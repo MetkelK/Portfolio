@@ -215,6 +215,10 @@ a:active, a:visited {
   justify-content: center;
 }
 
+.project-column h3, .project-column p {
+	margin: 0 0 1rem;
+} 
+
 .button-container {
   width: auto;
   display: flex;
