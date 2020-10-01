@@ -215,9 +215,13 @@ a:active, a:visited {
   justify-content: center;
 }
 
-.project-column h3, .project-column p {
+.project-column h3 {
+	margin: 1rem 0;
+}
+
+.project-column p {
 	margin: 0 0 1rem;
-} 
+}
 
 .button-container {
   width: auto;
@@ -277,7 +281,7 @@ a:active, a:visited {
 
 .project_button {
   background-color: #D8C1A2;
-  border: 1px solid #EDD4B2;
+  border: 1px solid #D8C1A2;
   border-radius: 4px;
   color: #000;
   text-align: center;
@@ -336,8 +340,6 @@ form {
     width: 50%;
     margin: 0 auto;
   }
-
-   
 }
 
 .svg {
