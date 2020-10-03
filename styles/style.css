@@ -104,7 +104,24 @@ a:active, a:visited {
 	    rgb(239, 242, 251) 90%, rgb(239, 242, 251) 100%);
 }
 
-.about h2 {
+.bio-background {
+	width: 50%;
+	height: auto;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	z-index: 98;
+}
+
+.bio-background img {
+	width: 100%;
+}
+
+.bio {
+	z-index: 98;
+}
+
+.bio h2 {
 	color: #FFFFF3;
   	text-transform: uppercase;
   	letter-spacing: 1rem;
