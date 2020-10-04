@@ -58,7 +58,7 @@ a:active, a:visited {
 
 .banner h2, .social-media {
   	color: #000;
-  	transition: 1s;
+  	transition-duration: 0.3s;
 }
 
 .social-media a {
@@ -66,7 +66,7 @@ a:active, a:visited {
 }
 
 .social-media a i:hover {
-  	color: #CCC5B9;
+  	color: #262E45;
 }
 
 .scrollArrow {
@@ -146,13 +146,16 @@ a:active, a:visited {
 @media only screen and (min-width: 1200px) {
 	.column {
 		width: 70%;
+    margin: 1rem auto;
 	}
 }
 
 .skills {
   height: 100vh;
-  	padding: 3rem 0;
-  	position: relative;
+  	padding: 1rem 0;
+  	display: flex;
+    flex-direction: column;
+    justify-content: center;
   	background:linear-gradient(315deg, 
 	    rgb(17, 29, 65) 0%, rgb(17, 29, 65) 63%,
 	    rgb(33, 58, 130) 63%, rgb(33, 58, 130) 75%,
@@ -168,6 +171,7 @@ a:active, a:visited {
   	letter-spacing: 1rem;
   	font-style: italic;
   	text-align: center;
+    margin: 0;
 }
 
 .skill-list {
@@ -181,6 +185,10 @@ a:active, a:visited {
   	text-align: center;
 }
 
+.skill-icon {
+	font-size: 5vw;
+}
+
 @media only screen and (min-width: 738px)  {
 	.skill-list {
 		grid-template: 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr ;
@@ -191,14 +199,6 @@ a:active, a:visited {
   	.skill-list {
     	grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
   	}
-}
-
-.skill-icon {
-	font-size: 3rem;
-}
-
-.skill-title {
-  	font-size: 1.25rem;
 }
 
 .projects {
@@ -219,6 +219,7 @@ a:active, a:visited {
   	letter-spacing: 1rem;
   	font-style: italic;
   	text-align: center;
+    margin: 0;
 }
 
 .project {
