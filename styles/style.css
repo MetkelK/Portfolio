@@ -14,7 +14,7 @@ html h1, html h2, html h3, html h4, html h5, html h6, html a {
 }
 
 html p {
-  	font-family: 'Cinzel', serif;
+  	font-family: 'Roboto Slab', serif;
 }
 
 a {
@@ -49,6 +49,11 @@ a:active, a:visited {
   	margin: 1rem;
   	border-radius: 5px;
   	box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+   /* z-index: 101;
+    position: absolute;
+    top: 33%;
+    left: 25%;
+    width: 60vmax;*/
 }
 
 .banner h2, .social-media {
@@ -73,6 +78,7 @@ a:active, a:visited {
   	flex-direction: column;
   	justify-content: center;
   	color: #FFFFF3;
+    z-index: 102;
 }
 
 .scrollArrow p {
@@ -144,7 +150,7 @@ a:active, a:visited {
 }
 
 .skills {
-	height: 100vh;
+  height: 100vh;
   	padding: 3rem 0;
   	position: relative;
   	background:linear-gradient(315deg, 
@@ -297,10 +303,10 @@ a:active, a:visited {
 }
 
 .project_button {
-  	background-color: #D8C1A2;
-  	border: 1px solid #D8C1A2;
+  	background-color: #262E45;
+  	border: 1px solid #262E45;
+    color: #FFF;
   	border-radius: 4px;
-  	color: #000;
   	text-align: center;
   	text-decoration: none;
   	display: inline-block;
@@ -311,8 +317,13 @@ a:active, a:visited {
 }
 
 .project_button:hover {
-  	background-color: #ECDCC9;
-  	border: 1px solid #ECDCC9; 
+  	background-color: #244091;
+  	border: 1px solid #244091;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+}
+
+.project_button a {
+  color: #FFF;
 }
 
 .contact {
@@ -365,4 +376,5 @@ form {
 
 footer {
 	text-align: center;
+  border-top: 1px solid #EFF2FB;
 }
