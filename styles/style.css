@@ -186,7 +186,7 @@ a:active, a:visited {
 }
 
 .skill-icon {
-	font-size: 5vw;
+	font-size: 6vw;
 }
 
 @media only screen and (min-width: 738px)  {
@@ -199,6 +199,11 @@ a:active, a:visited {
   	.skill-list {
     	grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
   	}
+}
+
+
+.skill-title {
+  	font-size: initial;
 }
 
 .projects {
@@ -341,6 +346,7 @@ a:active, a:visited {
 .contact h2, .contact i, .contact p, .contact a {
   	text-align: center;
   	color: #FFF;
+    margin-bottom: 1rem;
 }
 
 address {
