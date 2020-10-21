@@ -9,12 +9,10 @@
 	<link rel="stylesheet" href="Styles/style.css">
 	<link rel="stylesheet" rel="preload" href="styles/devicons.min.css">
 	<link rel="stylesheet" rel="preconnect" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 	<script rel="preconnect" src="https://kit.fontawesome.com/3ce30db80b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="header">
-		<!-- <div class="bio-background"><img src="nathan-dumlao-owpZrpicpXM-unsplash.jpg" alt=""></div> -->
+	<div class="header revealer--second">
 		<div class="banner">
 			<h1>Hi! My name's Metkel...</h1>
 			<h3>but you can call me Mike</h3>
@@ -25,8 +23,31 @@
 				<a class="icon" href="http://www.linkedin.com" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in icon"></i></a>
 			</div>
 		</div>
-		<div class="scrollArrow">
-			<a href="#about"><p>Learn More</p><i class="animate__animated animate__slideOutDown animate__infinite animate__slow fas fa-arrow-down"></i></a>
+	</div>
+
+	<div class="overlay overlay--1">
+		<div class="overlay__inner overlay__inner--color-1"></div>
+	</div>
+	<div class="overlay overlay--2">
+		<div class="overlay__inner overlay__inner--color-2"></div>
+	</div>
+	<div class="overlay overlay--3">
+		<div class="overlay__inner overlay__inner--color-3"></div>
+	</div>
+	<div class="overlay overlay--4">
+		<div class="overlay__inner overlay__inner--color-4"></div>
+	</div>
+	<div class="overlay overlay--5">
+		<div class="overlay__inner overlay__inner--color-5"></div>
+	</div>
+	<div class="overlay overlay--6">
+		<div class="overlay__inner overlay__inner--color-6"></div>
+	</div>
+
+	<div class="revealer revealer--first" id="revealer">
+		<div class="revealer revealer--move">
+			<div class="revealer--reverse">
+				<p class="enter">Hi! Scroll down to see more</p>
 			</div>
 		</div>
 	</div>
@@ -137,15 +158,11 @@
 				<form action="http://www.focuspocus.io/magic/metkelk@gmail.com" method="POST">
 					<div class="formContainer">
 						<div class="column-container">
-							<!-- <label for="name" class="visuallyhidden">Name</label> </br> -->
 							<input type="text" name="name" id="name" placeholder="Name" required> </br>
-							<!-- <label for="email" class="visuallyhidden">Email Address</label> </br> -->
 							<input type="email" name="email" id="email" placeholder="Email Address" required> </br>
-							<!-- <label for="subject" class="visuallyhidden">Subject</label> </br> -->
 							<input type="text" name="subject" id="subject" placeholder="Subject" required> </br>
 						</div>
 						<div class="message-container">
-							<!-- <label for="message" class="visuallyhidden">Enter messages</label> </br> -->
 							<textarea name="message" id="message" placeholder="Message"></textarea>
 						</div>
 					</div>
@@ -158,5 +175,9 @@
 	<footer>
 		<p>&copy; Metkel Kebede 2020</p>
 	</footer>
+	<script src="charming.min.js"></script>
+	<script src="gsap.min.js"></script>
+	<script src="ScrollTrigger.min.js"></script>
+	<script src="main.js"></script>
 </body>
 </html>
