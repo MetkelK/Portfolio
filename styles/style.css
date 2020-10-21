@@ -143,7 +143,7 @@ a:active, a:visited {
   	box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
 }
 
-@media only screen and (min-width: 1200px) {
+@media all and (min-width: 1200px) {
 	.column {
 		width: 70%;
     margin: 1rem auto;
@@ -189,13 +189,13 @@ a:active, a:visited {
 	font-size: 6vw;
 }
 
-@media only screen and (min-width: 738px)  {
+@media all and (min-width: 738px)  {
 	.skill-list {
 		grid-template: 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr ;
   	}
 }
 
-@media only screen and (min-width: 1200px)  {
+@media all and (min-width: 1200px)  {
   	.skill-list {
     	grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
   	}
@@ -282,7 +282,7 @@ a:active, a:visited {
   	width: 100%;
 }
 
-@media only screen and (max-width: 575px) {
+@media all and (max-width: 575px) {
 	.project {
     	flex-direction: column;
   	}
@@ -301,7 +301,7 @@ a:active, a:visited {
 	}
 }
 
-@media only screen and (min-width: 1200px) {
+@media all and (min-width: 1200px) {
 	.project {
     	margin: 2rem auto;
     	width: 70%;
@@ -369,7 +369,7 @@ form {
   	flex-direction: column;
 }
 
-@media only screen and (min-width: 738px) {
+@media all and (min-width: 738px) {
 	.formContainer, .contact_button {
     	width: 50%;
     	margin: 0 auto;
