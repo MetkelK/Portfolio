@@ -169,7 +169,7 @@ const tlProjects = gsap.timeline({
     start: "top center",
     end: "+=30%",
     scrub: 3,
-    markers: true
+    // markers: true
   } 
 })
 tlProjects.to('.projects h2', 0.25, {
@@ -177,7 +177,7 @@ tlProjects.to('.projects h2', 0.25, {
     ease: Expo.easeIn,
 })
 tlProjects.to('.projects', 1, {
-  background: "linear-gradient(0deg, #B1E0B0, #ACB4E7, rgb(239, 242, 251))",
+  background: "linear-gradient(0deg, rgb(177, 224, 176), rgb(172, 180, 231), rgb(239, 242, 251))",
   ease: Expo.easeIn,
 })
 tlProjects.from('#project1', 1, {
