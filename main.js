@@ -68,12 +68,13 @@ const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".header",
     start: "top top",
-    end: "bottom bottom",
-    endTrigger: "main",
+    end: "+=100%",
+    // endTrigger: "main",
     scrub: 0.25,
     pin: true,
     pinSpacing: true,
-    snap: 1
+    snap: 1,
+    markers: true
   }
 });
 tl.staggerTo(otherletters, 1.2*0.8, {
@@ -122,15 +123,15 @@ const tlBio = gsap.timeline({
     end: "bottom bottom",
     scrub: 1,
     snap: 1,
-    markers: true
+    // markers: true
   }
 });
-tlBio.from('.column', 1, {
+tlBio.from('.column', 0.5, {
     scaleX: 0,
     ease: Expo.easeInOut,
 })
-tlBio.to('.about', 0.25, {
-    ease: Expo.easeIn,
+tlBio.to('.about', 2, {
+    ease: Expo.easeInOut,
     background: "linear-gradient(45deg, rgb(17, 29, 65) 0%, rgb(17, 29, 65) 10%,rgb(33, 58, 130) 10%, rgb(33, 58, 130) 15%,rgb(49, 86, 196) 15%, rgb(49, 86, 196) 19%,rgb(108, 136, 218) 19%, rgb(108, 136, 218) 25%,rgb(173, 189, 235) 25%, rgb(173, 189, 235) 37%,rgb(239, 242, 251) 37%, rgb(239, 242, 251) 100%)"
 }, '-=0.5')
 tlBio.to('.bio h2', 0.25, {
