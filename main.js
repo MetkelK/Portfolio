@@ -71,7 +71,6 @@ const tl = gsap.timeline({
     end: "bottom bottom",
     endTrigger: "main",
     scrub: 0.25,
-    markers: true,
     pin: true,
     pinSpacing: true,
     snap: 1
@@ -111,4 +110,29 @@ tl.from('.banner', 0.25, {
 tl.from('.banner', 0.65, {
     yPercent: 100, 
     ease: Expo.easeOut
+})
+tl.to('.header', 2, {
+    background: "linear-gradient(135deg, rgb(17, 29, 65) 0%, rgb(17, 29, 65) 63%,rgb(33, 58, 130) 63%, rgb(33, 58, 130) 75%,rgb(49, 86, 196) 75%, rgb(49, 86, 196) 81%,rgb(108, 136, 218) 81%, rgb(108, 136, 218) 85%,rgb(173, 189, 235) 85%, rgb(173, 189, 235) 90%,rgb(239, 242, 251) 90%, rgb(239, 242, 251) 100%)"
+})
+
+const tlBio = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".about",
+    start: "top center",
+    end: "bottom bottom",
+    scrub: 1,
+    snap: 1
+  }
+});
+tlBio.from('.column', 0.5, {
+    scaleX: 0,
+    ease: Expo.easeInOut,
+})
+tlBio.to('.bio h2', 0.5, {
+    color: "#000",
+    ease: Expo.easeIn,
+})
+tlBio.to('.about', 1, {
+    ease: Expo.easeIn,
+    background: "linear-gradient(45deg, rgb(17, 29, 65) 0%, rgb(17, 29, 65) 10%,rgb(33, 58, 130) 10%, rgb(33, 58, 130) 15%,rgb(49, 86, 196) 15%, rgb(49, 86, 196) 19%,rgb(108, 136, 218) 19%, rgb(108, 136, 218) 25%,rgb(173, 189, 235) 25%, rgb(173, 189, 235) 37%,rgb(239, 242, 251) 37%, rgb(239, 242, 251) 100%)"
 })

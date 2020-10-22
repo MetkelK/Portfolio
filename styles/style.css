@@ -169,7 +169,7 @@ a:active, a:visited {
   	justify-content: center;
   	align-items: center;
   	position: relative;
-  	background:linear-gradient(225deg, 
+  	background:linear-gradient(45deg, 
 	    rgb(17, 29, 65) 0%, rgb(17, 29, 65) 63%,
 	    rgb(33, 58, 130) 63%, rgb(33, 58, 130) 75%,
 	    rgb(49, 86, 196) 75%, rgb(49, 86, 196) 81%,
