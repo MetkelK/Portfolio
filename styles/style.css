@@ -224,13 +224,13 @@ a:active, a:visited {
   	display: flex;
     flex-direction: column;
     justify-content: center;
-  	background:linear-gradient(315deg, 
-	    rgb(17, 29, 65) 0%, rgb(17, 29, 65) 63%,
-	    rgb(33, 58, 130) 63%, rgb(33, 58, 130) 75%,
-	    rgb(49, 86, 196) 75%, rgb(49, 86, 196) 81%,
-	    rgb(108, 136, 218) 81%, rgb(108, 136, 218) 85%,
-	    rgb(173, 189, 235) 85%, rgb(173, 189, 235) 90%,
-	    rgb(239, 242, 251) 90%, rgb(239, 242, 251) 100%);
+  	background:linear-gradient(135deg, 
+	    rgb(17, 29, 65) 0%, rgb(17, 29, 65) 10%,
+	    rgb(33, 58, 130) 10%, rgb(33, 58, 130) 15%,
+	    rgb(49, 86, 196) 15%, rgb(49, 86, 196) 19%,
+	    rgb(108, 136, 218) 19%, rgb(108, 136, 218) 25%,
+	    rgb(173, 189, 235) 25%, rgb(173, 189, 235) 37%,
+	    rgb(239, 242, 251) 37%, rgb(239, 242, 251) 100%);
 }
 
 .skills h2 {
@@ -242,7 +242,7 @@ a:active, a:visited {
     margin: 0;
 }
 
-.skill-list {
+.skill--list {
   	background-color: #FFFFF3;
   	padding: 1rem;
   	margin: 2rem;
@@ -258,13 +258,13 @@ a:active, a:visited {
 }
 
 @media all and (min-width: 738px)  {
-	.skill-list {
+	.skill--list {
 		grid-template: 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr ;
   	}
 }
 
 @media all and (min-width: 1200px)  {
-  	.skill-list {
+  	.skill--list {
     	grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
   	}
 }

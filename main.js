@@ -68,9 +68,9 @@ const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".header",
     start: "top top",
-    end: "+=100%",
+    end: "+=150%",
     // endTrigger: "main",
-    scrub: 0.25,
+    scrub: 3,
     pin: true,
     pinSpacing: true,
     snap: 1,
@@ -121,7 +121,7 @@ const tlBio = gsap.timeline({
     trigger: ".about",
     start: "top center",
     end: "bottom bottom",
-    scrub: 1,
+    scrub: 3,
     snap: 1,
     // markers: true
   }
@@ -130,11 +130,27 @@ tlBio.from('.column', 0.5, {
     scaleX: 0,
     ease: Expo.easeInOut,
 })
+tlBio.to('.bio h2', 0.25, {
+    color: "#000",
+    ease: Expo.easeIn,
+})
 tlBio.to('.about', 2, {
     ease: Expo.easeInOut,
     background: "linear-gradient(45deg, rgb(17, 29, 65) 0%, rgb(17, 29, 65) 10%,rgb(33, 58, 130) 10%, rgb(33, 58, 130) 15%,rgb(49, 86, 196) 15%, rgb(49, 86, 196) 19%,rgb(108, 136, 218) 19%, rgb(108, 136, 218) 25%,rgb(173, 189, 235) 25%, rgb(173, 189, 235) 37%,rgb(239, 242, 251) 37%, rgb(239, 242, 251) 100%)"
 }, '-=0.5')
-tlBio.to('.bio h2', 0.25, {
-    color: "#000",
-    ease: Expo.easeIn,
+
+
+const tlSkills = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".skills",
+    start: "top center",
+    end: "+=50%",
+    scrub: 3,
+    snap: 1,
+    // markers: true
+  }
+});
+tlSkills.to('.skills', 1, {
+    ease: Expo.easeInOut,
+    background: "linear-gradient(135deg, rgb(239, 242, 251) 100%, rgb(239, 242, 251) 100%, rgb(173, 189, 235) 99%, rgb(173, 189, 235) 99%, rgb(108, 136, 218) 98%, rgb(49, 86, 196) 97%, rgb(33, 58, 130) 96%,rgb(17, 29, 65) 95%)"
 })
