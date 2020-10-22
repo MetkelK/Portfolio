@@ -74,7 +74,7 @@ const tl = gsap.timeline({
     pin: true,
     pinSpacing: true,
     snap: 1,
-    markers: true
+    // markers: true
   }
 });
 tl.staggerTo(otherletters, 1.2*0.8, {
@@ -144,13 +144,51 @@ const tlSkills = gsap.timeline({
   scrollTrigger: {
     trigger: ".skills",
     start: "top center",
-    end: "+=50%",
+    end: "bottom bottom",
     scrub: 3,
     snap: 1,
     // markers: true
   }
 });
-tlSkills.to('.skills', 1, {
+tlSkills.from('.skill--list', 0.5, {
+    scaleX: 0,
+    ease: Expo.easeInOut,
+})
+tlSkills.to('.skills h2', 0.25, {
+    color: "#000",
+    ease: Expo.easeIn,
+})
+tlSkills.to('.skills', 2, {
     ease: Expo.easeInOut,
     background: "linear-gradient(135deg, rgb(239, 242, 251) 100%, rgb(239, 242, 251) 100%, rgb(173, 189, 235) 99%, rgb(173, 189, 235) 99%, rgb(108, 136, 218) 98%, rgb(49, 86, 196) 97%, rgb(33, 58, 130) 96%,rgb(17, 29, 65) 95%)"
+}, '-=0.5')
+
+const tlProjects = gsap.timeline({
+   scrollTrigger: {
+    trigger: ".projects",
+    start: "top center",
+    end: "+=30%",
+    scrub: 3,
+    markers: true
+  } 
 })
+tlProjects.to('.projects h2', 0.25, {
+    color: "#000",
+    ease: Expo.easeIn,
+})
+tlProjects.to('.projects', 1, {
+  background: "linear-gradient(0deg, #B1E0B0, #ACB4E7, rgb(239, 242, 251))",
+  ease: Expo.easeIn,
+})
+tlProjects.from('#project1', 1, {
+  x: "-2000"
+})
+tlProjects.from('#project2', 1, {
+  x: "2000"
+}, "+=0.25")
+tlProjects.from('#project3', 1, {
+  x: "-2000"
+}, "+=0.25")
+tlProjects.from('#project4', 1, {
+  x: "2000"
+}, "+=0.25")

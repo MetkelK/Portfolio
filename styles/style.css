@@ -275,6 +275,7 @@ a:active, a:visited {
 }
 
 .projects {
+  overflow: hidden;
   	position: relative;
   	padding: 3rem 0;
   	background:linear-gradient(135deg, 
