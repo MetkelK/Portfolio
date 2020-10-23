@@ -274,13 +274,7 @@ a:active, a:visited {
   overflow: hidden;
   	position: relative;
   	padding: 3rem 0;
-  	background:linear-gradient(45deg, 
-        rgb(17, 29, 65) 0%, rgb(17, 29, 65) 63%,
-        rgb(33, 58, 130) 63%, rgb(33, 58, 130) 75%,
-        rgb(49, 86, 196) 75%, rgb(49, 86, 196) 81%,
-        rgb(108, 136, 218) 81%, rgb(108, 136, 218) 85%,
-        rgb(173, 189, 235) 85%, rgb(173, 189, 235) 90%,
-        rgb(239, 242, 251) 90%, rgb(239, 242, 251) 100%); 
+  	background:linear-gradient(45deg, rgb(173, 189, 235), rgb(239, 242, 251));
 }
 
 .projects h2 {

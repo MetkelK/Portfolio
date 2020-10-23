@@ -87,7 +87,10 @@ tl.staggerTo(otherletters, 1.2*0.8, {
 tl.to(firstPageContent.enter, 1.2*0.5, {
     ease: Expo.easeInOut,
     opacity: 0,
-    y: '-500'
+    y: '500'
+}, 0)
+tl.to(revealer.DOM.el, 1, {
+    ease: Expo.ease,
 }, 0)
 tl.to(revealer.DOM.inner, 1, {
     ease: Expo.easeInOut,
@@ -102,7 +105,7 @@ for (let i = 0; i <= overlaysTotal-1; ++i) {
 t = 0.1*i+0.1
 tl.to(overlays[overlaysTotal-1-i].DOM.inner, 1, {
     ease: Expo.easeInOut,
-     y: '100%'
+    y: '100%'
 }, t);
 }
 tl.from('.banner', 0.25, {
@@ -176,7 +179,8 @@ tlProjects.to('.projects h2', 0.25, {
     color: "#000",
     ease: Expo.easeIn,
 })
-tlProjects.to('.projects', 1, {
+tlProjects.to('.projects', {
+    duration: 1,
   background: "linear-gradient(0deg, rgb(177, 224, 176), rgb(172, 180, 231), rgb(239, 242, 251))",
   ease: Expo.easeIn,
 })
