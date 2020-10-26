@@ -65,7 +65,7 @@ firstPageContent.enter.addEventListener('mouseleave', function(){
 const overlays = [];
 const overlayElems = [...document.querySelectorAll('.overlay')];
 const overlaysTotal = overlayElems.length;
-overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: 225})));
+overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: 180})));
 
 const tlHeader = gsap.timeline({
   scrollTrigger: {
