@@ -20,8 +20,6 @@ class Revealer {
     }
 }
 
-
-
 const firstPageContent = {
     enter: document.querySelector('.enter')
 };
@@ -53,8 +51,6 @@ firstPageContent.enter.addEventListener('mouseleave', function(){
     enterTL.reverse()
 })
 
-
-
 const overlays = [];
 const overlayElems = [...document.querySelectorAll('.overlay')];
 const overlaysTotal = overlayElems.length;
@@ -67,18 +63,20 @@ const tlHeader = gsap.timeline({
     end: '+=100%',
     toggleActions: "play pause reverse reset",
     // markers: true,
-    scrub: 1,
-    snap: 1
+    scrub: 5,
+    snap: 1,
+    pin: true,
+    pinSpacing: true
   }
 });
-tlHeader.staggerTo(letters, 0.9, {
+tlHeader.staggerTo(letters, 0.2, {
     ease: Expo.easeInOut,
-    y: '-50%',
+    y: '-100%',
     scaleX: 0.8,
     scaleY: 1.5,
     opacity: 0
 }, 0.04, 0)
-tlHeader.staggerTo(otherletters, 0.9, {
+tlHeader.staggerTo(otherletters, 0.2, {
     ease: Expo.easeInOut,
     y: '500%',
     scaleX: 0.8,
@@ -98,7 +96,7 @@ tlHeader.to('.overlay', {
 
 let t = 0;
 for (let i = 0; i <= overlaysTotal-1; ++i) {
-t = 0.1*i+0.1
+t = 0.2*i+0.2
 tlHeader.to(overlays[overlaysTotal-1-i].DOM.inner, 1, {
     ease: Expo.easeInOut,
     y: '100%'
