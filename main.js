@@ -20,6 +20,16 @@ class Revealer {
     }
 }
 
+function navScroll(){
+  gsap.utils.toArray('#navlist a').forEach(item => {
+    const activeSection = item.getAttribute("href");
+    item.addEventListener('click', function(e){
+      e.preventDefault();
+      gsap.to(window, {duration: 1, scrollTo:activeSection});
+    });  
+  });
+}
+
 const firstPageContent = {
     enter: document.querySelector('.enter')
 };
