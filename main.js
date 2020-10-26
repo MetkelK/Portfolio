@@ -20,13 +20,10 @@ class Revealer {
     }
 }
 
-const content = {
-    first: document.querySelector('.revealer--first'),
-    second: document.querySelector('.revealer--second')
-};
+
 
 const firstPageContent = {
-    enter: content.first.querySelector('.enter')
+    enter: document.querySelector('.enter')
 };
 
 charming(firstPageContent.enter);
@@ -34,7 +31,6 @@ firstPageContent.titleLetters = [...firstPageContent.enter.querySelectorAll('spa
 firstPageContent.titleLetters.sort(() => Math.round(Math.random())-0.5);
 let letters = firstPageContent.titleLetters.filter(_ => Math.random() < .5);
 let otherletters = firstPageContent.titleLetters.filter(el => letters.indexOf(el) < 0);
-
 
 const enterTL = gsap.timeline({paused: true})
 .staggerTo(letters, 0.2, {
@@ -57,142 +53,166 @@ firstPageContent.enter.addEventListener('mouseleave', function(){
     enterTL.reverse()
 })
 
-const revealer = new Revealer(content.first, {angle:45});
+
 
 const overlays = [];
 const overlayElems = [...document.querySelectorAll('.overlay')];
 const overlaysTotal = overlayElems.length;
 overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: 225})));
 
-const tl = gsap.timeline({
+const tlHeader = gsap.timeline({
   scrollTrigger: {
-    trigger: ".header",
-    start: "top top",
-    end: "+=150%",
-    // endTrigger: "main",
-    scrub: 3,
-    pin: true,
-    pinSpacing: true,
-    snap: 1,
-    // markers: true
+    trigger: '.header',
+    start: 'top top',
+    end: '+=100%',
+    toggleActions: "play pause reverse reset",
+    // markers: true,
+    scrub: 1,
+    snap: 1
   }
 });
-tl.staggerTo(otherletters, 1.2*0.8, {
+tlHeader.staggerTo(letters, 0.9, {
     ease: Expo.easeInOut,
-    y: '-100%',
+    y: '-50%',
     scaleX: 0.8,
     scaleY: 1.5,
     opacity: 0
 }, 0.04, 0)
-tl.to(firstPageContent.enter, 1.2*0.5, {
+tlHeader.staggerTo(otherletters, 0.9, {
     ease: Expo.easeInOut,
-    opacity: 0,
-    y: '500'
-}, 0)
-tl.to(revealer.DOM.el, 1, {
-    ease: Expo.ease,
-}, 0)
-tl.to(revealer.DOM.inner, 1, {
-    ease: Expo.easeInOut,
-    y: '-100%'
-}, 0)
-tl.to(revealer.DOM.reverse, 1, {
-    ease: Expo.easeInOut,
-    y: '100%'
-}, 0)
+    y: '500%',
+    scaleX: 0.8,
+    scaleY: 1.5,
+    opacity: 0
+}, 0.04, 0)
+tlHeader.to('.banner', 1.5, {
+  ease: Expo.easeInOut,
+    y: '500%',
+    scaleX: 0.9,
+    scaleY: 1.1,
+    opacity: 0
+}, 0.04, 0)
+tlHeader.to('.overlay', {
+    zIndex: '150'
+})
+
 let t = 0;
 for (let i = 0; i <= overlaysTotal-1; ++i) {
 t = 0.1*i+0.1
-tl.to(overlays[overlaysTotal-1-i].DOM.inner, 1, {
+tlHeader.to(overlays[overlaysTotal-1-i].DOM.inner, 1, {
     ease: Expo.easeInOut,
     y: '100%'
 }, t);
 }
-tl.from('.banner', 0.25, {
-    scaleX: 0
+tlHeader.to('nav ul', 0.5, {
+  background: 'linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%)'
 })
-tl.from('.banner', 0.65, {
-    yPercent: 100, 
-    ease: Expo.easeOut
-})
-tl.to('.header', 2, {
-    background: "linear-gradient(135deg, rgb(17, 29, 65) 0%, rgb(17, 29, 65) 63%,rgb(33, 58, 130) 63%, rgb(33, 58, 130) 75%,rgb(49, 86, 196) 75%, rgb(49, 86, 196) 81%,rgb(108, 136, 218) 81%, rgb(108, 136, 218) 85%,rgb(173, 189, 235) 85%, rgb(173, 189, 235) 90%,rgb(239, 242, 251) 90%, rgb(239, 242, 251) 100%)"
-})
+
 
 const tlBio = gsap.timeline({
   scrollTrigger: {
-    trigger: ".about",
-    start: "top center",
-    end: "bottom bottom",
-    scrub: 3,
-    snap: 1,
-    // markers: true
+    trigger: '.about',
+    start: 'top +=20%',
+    end: '+=20%',
+    toggleActions: "play pause reverse reset",
+    // markers: true,
+    scrub: 1
   }
 });
-tlBio.from('.column', 0.5, {
-    scaleX: 0,
-    ease: Expo.easeInOut,
+tlBio.from('.bio h2', {
+  opacity: 0,
+  duration: 1
 })
-tlBio.to('.bio h2', 0.25, {
-    color: "#000",
-    ease: Expo.easeIn,
+tlBio.from('.bio h2', {
+  y: '-500%',
+  duration: 0.5
+},"<-0.25")
+tlBio.from('.column p', {
+  opacity: 0,
+  duration: 1
 })
-tlBio.to('.about', 2, {
-    ease: Expo.easeInOut,
-    background: "linear-gradient(45deg, rgb(17, 29, 65) 0%, rgb(17, 29, 65) 10%,rgb(33, 58, 130) 10%, rgb(33, 58, 130) 15%,rgb(49, 86, 196) 15%, rgb(49, 86, 196) 19%,rgb(108, 136, 218) 19%, rgb(108, 136, 218) 25%,rgb(173, 189, 235) 25%, rgb(173, 189, 235) 37%,rgb(239, 242, 251) 37%, rgb(239, 242, 251) 100%)"
-}, '-=0.5')
+tlBio.from('.column p', {
+  y: '500%',
+  duration: 0.5
+}, "<-0.25")
 
 
 const tlSkills = gsap.timeline({
   scrollTrigger: {
     trigger: ".skills",
-    start: "top center",
-    end: "bottom bottom",
-    scrub: 3,
-    snap: 1,
-    // markers: true
+    start: 'top +=20%',
+    end: '+=20%',
+    toggleActions: "play pause reverse reset",
+    // markers: true,
+    scrub: 1
   }
 });
-tlSkills.from('.skill--list', 0.5, {
-    scaleX: 0,
-    ease: Expo.easeInOut,
+tlSkills.from('.skills h2', {
+  y: '-500%',
+  duration: 1
 })
-tlSkills.to('.skills h2', 0.25, {
-    color: "#000",
-    ease: Expo.easeIn,
+tlSkills.from('.skills h2', {
+  opacity: 0,
+  duration: 0.5
+}, "<0.5")
+
+tlSkills.from('.skill--list', {
+  y: '500%',
+  duration: 1
 })
-tlSkills.to('.skills', 2, {
-    ease: Expo.easeInOut,
-    background: "linear-gradient(135deg, rgb(239, 242, 251) 100%, rgb(239, 242, 251) 100%, rgb(173, 189, 235) 99%, rgb(173, 189, 235) 99%, rgb(108, 136, 218) 98%, rgb(49, 86, 196) 97%, rgb(33, 58, 130) 96%,rgb(17, 29, 65) 95%)"
-}, '-=0.5')
+tlSkills.from('.skill--list', {
+  opacity: 0,
+  duration: 0.5
+}, "<0.25")
+
+tlSkills.to('nav ul', {
+  background: "linear-gradient(45deg,#000000,#152331)"
+})
+tlSkills.to('nav ul li a', {
+  color: "#fff"
+})
 
 const tlProjects = gsap.timeline({
    scrollTrigger: {
     trigger: ".projects",
-    start: "top center",
-    end: "+=30%",
-    scrub: 3,
+    start: 'top +=80%',
+    end: '+=80%',
+    scrub: 1,
+    toggleActions: "play pause reverse reset",
     // markers: true
   } 
 })
-tlProjects.to('.projects h2', 0.25, {
-    color: "#000",
-    ease: Expo.easeIn,
+tlProjects.from('.projects h2', {
+  y: '-500%',
+  duration: 1
 })
-tlProjects.to('.projects', {
-    duration: 1,
-  background: "linear-gradient(0deg, rgb(177, 224, 176), rgb(172, 180, 231), rgb(239, 242, 251))",
-  ease: Expo.easeIn,
-})
+tlProjects.from('.projects h2', {
+  opacity: 0,
+  duration: 0.5
+}, "<0.5")
 tlProjects.from('#project1', 1, {
-  x: "-2000"
+  duration: 1,
+  opacity: 0,
+  x: '-500%'
 })
 tlProjects.from('#project2', 1, {
-  x: "2000"
-}, "+=0.25")
+  duration: 1,
+  opacity: 0,
+  x: '500%'
+})
 tlProjects.from('#project3', 1, {
-  x: "-2000"
-}, "+=0.25")
+  duration: 1,
+  opacity: 0,
+  x: '-500%'
+})
 tlProjects.from('#project4', 1, {
-  x: "2000"
-}, "+=0.25")
+  duration: 1,
+  opacity: 0,
+  x: '500%'
+})
+tlProjects.to('nav ul', {
+  background: "linear-gradient(45deg,#e0eafc,#cfdef3)"
+}, '<10')
+tlProjects.to('nav ul li a', {
+  color: "#000"
+})

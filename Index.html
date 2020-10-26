@@ -12,46 +12,38 @@
 	<script rel="preconnect" src="https://kit.fontawesome.com/3ce30db80b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="header revealer--second">
+	<div class="header">
+		<nav>
+			<ul>
+				<li><a href="">About</a></li>
+				<li><a href="">Skills</a></li>
+				<li><a href="">Projects</a></li>
+				<li><a href="">Contents</a></li>
+			</ul>
+		</nav>
+	
+		<div class="overlay overlay--1">
+			<div class="overlay__inner overlay__inner--color-1"></div>
+		</div>
+		<div class="overlay overlay--2">
+			<div class="overlay__inner overlay__inner--color-2"></div>
+		</div>
+		<div class="overlay overlay--3">
+			<div class="overlay__inner overlay__inner--color-3"></div>
+		</div>
 		<div class="banner">
 			<h1>Hi! My name's Metkel...</h1>
 			<h3>but you can call me Mike</h3>
-			
+						
 			<div class="social-media">
 				<a class="icon" href="http://www.twitter.com" target="_blank" rel="noreferrer"><i class="fab fa-twitter icon"></i></a>
 				<a class="icon" href="http://www.github.com/MetkelK" target="_blank" rel="noreferrer"><i class="fab fa-github icon"></i></a>
 				<a class="icon" href="http://www.linkedin.com" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in icon"></i></a>
 			</div>
-		</div>
+		</div>		
+		<p class="enter">Scroll down to see more</p>
 	</div>
 
-	<div class="overlay overlay--1">
-		<div class="overlay__inner overlay__inner--color-1"></div>
-	</div>
-	<div class="overlay overlay--2">
-		<div class="overlay__inner overlay__inner--color-2"></div>
-	</div>
-	<div class="overlay overlay--3">
-		<div class="overlay__inner overlay__inner--color-3"></div>
-	</div>
-	<div class="overlay overlay--4">
-		<div class="overlay__inner overlay__inner--color-4"></div>
-	</div>
-	<div class="overlay overlay--5">
-		<div class="overlay__inner overlay__inner--color-5"></div>
-	</div>
-	<div class="overlay overlay--6">
-		<div class="overlay__inner overlay__inner--color-6"></div>
-	</div>
-
-	<div class="revealer revealer--first" id="revealer">
-		<div class="revealer revealer--move">
-			<div class="revealer--reverse">
-				<p class="enter">Hi! Scroll down to see more</p>
-			</div>
-		</div>
-	</div>
-	
 	<main>
 		<div class="about" id="about">
 			<div class="bio">
@@ -176,6 +168,7 @@
 	</footer>
 	<script src="charming.min.js"></script>
 	<script src="gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
 	<script src="ScrollTrigger.min.js"></script>
 	<script src="main.js"></script>
 </body>
