@@ -41,8 +41,8 @@ const firstPageContent = {
 };
 
 gsap.to('.arrow', {
-   y: -25,
-   repeat: '1',
+   y: -50,
+   repeat: '-1',
    yoyo: true 
 })
 
