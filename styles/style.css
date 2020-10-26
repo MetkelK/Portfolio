@@ -30,15 +30,15 @@ a:active, a:visited {
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg,#000000,#152331);
-  position: relative;
-  z-index: 10;
+
 }
 
 nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
+  z-index: 99;
   box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
 }
 
@@ -187,12 +187,13 @@ ul li {
   top: 0;
 }
 
-.revealer--second {
+/*.revealer--second {
   pointer-events: none;
-}
+}*/
 
 .revealer--first {
   position: fixed;
+  z-index: 999;
 }
 
 .revealer--move {

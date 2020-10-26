@@ -114,6 +114,9 @@ tlHeader.to(revealer.DOM.reverse, 1.2, {
     ease: Expo.easeInOut,
     y: '100%'
 }, 0)
+tlHeader.to('.revealer--first', {
+    zIndex: 0
+})
 
 let t = 0;
 for (let i = 0; i <= overlaysTotal-1; ++i) {
