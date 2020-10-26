@@ -87,7 +87,7 @@ const tlHeader = gsap.timeline({
 });
 tlHeader.to('.banner', 1.5, {
     ease: Expo.easeInOut,
-    y: -150,
+    y: "150%",
     scaleY: 1.1,
     opacity: 0
 },  0)

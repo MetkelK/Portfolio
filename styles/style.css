@@ -29,7 +29,9 @@ a:active, a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg,#000000,#152331);    
+  background: linear-gradient(135deg,#000000,#152331);
+  position: relative;
+  z-index: 10;
 }
 
 nav {
