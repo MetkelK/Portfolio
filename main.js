@@ -65,8 +65,8 @@ const tlHeader = gsap.timeline({
     // markers: true,
     scrub: 5,
     snap: 1,
-    pin: true,
-    pinSpacing: true
+    // pin: true,
+    // pinSpacing: true
   }
 });
 tlHeader.staggerTo(letters, 0.2, {
