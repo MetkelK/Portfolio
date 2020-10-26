@@ -31,19 +31,48 @@ function navScroll(){
 }
 navScroll();
 
+// let last_known_scroll_position = 0;
+// let ticking = false;
+// let prevScrollPos = window.pageYOffset;
+
+// function windowScroll(e){
+//   let currentScrollPos = window.pageYOffset;
+//   if (prevScrollPos < currentScrollPos) {
+//     // console.log('scroll down');
+//     gsap.to(window, {duration: 0.1, scrollTo:'#skills'});
+//   } else {
+//     // console.log('scroll up');
+//     gsap.to(window, {duration: 0.1, scrollTo:'#about'});
+//   }
+//   prevScrollPos = currentScrollPos;
+// }
+
+// window.addEventListener('scroll', function(e){
+//   last_known_scroll_position = window.scrollY;
+
+//   if (!ticking) {
+//     window.requestAnimationFrame(function() {
+//       windowScroll(last_known_scroll_position);
+//       ticking = false;
+//     });
+
+//     ticking = true;
+//   }
+// })
+
 const content = {
-        first: document.querySelector('.revealer--first'),
-        second: document.querySelector('.revealer--second')
-    };
+  first: document.querySelector('.revealer--first'),
+  second: document.querySelector('.revealer--second')
+};
 
 const firstPageContent = {
-    enter: content.first.querySelector('.enter')
+  enter: content.first.querySelector('.enter')
 };
 
 gsap.to('.arrow', {
-   y: -50,
-   repeat: '-1',
-   yoyo: true 
+  y: -50,
+  repeat: '-1',
+  yoyo: true 
 })
 
 charming(firstPageContent.enter);
@@ -88,11 +117,11 @@ const tlHeader = gsap.timeline({
     toggleActions: "play pause reverse reset",
     // markers: true,
     scrub: 5,
-    snap: {
-        snapTo: 1,
-        duration: 0.3,
-        ease: Expo.easeIn
-    }
+    // snap: {
+    //     snapTo: 1,
+    //     duration: 0.3,
+    //     ease: Expo.easeIn
+    // }
   }
 });
 tlHeader.to('.banner', 1.5, {
@@ -144,10 +173,10 @@ tlHeader.to('nav ul', 0.5, {
 const tlBio = gsap.timeline({
   scrollTrigger: {
     trigger: '.about',
-    start: 'top +=20%',
-    end: '+=20%',
+    start: 'top +=30%',
+    end: '+=10%',
     toggleActions: "play pause reverse reset",
-    // markers: true,
+    markers: true,
     scrub: 1
   }
 });
