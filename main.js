@@ -88,7 +88,11 @@ const tlHeader = gsap.timeline({
     toggleActions: "play pause reverse reset",
     // markers: true,
     scrub: 5,
-    snap: 1,
+    snap: {
+        snapTo: 1,
+        duration: 0.3,
+        ease: Expo.easeIn
+    }
   }
 });
 tlHeader.to('.banner', 1.5, {
