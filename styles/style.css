@@ -251,6 +251,13 @@ ul li {
   white-space: pre;
 }
 
+.arrow {
+  color: #fff;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 2%;
+}
+
 .about {
 	height: 100vh;
   display: flex;

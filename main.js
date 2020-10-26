@@ -40,6 +40,12 @@ const firstPageContent = {
     enter: content.first.querySelector('.enter')
 };
 
+gsap.to('.arrow', {
+   y: -25,
+   repeat: '1',
+   yoyo: true 
+})
+
 charming(firstPageContent.enter);
 firstPageContent.titleLetters = [...firstPageContent.enter.querySelectorAll('span')];
 firstPageContent.titleLetters.sort(() => Math.round(Math.random())-0.5);
