@@ -31,8 +31,13 @@ function navScroll(){
 }
 navScroll();
 
+const content = {
+        first: document.querySelector('.revealer--first'),
+        second: document.querySelector('.revealer--second')
+    };
+
 const firstPageContent = {
-    enter: document.querySelector('.enter')
+    enter: content.first.querySelector('.enter')
 };
 
 charming(firstPageContent.enter);
@@ -62,10 +67,12 @@ firstPageContent.enter.addEventListener('mouseleave', function(){
     enterTL.reverse()
 })
 
+const revealer = new Revealer(content.first, {angle:360});
+
 const overlays = [];
 const overlayElems = [...document.querySelectorAll('.overlay')];
 const overlaysTotal = overlayElems.length;
-overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: 180})));
+overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: i % 2 === 0 ? 360 : 180})));
 
 const tlHeader = gsap.timeline({
   scrollTrigger: {
@@ -76,10 +83,16 @@ const tlHeader = gsap.timeline({
     // markers: true,
     scrub: 5,
     snap: 1,
-    // pin: true,
-    // pinSpacing: true
+    pin: true,
+    pinSpacing: true
   }
 });
+tlHeader.to('.banner', 1.5, {
+    ease: Expo.easeInOut,
+    y: -150,
+    scaleY: 1.1,
+    opacity: 0
+},  0)
 tlHeader.staggerTo(letters, 0.2, {
     ease: Expo.easeInOut,
     y: '-100%',
@@ -94,16 +107,15 @@ tlHeader.staggerTo(otherletters, 0.2, {
     scaleY: 1.5,
     opacity: 0
 }, 0.04, 0)
-tlHeader.to('.banner', 1.5, {
-  ease: Expo.easeInOut,
-    y: '500%',
-    scaleX: 0.9,
-    scaleY: 1.1,
-    opacity: 0
-}, 0.04, 0)
-tlHeader.to('.overlay', {
-    zIndex: '150'
-})
+
+tlHeader.to(revealer.DOM.inner, 1.2, {
+    ease: Expo.easeInOut,
+    y: '-100%'
+}, 0)
+tlHeader.to(revealer.DOM.reverse, 1.2, {
+    ease: Expo.easeInOut,
+    y: '100%'
+}, 0)
 
 let t = 0;
 for (let i = 0; i <= overlaysTotal-1; ++i) {
