@@ -430,18 +430,12 @@ ul li {
 
 .contact {
   	padding: 2rem;
-  /*background:linear-gradient(225deg, */
-	    rgb(17, 29, 65) 0%, rgb(17, 29, 65) 63%,
-	    rgb(33, 58, 130) 63%, rgb(33, 58, 130) 75%,
-	    rgb(49, 86, 196) 75%, rgb(49, 86, 196) 81%,
-	    rgb(108, 136, 218) 81%, rgb(108, 136, 218) 85%,
-	    rgb(173, 189, 235) 85%, rgb(173, 189, 235) 90%,
-	    rgb(239, 242, 251) 90%, rgb(239, 242, 251) 100%);
+
 }
 
 .contact h2, .contact i, .contact p, .contact a {
   	text-align: center;
-  	color: #000;
+  	color: #FFF;
     margin-bottom: 1rem;
 }
 

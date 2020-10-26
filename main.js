@@ -23,7 +23,6 @@ class Revealer {
 function navScroll(){
   gsap.utils.toArray('#navlist a').forEach(item => {
     const activeSection = item.getAttribute("href");
-    console.log(activeSection)
     item.addEventListener('click', function(e){
       e.preventDefault();
       gsap.to(window, {duration: 1, scrollTo:activeSection});
@@ -150,11 +149,11 @@ tlBio.from('.column p', {
 const tlSkills = gsap.timeline({
   scrollTrigger: {
     trigger: ".skills",
-    start: 'top +=20%',
+    start: 'top center',
     end: '+=20%',
     toggleActions: "play pause reverse reset",
-    // markers: true,
     scrub: 1
+    // markers: true,
   }
 });
 tlSkills.from('.skills h2', {
@@ -173,11 +172,11 @@ tlSkills.from('.skill--list', {
 tlSkills.from('.skill--list', {
   opacity: 0,
   duration: 0.5
-}, "<0.25")
+}, "<-0.25")
 
 tlSkills.to('nav ul', {
   background: "linear-gradient(45deg,#000000,#152331)"
-})
+}, "+=4")
 tlSkills.to('nav ul li a', {
   color: "#fff"
 })
