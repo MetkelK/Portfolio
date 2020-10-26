@@ -73,12 +73,12 @@ firstPageContent.enter.addEventListener('mouseleave', function(){
     enterTL.reverse()
 })
 
-const revealer = new Revealer(content.first, {angle:360});
+const revealer = new Revealer(content.first, {angle:0});
 
 const overlays = [];
 const overlayElems = [...document.querySelectorAll('.overlay')];
 const overlaysTotal = overlayElems.length;
-overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: i % 2 === 0 ? 360 : 180})));
+overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: i % 2 === 0 ? 45 : -45})));
 
 const tlHeader = gsap.timeline({
   scrollTrigger: {
