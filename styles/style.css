@@ -533,5 +533,11 @@ form {
 
 footer {
 	text-align: center;
-  border-top: 1px solid #EFF2FB;
+  background: linear-gradient(45deg,#5B6C7D,#36404A);
+}
+
+footer p {
+  margin: 0;
+  padding: 1rem;
+  color: #fff;
 }
