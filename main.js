@@ -97,7 +97,7 @@ const bioNav = gsap.timeline({
 const skillsNav = gsap.timeline({
   scrollTrigger: {
     trigger: '.skills',
-    start: 'top top',
+    start: '-50px top',
     end: '+=1px',
     toggleActions: "play pause reverse reset",
     scrub: 0.1,
@@ -113,7 +113,7 @@ const skillsNav = gsap.timeline({
 const projectssNav = gsap.timeline({
   scrollTrigger: {
     trigger: '.projects',
-    start: 'top top',
+    start: '-50px top',
     end: '+=1px',
     toggleActions: "play pause reverse reset",
     scrub: 0.1,

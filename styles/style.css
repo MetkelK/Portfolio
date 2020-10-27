@@ -199,7 +199,7 @@ ul li {
 .revealer--move {
   will-change: transform;
   overflow: hidden;
-  background:linear-gradient(45deg, 
+  background:linear-gradient(315deg, 
     #131515 0%, 
     #131515 63%,
     #3A4040 63%, 
@@ -310,6 +310,7 @@ ul li {
 
 .skills {
   height: 100vh;
+  overflow: hidden;
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
