@@ -18,9 +18,9 @@ a {
   	color: black;
 }
 
-a:active, a:visited {
+/*a:active, a:visited {
   	color: black;
-}
+}*/
 
 .header {
   height: 100vh;
@@ -29,7 +29,7 @@ a:active, a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg,#000000,#152331);
+  background: linear-gradient(45deg,#000000,#152331);
 
 }
 
@@ -43,7 +43,7 @@ nav {
 }
 
 ul {
-  background: linear-gradient(45deg,#000000,#152331);
+  background: linear-gradient(45deg,#5B6C7D,#36404A);
   display: flex;
   justify-content: space-around;
   padding: 1rem 2rem;
@@ -53,6 +53,11 @@ ul {
 
 ul li {
   list-style-type: none;
+  text-transform: uppercase;
+}
+
+ul li a {
+  color: #fff;
 }
 
 .overlay {
@@ -211,11 +216,8 @@ ul li {
     #231F20 85%, 
     #231F20 90%,
     #D8D2E1 90%, 
-    #D8D2E1 100%);
-            
+    #D8D2E1 100%);    
 }
-
-
 
 .revealer--reverse {
   width: 100%;
@@ -278,7 +280,7 @@ ul li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg,#000000,#152331);   
+  background: linear-gradient(135deg,#000000,#152331);   
 }
 
 .bio {
@@ -317,11 +319,11 @@ ul li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(45deg,#e0eafc,#cfdef3);
+  background: linear-gradient(45deg,#000000,#152331);
 }
 
 .skills h2 {
-  	color: #000;
+  	color: #FFF;
   	text-transform: uppercase;
   	letter-spacing: 1rem;
   	font-style: italic;
@@ -365,7 +367,7 @@ ul li {
   overflow: hidden;
   	position: relative;
   	padding: 3rem 0;
-  	background: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+  	background: linear-gradient(225deg,#000000,#152331);
 }
 
 .projects h2 {
@@ -472,13 +474,14 @@ ul li {
   	margin: 4px 2px;
   	padding: 0.5rem 1rem;
   	transition-duration: 0.3s;
+    will-change: transform;
 }
 
-.project_button:hover {
+/*.project_button:hover {
   	background-color: #244091;
   	border: 1px solid #244091;
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
-}
+}*/
 
 .project_button a {
   color: #FFF;
