@@ -31,35 +31,6 @@ function navScroll(){
 }
 navScroll();
 
-// let last_known_scroll_position = 0;
-// let ticking = false;
-// let prevScrollPos = window.pageYOffset;
-
-// function windowScroll(e){
-//   let currentScrollPos = window.pageYOffset;
-//   if (prevScrollPos < currentScrollPos) {
-//     // console.log('scroll down');
-//     gsap.to(window, {duration: 0.1, scrollTo:'#skills'});
-//   } else {
-//     // console.log('scroll up');
-//     gsap.to(window, {duration: 0.1, scrollTo:'#about'});
-//   }
-//   prevScrollPos = currentScrollPos;
-// }
-
-// window.addEventListener('scroll', function(e){
-//   last_known_scroll_position = window.scrollY;
-
-//   if (!ticking) {
-//     window.requestAnimationFrame(function() {
-//       windowScroll(last_known_scroll_position);
-//       ticking = false;
-//     });
-
-//     ticking = true;
-//   }
-// })
-
 const content = {
   first: document.querySelector('.revealer--first'),
   second: document.querySelector('.revealer--second')
@@ -147,12 +118,12 @@ firstPageContent.enter.addEventListener('mouseleave', function(){
     enterTL.reverse()
 })
 
-const revealer = new Revealer(content.first, {angle:0});
+const revealer = new Revealer(content.first, {angle: 0});
 
 const overlays = [];
 const overlayElems = [...document.querySelectorAll('.overlay')];
 const overlaysTotal = overlayElems.length;
-overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: i % 2 === 0 ? 45 : -45})));
+overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: i % 2 === 0 ? 30 : -30})));
 
 const tlHeader = gsap.timeline({
   scrollTrigger: {
@@ -161,7 +132,7 @@ const tlHeader = gsap.timeline({
     end: '+=100%',
     toggleActions: "play pause reverse reset",
     // markers: true,
-    scrub: 5,
+    scrub: 3,
     // snap: {
     //     snapTo: 1,
     //     duration: 0.3,
@@ -171,7 +142,7 @@ const tlHeader = gsap.timeline({
 });
 tlHeader.to('.banner', 1.5, {
     ease: Expo.easeInOut,
-    y: "150%",
+    y: "300%",
     scaleY: 1.1,
     opacity: 0
 },  0)
