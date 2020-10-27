@@ -205,18 +205,18 @@ ul li a {
   will-change: transform;
   overflow: hidden;
   background:linear-gradient(315deg, 
-    #14110F 0%, 
-    #14110F 63%,
-    #5F1A37 63%, 
-    #5F1A37 75%,
-    #57737A 75%, 
-    #57737A 81%,
-    #DB504A 81%, 
-    #DB504A 85%,
-    #231F20 85%, 
-    #231F20 90%,
-    #D8D2E1 90%, 
-    #D8D2E1 100%);    
+    #030C11 0%, 
+    #030C11 63%,
+    #0F3E57 63%, 
+    #0F3E57 75%,
+    #1B6F9D 75%, 
+    #1B6F9D 81%,
+    #2E9FDC 81%, 
+    #2E9FDC 85%,
+    #73BFE7 85%, 
+    #73BFE7 90%,
+    #B9DFF3 90%, 
+    #B9DFF3 100%);    
 }
 
 .revealer--reverse {
@@ -329,6 +329,7 @@ ul li a {
   	font-style: italic;
   	text-align: center;
     margin: 0;
+    padding-top: 3rem;
 }
 
 .skill--list {

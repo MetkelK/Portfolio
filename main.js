@@ -163,7 +163,7 @@ const revealer = new Revealer(content.first, {angle: 0});
 const overlays = [];
 const overlayElems = [...document.querySelectorAll('.overlay')];
 const overlaysTotal = overlayElems.length;
-overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: i % 2 === 0 ? 30 : -30})));
+overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: i % 2 === 0 ? 6 : -6})));
 
 const tlHeader = gsap.timeline({
   scrollTrigger: {
@@ -203,7 +203,7 @@ tlHeader.staggerTo(otherletters, 0.2, {
 
 tlHeader.to(revealer.DOM.inner, 1.2, {
     ease: Expo.easeInOut,
-    y: '-100%'
+    y: '-100%',
 }, 0)
 tlHeader.to(revealer.DOM.reverse, 1.2, {
     ease: Expo.easeInOut,
