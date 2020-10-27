@@ -81,6 +81,51 @@ firstPageContent.titleLetters.sort(() => Math.round(Math.random())-0.5);
 let letters = firstPageContent.titleLetters.filter(_ => Math.random() < .5);
 let otherletters = firstPageContent.titleLetters.filter(el => letters.indexOf(el) < 0);
 
+const bioNav = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.header',
+    start: 'bottom bottom',
+    end: '+=10%',
+    toggleActions: "play pause reverse reset",
+    scrub: 0.1,
+  }
+})
+.to('nav ul', {
+  background: 'linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%)',
+})
+
+const skillsNav = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.skills',
+    start: 'top top',
+    end: '+=1px',
+    toggleActions: "play pause reverse reset",
+    scrub: 0.1,
+  }
+})
+.to('nav ul', {
+  background: 'linear-gradient(45deg,#000000,#152331)',
+})
+.to('nav a', {
+  color: '#FFF'
+})
+
+const projectssNav = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.projects',
+    start: 'top top',
+    end: '+=1px',
+    toggleActions: "play pause reverse reset",
+    scrub: 0.1,
+  }
+})
+.to('nav ul', {
+  background: 'linear-gradient(45deg, rgb(224, 234, 252), rgb(207, 222, 243))',
+})
+.to('nav a', {
+  color: '#000'
+})
+
 const enterTL = gsap.timeline({paused: true})
 .staggerTo(letters, 0.2, {
     ease: Quad.easeIn,
@@ -160,24 +205,24 @@ tlHeader.to('.revealer--first', {
 let t = 0;
 for (let i = 0; i <= overlaysTotal-1; ++i) {
 t = 0.2*i+0.2
-tlHeader.to(overlays[overlaysTotal-1-i].DOM.inner, 1, {
+tlHeader.to(overlays[overlaysTotal-1-i].DOM.inner, 0.6, {
     ease: Expo.easeInOut,
     y: '100%'
 }, t);
 }
-tlHeader.to('nav ul', 0.5, {
-  background: 'linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%)'
-})
+// tlHeader.to('nav ul', 0.5, {
+//   background: 'linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%)'
+// }, ">-0.5")
 
 
 const tlBio = gsap.timeline({
   scrollTrigger: {
     trigger: '.about',
-    start: 'top +=30%',
-    end: '+=10%',
+    start: 'top center',
+    end: '+=5%',
     toggleActions: "play pause reverse reset",
-    markers: true,
-    scrub: 1
+    // markers: true,
+    scrub: 4
   }
 });
 tlBio.from('.bio h2', {
@@ -204,7 +249,7 @@ const tlSkills = gsap.timeline({
     start: 'top center',
     end: '+=20%',
     toggleActions: "play pause reverse reset",
-    scrub: 1
+    scrub: 3,
     // markers: true,
   }
 });
@@ -226,19 +271,19 @@ tlSkills.from('.skill--list', {
   duration: 0.5
 }, "<-0.25")
 
-tlSkills.to('nav ul', {
-  background: "linear-gradient(45deg,#000000,#152331)"
-}, "+=4")
-tlSkills.to('nav ul li a', {
-  color: "#fff"
-})
+// tlSkills.to('nav ul', {
+//   background: "linear-gradient(45deg,#000000,#152331)"
+// }, "+=4")
+// tlSkills.to('nav ul li a', {
+//   color: "#fff"
+// })
 
 const tlProjects = gsap.timeline({
    scrollTrigger: {
     trigger: ".projects",
     start: 'top +=80%',
     end: '+=80%',
-    scrub: 1,
+    scrub: 2,
     toggleActions: "play pause reverse reset",
     // markers: true
   } 
@@ -271,9 +316,9 @@ tlProjects.from('#project4', 1, {
   opacity: 0,
   x: '500%'
 })
-tlProjects.to('nav ul', {
-  background: "linear-gradient(45deg,#e0eafc,#cfdef3)"
-}, '<10')
-tlProjects.to('nav ul li a', {
-  color: "#000"
-})
+// tlProjects.to('nav ul', {
+//   background: "linear-gradient(45deg,#e0eafc,#cfdef3)"
+// }, '<10')
+// tlProjects.to('nav ul li a', {
+//   color: "#000"
+// })
