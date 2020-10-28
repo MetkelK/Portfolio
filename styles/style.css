@@ -338,7 +338,7 @@ ul li a:hover {
 }
 
 .skill--list {
-  	background-color: #FFFFF3;
+  	background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
   	padding: 1rem;
   	margin: 2rem;
   	display: grid;
@@ -426,7 +426,7 @@ ul li a:hover {
   	justify-content: flex-end;
 }
 
-#project2 {
+#project2, #project4 {
 	text-align: right;
 }
 
