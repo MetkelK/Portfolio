@@ -273,14 +273,14 @@ tlSkills.from('.skills h2', {
   duration: 0.5
 }, "<0.5")
 
-tlSkills.from('.skill--list', {
-  y: '500%',
-  duration: 1
-})
-tlSkills.from('.skill--list', {
-  opacity: 0,
-  duration: 0.5
-}, "<-0.25")
+// tlSkills.from('.skill--list', {
+//   y: '500%',
+//   duration: 1
+// })
+// tlSkills.from('.skill--list', {
+//   opacity: 0,
+//   duration: 0.5
+// }, "<-0.25")
 
 // tlSkills.to('nav ul', {
 //   background: "linear-gradient(45deg,#000000,#152331)"

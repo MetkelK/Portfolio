@@ -43,7 +43,7 @@ nav {
 }
 
 ul {
-  background: linear-gradient(45deg,#5B6C7D,#36404A);
+background: linear-gradient(225deg, #2f4353 0%, #d2ccc4 74%);
   display: flex;
   justify-content: space-around;
   padding: 1rem 2rem;
@@ -57,7 +57,7 @@ ul li {
 }
 
 ul li a {
-  color: #fff;
+  color: #000;
   transition: 0.3s;
 }
 
@@ -388,7 +388,7 @@ ul li a:hover {
 }
 
 .project {
-  	background-color: #FFFFF3;
+  	background-color: #fff;
   	padding: 1rem;
   	margin: 2rem;
   	display: flex;
@@ -539,7 +539,7 @@ form {
 
 footer {
 	text-align: center;
-  background: linear-gradient(45deg,#5B6C7D,#36404A);
+  background: linear-gradient(45deg, #2f4353 50%, #d2ccc4 74%);
 }
 
 footer p {
