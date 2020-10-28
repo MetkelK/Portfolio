@@ -31,43 +31,6 @@ function navScroll(){
 }
 navScroll();
 
-// let buttons = gsap.utils.toArray('.project_button');
-//   console.log(buttons)
-// buttons.forEach(button, i => { 
-//   const buttonTL = gsap.timeline({paused: true})
-//   .to(button[i], {
-//     backgroundColor: '#000'
-//   })
-
-//   button.addEventListener('mouseenter', function(){
-//     buttonTL.play();
-//   })
-//   button.addEventListener('mouseleave', function(){
-//     buttonTL.reverse();
-//   })
-// })
-
-// const buttonTL = gsap.timeline({paused: true})
-// .staggerTo(letters, 0.2, {
-//     ease: Quad.easeIn,
-//     y: '-100%',
-//     opacity: 0
-// }, 0.04, 0)
-// .staggerTo(letters, 0.6, {
-//     ease: Quint.easeOut,
-//     startAt: {y: '35%'},
-//     y: '0%',
-//     opacity: 1
-// }, 0.04, 0.2);
-
-// firstPageContent.enter.addEventListener('mouseenter', function(){
-//     enterTL.play()
-// })
-
-// firstPageContent.enter.addEventListener('mouseleave', function(){
-//     enterTL.reverse()
-// })
-
 const content = {
   first: document.querySelector('.revealer--first'),
   second: document.querySelector('.revealer--second')
@@ -89,53 +52,6 @@ firstPageContent.titleLetters.sort(() => Math.round(Math.random())-0.5);
 let letters = firstPageContent.titleLetters.filter(_ => Math.random() < .5);
 let otherletters = firstPageContent.titleLetters.filter(el => letters.indexOf(el) < 0);
 
-// const bioNav = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: '.header',
-//     start: 'bottom bottom',
-//     end: '+=10%',
-//     toggleActions: "play pause reverse reset",
-//     scrub: 0.1,
-//   }
-// })
-// .to('nav ul', {
-//   background: 'linear-gradient(45.34deg, #5B507A 5.66%, #9EADC8 94.35%)',
-// })
-// .to('nav a', {
-//   color: '#fff'
-// })
-
-// const skillsNav = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: '.skills',
-//     start: '-50px top',
-//     end: '+=1px',
-//     toggleActions: "play pause reverse reset",
-//     scrub: 0.1,
-//   }
-// })
-// .to('nav ul', {
-//   background: 'linear-gradient(45deg,#000000,#152331)',
-// })
-// .to('nav a', {
-//   color: '#FFF'
-// })
-
-// const projectssNav = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: '.projects',
-//     start: '-50px top',
-//     end: '+=1px',
-//     toggleActions: "play pause reverse reset",
-//     scrub: 0.1,
-//   }
-// })
-// .to('nav ul', {
-//   background: 'linear-gradient(45deg, rgb(224, 234, 252), rgb(207, 222, 243))',
-// })
-// .to('nav a', {
-//   color: '#000'
-// })
 
 const enterTL = gsap.timeline({paused: true})
 .staggerTo(letters, 0.2, {
@@ -273,6 +189,7 @@ tlSkills.from('.skills h2', {
   duration: 0.5
 }, "<0.5")
 
+
 // tlSkills.from('.skill--list', {
 //   y: '500%',
 //   duration: 1
@@ -282,12 +199,6 @@ tlSkills.from('.skills h2', {
 //   duration: 0.5
 // }, "<-0.25")
 
-// tlSkills.to('nav ul', {
-//   background: "linear-gradient(45deg,#000000,#152331)"
-// }, "+=4")
-// tlSkills.to('nav ul li a', {
-//   color: "#fff"
-// })
 
 const tlProjects = gsap.timeline({
    scrollTrigger: {
@@ -327,10 +238,3 @@ tlProjects.from('#project4', 1, {
   opacity: 0,
   x: '500%'
 })
-// tlProjects.to('nav ul', {
-//   background: "linear-gradient(45deg,#e0eafc,#cfdef3)"
-// }, '<10')
-// tlProjects.to('nav ul li a', {
-//   color: "#000"
-// })
-
