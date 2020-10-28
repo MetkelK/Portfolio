@@ -58,6 +58,11 @@ ul li {
 
 ul li a {
   color: #fff;
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  color: #6E8296;
 }
 
 .overlay {
@@ -464,8 +469,8 @@ ul li a {
 }
 
 .project_button {
-  	background-color: #262E45;
-  	border: 1px solid #262E45;
+  	background-color: #36597D;
+  	border: 1px solid #36597D;
     color: #FFF;
   	border-radius: 4px;
   	text-align: center;
@@ -476,13 +481,14 @@ ul li a {
   	padding: 0.5rem 1rem;
   	transition-duration: 0.3s;
     will-change: transform;
+    overflow: hidden;
 }
 
-/*.project_button:hover {
-  	background-color: #244091;
-  	border: 1px solid #244091;
+.project_button:hover {
+  	background-color: #5790C9;
+  	border: 1px solid #5790C9;
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
-}*/
+}
 
 .project_button a {
   color: #FFF;
@@ -540,4 +546,8 @@ footer p {
   margin: 0;
   padding: 1rem;
   color: #fff;
+}
+
+.buttonarrow {
+
 }
