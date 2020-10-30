@@ -25,7 +25,7 @@ function navScroll(){
     const activeSection = item.getAttribute("href");
     item.addEventListener('click', function(e){
       e.preventDefault();
-      gsap.to(window, {duration: 1, scrollTo:activeSection});
+      gsap.to(window, {duration: 0.1, scrollTo:activeSection});
     });  
   });
 }
@@ -79,23 +79,19 @@ const revealer = new Revealer(content.first, {angle: 0});
 const overlays = [];
 const overlayElems = [...document.querySelectorAll('.overlay')];
 const overlaysTotal = overlayElems.length;
-overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: i % 2 === 0 ? 6 : -6})));
+overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: i % 2 === 0 ? 45 : -45})));
 
 const tlHeader = gsap.timeline({
   scrollTrigger: {
     trigger: '.header',
     start: 'top top',
-    end: '+=100%',
+    end: '+=65%',
     toggleActions: "play pause reverse reset",
     // markers: true,
-    scrub: 3,
-    // snap: {
-    //     snapTo: 1,
-    //     duration: 0.3,
-    //     ease: Expo.easeIn
-    // }
+    scrub: 4,
   }
 });
+
 tlHeader.to('.banner', 1.5, {
     ease: Expo.easeInOut,
     y: "300%",
@@ -125,9 +121,7 @@ tlHeader.to(revealer.DOM.reverse, 1.2, {
     ease: Expo.easeInOut,
     y: '100%'
 }, 0)
-tlHeader.to('.revealer--first', {
-    zIndex: 0
-})
+
 
 let t = 0;
 for (let i = 0; i <= overlaysTotal-1; ++i) {
@@ -137,10 +131,9 @@ tlHeader.to(overlays[overlaysTotal-1-i].DOM.inner, 0.6, {
     y: '100%'
 }, t);
 }
-// tlHeader.to('nav ul', 0.5, {
-//   background: 'linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%)'
-// }, ">-0.5")
-
+tlHeader.to('.revealer--first', 0.1,{
+    zIndex: 0
+}, ">")
 
 const tlBio = gsap.timeline({
   scrollTrigger: {
@@ -148,8 +141,9 @@ const tlBio = gsap.timeline({
     start: 'top center',
     end: '+=5%',
     toggleActions: "play pause reverse reset",
+    // once: true,
     // markers: true,
-    scrub: 4
+    scrub: 4,
   }
 });
 tlBio.from('.bio h2', {
@@ -176,6 +170,7 @@ const tlSkills = gsap.timeline({
     start: 'top center',
     end: '+=20%',
     toggleActions: "play pause reverse reset",
+    // once: true,
     scrub: 3,
     // markers: true,
   }
@@ -206,7 +201,8 @@ const tlProjects = gsap.timeline({
     start: 'top +=80%',
     end: '+=80%',
     scrub: 2,
-    toggleActions: "play pause reverse reset",
+    // toggleActions: "play pause reverse reset",
+    once: true,
     // markers: true
   } 
 })
