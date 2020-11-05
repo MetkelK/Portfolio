@@ -51,6 +51,8 @@ firstPageContent.titleLetters = [...firstPageContent.enter.querySelectorAll('spa
 firstPageContent.titleLetters.sort(() => Math.round(Math.random())-0.5);
 let letters = firstPageContent.titleLetters.filter(_ => Math.random() < .5);
 let otherletters = firstPageContent.titleLetters.filter(el => letters.indexOf(el) < 0);
+console.log(letters)
+console.log(otherletters)
 
 
 const enterTL = gsap.timeline({paused: true})
@@ -79,7 +81,7 @@ const revealer = new Revealer(content.first, {angle: 0});
 const overlays = [];
 const overlayElems = [...document.querySelectorAll('.overlay')];
 const overlaysTotal = overlayElems.length;
-overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: i % 2 === 0 ? 45 : -45})));
+overlayElems.forEach((overlay,i) => overlays.push(new Revealer(overlay, {angle: -45})));
 
 const tlHeader = gsap.timeline({
   scrollTrigger: {
@@ -88,7 +90,9 @@ const tlHeader = gsap.timeline({
     end: '+=65%',
     toggleActions: "play pause reverse reset",
     // markers: true,
-    scrub: 4,
+    scrub: 1,
+    pin: true,
+
   }
 });
 
@@ -143,7 +147,7 @@ const tlBio = gsap.timeline({
     toggleActions: "play pause reverse reset",
     // once: true,
     // markers: true,
-    scrub: 4,
+    scrub: 1,
   }
 });
 tlBio.from('.bio h2', {

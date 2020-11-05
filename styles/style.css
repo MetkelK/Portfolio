@@ -29,7 +29,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg,#000000,#152331);
+  background: linear-gradient(225deg, #FAEBD7 5%, #F5F5F5 20%);
 }
 
 nav {
@@ -42,7 +42,7 @@ nav {
 }
 
 ul {
-background: linear-gradient(225deg, #FAEBD7 5%, #F5F5F5 20%);
+background: linear-gradient(45deg,#000000,#152331);
   display: flex;
   justify-content: space-around;
   padding: 1rem 2rem;
@@ -56,7 +56,7 @@ ul li {
 }
 
 ul li a {
-  color: #000;
+  color: #fff;
   transition: 0.2s;
 }
 
@@ -83,6 +83,21 @@ ul li a:hover {
   flex: none;
   background: #ccc;
   will-change: transform;
+}
+
+.overlay--1 {
+  top: 10%;
+  left: 10%;
+}
+
+.overlay--2 {
+  top: 20%;
+  left: 20%;
+}
+
+.overlay--3 {
+  top: 30%;
+  left: 30%;
 }
 
 .overlay__inner--color-1 {
@@ -284,12 +299,13 @@ ul li a:hover {
 }
 
 .about {
+  position: relative;
 	height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg,#000000,#152331);   
+  background: linear-gradient(45deg, #FAEBD7 5%, #F5F5F5 20%);
 }
 
 .bio {
@@ -297,7 +313,7 @@ ul li a:hover {
 }
 
 .bio h2 {
-	color: #FFFFF3;
+	color: #000;
   text-transform: uppercase;
   letter-spacing: 1rem;
   font-style: italic;
@@ -311,7 +327,7 @@ ul li a:hover {
 }
 
 .column p {
-  color: #fff;
+  color: #000;
 }
 
 @media all and (min-width: 1200px) {
@@ -328,11 +344,11 @@ ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(45deg,#000000,#152331);
+  background:linear-gradient(135deg, #FAEBD7 5%, #F5F5F5 20%);
 }
 
 .skills h2 {
-  	color: #FFF;
+  	color: #000;
   	text-transform: uppercase;
   	letter-spacing: 1rem;
   	font-style: italic;
@@ -377,11 +393,11 @@ ul li a:hover {
   overflow: hidden;
   	position: relative;
   	padding: 3rem 0;
-  	background: linear-gradient(225deg,#000000,#152331);
+  	background: linear-gradient(315deg, #FAEBD7 5%, #F5F5F5 20%);
 }
 
 .projects h2 {
-  	color: #FFF;
+  	color: #000;
   	text-transform: uppercase;
   	letter-spacing: 1rem;
   	font-style: italic;
@@ -505,7 +521,7 @@ ul li a:hover {
 
 .contact h2, .contact i, .contact p, .contact a {
   	text-align: center;
-  	color: #FFF;
+  	color: #000;
     margin-bottom: 1rem;
 }
 
@@ -543,13 +559,13 @@ form {
 
 footer {
 	text-align: center;
-  background: linear-gradient(45deg, #FAEBD7 5%, #F5F5F5 20%);
+  background:linear-gradient(45deg,#000000,#152331);
 }
 
 footer p {
   margin: 0;
   padding: 1rem;
-  color: #000;
+  color: #fff;
 }
 
 svg {
