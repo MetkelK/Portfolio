@@ -152,7 +152,7 @@ const tlBio = gsap.timeline({
   scrollTrigger: {
     trigger: '.about',
     start: 'top center',
-    end: '+=50%',
+    end: '+=10%',
     toggleActions: "play pause reverse reset",
     // once: true,
     // markers: true,

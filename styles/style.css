@@ -416,6 +416,10 @@ ul li a:hover {
   justify-items: center;
 }
 
+@media all and (min-width: 1200px) {
+  
+}
+
 .project {
   	background-color: #fff;
   	padding: 1rem;
@@ -493,9 +497,13 @@ ul li a:hover {
 
 @media all and (min-width: 1200px) {
 	.project {
-    	margin: 2rem auto;
-    	width: 70%;
+    	margin: 1rem auto;
+    	width: 90%;
   	}
+
+  .projects-container {
+    grid-template: 1fr 1fr / 1fr 1fr ;
+  }
 }
 
 .project_button {
@@ -570,8 +578,8 @@ form {
 
 footer {
 	text-align: center;
-  background: linear-gradient(45deg, #FAEBD7 5%, #F5F5F5 20%);
-}
+  background-color: #F5F5F5;
+  box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);}
 
 footer p {
   margin: 0;
