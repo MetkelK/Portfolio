@@ -29,7 +29,8 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(0deg,#000000,#152331);
+  /*background: linear-gradient(0deg,#000000,#152331);*/
+  background: linear-gradient(to bottom, #cfd9df 0%, #e2ebf0 100%);
 }
 
 nav {
@@ -155,7 +156,7 @@ ul li a:hover {
     rgba(255, 153, 187, 1) 85.716%,
     rgba(255, 198, 217, 1) 85.716%, 
     rgba(255, 198, 217, 1) 100.002%);*/
-    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
 }
 
 .overlay__inner--color-3 {
@@ -294,7 +295,8 @@ ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg,#000000,#152331);   
+  /*background: linear-gradient(180deg,#000000,#152331);  */ 
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 
 .bio {
@@ -302,11 +304,13 @@ ul li a:hover {
 }
 
 .bio h2 {
-	color: #FFFFF3;
+	color: #000;
   text-transform: uppercase;
   letter-spacing: 1rem;
   font-style: italic;
 	text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .column {
@@ -316,10 +320,10 @@ ul li a:hover {
 }
 
 .column p {
-  color: #fff;
+  color: #000;
 }
 
-.column span {
+.columnTitle {
   will-change: transform;
   display: inline-block;
   white-space: pre;
@@ -339,11 +343,13 @@ ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(0deg,#000000,#152331);
+  align-items: center;
+ /* background: linear-gradient(0deg,#000000,#152331);*/
+ background: linear-gradient(to bottom, #cfd9df 0%, #e2ebf0 100%);
 }
 
 .skills h2 {
-  	color: #FFF;
+  	color: #000;
   	text-transform: uppercase;
   	letter-spacing: 1rem;
   	font-style: italic;
@@ -361,10 +367,12 @@ ul li a:hover {
   	border-radius: 5px;
   	box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
   	text-align: center;
+    max-width: 1200px;
 }
 
 .skill-icon {
 	font-size: 6vw;
+  padding: 1rem 2rem;
 }
 
 @media all and (min-width: 738px)  {
@@ -388,11 +396,12 @@ ul li a:hover {
   overflow: hidden;
   position: relative;
   padding: 3rem 0;
-  background: linear-gradient(180deg,#000000,#152331);
+  /*background: linear-gradient(180deg,#000000,#152331);*/
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 
 .projects h2 {
-    color: #FFF;
+    color: #000;
     text-transform: uppercase;
     letter-spacing: 1rem;
     font-style: italic;
@@ -402,9 +411,9 @@ ul li a:hover {
 }
 
 .projects-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr ;
+  justify-items: center;
 }
 
 .project {
@@ -490,8 +499,8 @@ ul li a:hover {
 }
 
 .project_button {
-  	background-color: #5790C9;
-  	border: 1px solid #5790C9;
+  	background: linear-gradient(45deg,#000000,#152331);
+  	border: 1px solid #152331;
     color: #FFF;
   	border-radius: 4px;
   	text-align: center;
@@ -506,23 +515,24 @@ ul li a:hover {
 }
 
 .project_button:hover {
-  	background-color: #36597D;
-  	border: 1px solid #36597D;
+  	background:  linear-gradient(135deg,#000000,#152331);
+  	border: 1px solid #000000;
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
 }
 
 .project_button a {
-  color: #FFF;
+  color: #fff;
 }
 
 .contact {
   	padding: 2rem;
-    background: linear-gradient(0deg,#000000,#152331);
+    background-image: linear-gradient(to bottom, #cfd9df 0%, #e2ebf0 100%);
+    /*background: linear-gradient(0deg,#000000,#152331);*/
 }
 
 .contact h2, .contact i, .contact p, .contact a {
   	text-align: center;
-  	color: #FFF;
+  	color: #000;
     margin-bottom: 1rem;
 }
 

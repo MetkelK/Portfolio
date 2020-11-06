@@ -58,12 +58,12 @@ let letters = firstPageContent.titleLetters.filter(_ => Math.random() < .5);
 let otherletters = firstPageContent.titleLetters.filter(el => letters.indexOf(el) < 0);
 
 const bioContent = {
-  story: document.querySelector('.column')
+  story: document.querySelector('.columnTitle')
 };
 
 charming(bioContent.story);
 bioContent.storyLetters = [...bioContent.story.querySelectorAll('span')];
-bioContent.storyLetters.sort(() => Math.round(Math.random())-0.5);
+// bioContent.storyLetters.sort(() => Math.round(Math.random())-0.5);
 console.log(bioContent.storyLetters)
 
 const enterTL = gsap.timeline({paused: true})
@@ -152,21 +152,21 @@ const tlBio = gsap.timeline({
   scrollTrigger: {
     trigger: '.about',
     start: 'top center',
-    end: '+=10%',
+    end: '+=50%',
     toggleActions: "play pause reverse reset",
     // once: true,
     // markers: true,
     scrub: 5,
   }
 });
-tlBio.from('.bio h2', {
-  opacity: 0,
-  duration: 1
-})
-tlBio.from('.bio h2', {
-  y: '-500%',
-  duration: 0.5
-},"<-0.25")
+// tlBio.from('.bio h2', {
+//   opacity: 0,
+//   duration: 1
+// })
+// tlBio.from('.bio h2', {
+//   y: '-500%',
+//   duration: 0.5
+// },"<-0.25")
 // tlBio.from('.column p', {
 //   opacity: 0,
 //   duration: 1
@@ -179,18 +179,18 @@ tlBio.from(bioContent.storyLetters, 0.5, {
     ease: Expo.easeInOut,
     y: '-100%',
     opacity: 0,
-    stagger: 0.004,
+    stagger: 0.014,
 })
 
 
 const tlSkills = gsap.timeline({
   scrollTrigger: {
     trigger: ".skills",
-    start: 'top center',
+    start: 'top bottom',
     end: '+=20%',
     toggleActions: "play pause reverse reset",
     // once: true,
-    scrub: 3,
+    scrub: 1,
     // markers: true,
   }
 });
