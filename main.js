@@ -40,6 +40,11 @@ const firstPageContent = {
   enter: content.first.querySelector('.enter')
 };
 
+gsap.to('.banner', 0.8,{
+  delay: 0.8,
+  clipPath: 'inset(1% 0)'
+})
+
 gsap.to('.arrow', {
   y: -50,
   repeat: '-1',
@@ -52,6 +57,14 @@ firstPageContent.titleLetters.sort(() => Math.round(Math.random())-0.5);
 let letters = firstPageContent.titleLetters.filter(_ => Math.random() < .5);
 let otherletters = firstPageContent.titleLetters.filter(el => letters.indexOf(el) < 0);
 
+const bioContent = {
+  story: document.querySelector('.column')
+};
+
+charming(bioContent.story);
+bioContent.storyLetters = [...bioContent.story.querySelectorAll('span')];
+bioContent.storyLetters.sort(() => Math.round(Math.random())-0.5);
+console.log(bioContent.storyLetters)
 
 const enterTL = gsap.timeline({paused: true})
 .staggerTo(letters, 0.2, {
@@ -139,11 +152,11 @@ const tlBio = gsap.timeline({
   scrollTrigger: {
     trigger: '.about',
     start: 'top center',
-    end: '+=5%',
+    end: '+=10%',
     toggleActions: "play pause reverse reset",
     // once: true,
     // markers: true,
-    scrub: 4,
+    scrub: 5,
   }
 });
 tlBio.from('.bio h2', {
@@ -154,14 +167,20 @@ tlBio.from('.bio h2', {
   y: '-500%',
   duration: 0.5
 },"<-0.25")
-tlBio.from('.column p', {
-  opacity: 0,
-  duration: 1
+// tlBio.from('.column p', {
+//   opacity: 0,
+//   duration: 1
+// })
+// tlBio.from('.column p', {
+//   y: '500%',
+//   duration: 0.5
+// }, "<-0.25")
+tlBio.from(bioContent.storyLetters, 0.5, {
+    ease: Expo.easeInOut,
+    y: '-100%',
+    opacity: 0,
+    stagger: 0.004,
 })
-tlBio.from('.column p', {
-  y: '500%',
-  duration: 0.5
-}, "<-0.25")
 
 
 const tlSkills = gsap.timeline({
@@ -206,31 +225,31 @@ const tlProjects = gsap.timeline({
     // markers: true
   } 
 })
-tlProjects.from('.projects h2', {
-  y: '-500%',
-  duration: 1
-})
-tlProjects.from('.projects h2', {
-  opacity: 0,
-  duration: 0.5
-}, "<0.5")
-tlProjects.from('#project1', 1, {
-  duration: 1,
-  opacity: 0,
-  x: '-500%'
-})
-tlProjects.from('#project2', 1, {
-  duration: 1,
-  opacity: 0,
-  x: '500%'
-})
-tlProjects.from('#project3', 1, {
-  duration: 1,
-  opacity: 0,
-  x: '-500%'
-})
-tlProjects.from('#project4', 1, {
-  duration: 1,
-  opacity: 0,
-  x: '500%'
-})
+// tlProjects.from('.projects h2', {
+//   y: '-500%',
+//   duration: 1
+// })
+// tlProjects.from('.projects h2', {
+//   opacity: 0,
+//   duration: 0.5
+// }, "<0.5")
+// tlProjects.from('#project1', 1, {
+//   duration: 1,
+//   opacity: 0,
+//   x: '-500%'
+// })
+// tlProjects.from('#project2', 1, {
+//   duration: 1,
+//   opacity: 0,
+//   x: '500%'
+// })
+// tlProjects.from('#project3', 1, {
+//   duration: 1,
+//   opacity: 0,
+//   x: '-500%'
+// })
+// tlProjects.from('#project4', 1, {
+//   duration: 1,
+//   opacity: 0,
+//   x: '500%'
+// })
