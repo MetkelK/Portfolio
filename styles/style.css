@@ -438,6 +438,7 @@ ul li a:hover {
 
 .projectImage {
   width: 100%;
+  height: auto;
 }
 
 .textContainer {
@@ -510,7 +511,6 @@ ul li a:hover {
 .contact {
   	padding: 2rem;
     position: relative;
-    /*background-image: linear-gradient(to bottom, #cfd9df 0%, #e2ebf0 100%);*/
     background: linear-gradient(0deg,#000000,#152331);
 }
 
@@ -536,9 +536,6 @@ input[type=text], input[type=email], select, textarea {
   	border: 1px solid #ccc;
     background-color: transparent;
     color: #fff;
-  	/*border-radius: 4px;*/
-  	/*margin-top: 6px;*/
-  	/*margin-bottom: 16px;*/
   	resize: vertical;
 }
 
