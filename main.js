@@ -318,9 +318,8 @@ contactTL.to('.contact_button', {
   // background:'linear-gradient(135deg, #030C11 0%, #030C11 10%,#0F3E57 10%, #0F3E57 15%,#1B6F9D 15%, #1B6F9D 19%,#2E9FDC 19%, #2E9FDC 25%,#73BFE7 25%, #73BFE7 37%,#B9DFF3 37%, #B9DFF3 100%)',
     // color: '#000',
     // clipPath: 'inset(0px 0px 0px 0px)',
-    scale: 1.1,
-    backgroundColor: '#fff',
-    color: '#000',
+    backgroundColor: '#000',
+    color: '#B9DFF3',
     duration: 0.3,
     ease: Expo.easeInOut 
 })
