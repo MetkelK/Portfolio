@@ -57,14 +57,7 @@ firstPageContent.titleLetters.sort(() => Math.round(Math.random())-0.5);
 let letters = firstPageContent.titleLetters.filter(_ => Math.random() < .5);
 let otherletters = firstPageContent.titleLetters.filter(el => letters.indexOf(el) < 0);
 
-const bioContent = {
-  story: document.querySelector('.columnTitle')
-};
 
-charming(bioContent.story);
-bioContent.storyLetters = [...bioContent.story.querySelectorAll('span')];
-// bioContent.storyLetters.sort(() => Math.round(Math.random())-0.5);
-console.log(bioContent.storyLetters)
 
 const enterTL = gsap.timeline({paused: true})
 .staggerTo(letters, 0.2, {
@@ -175,12 +168,7 @@ const tlBio = gsap.timeline({
 //   y: '500%',
 //   duration: 0.5
 // }, "<-0.25")
-tlBio.from(bioContent.storyLetters, 0.5, {
-    ease: Expo.easeInOut,
-    y: '-100%',
-    opacity: 0,
-    stagger: 0.014,
-})
+
 
 
 const tlSkills = gsap.timeline({
@@ -225,6 +213,7 @@ const tlProjects = gsap.timeline({
     // markers: true
   } 
 })
+
 // tlProjects.from('.projects h2', {
 //   y: '-500%',
 //   duration: 1
@@ -253,3 +242,92 @@ const tlProjects = gsap.timeline({
 //   opacity: 0,
 //   x: '500%'
 // })
+
+
+// let buttonTimeline = gsap.timeline({ paused: true })
+// .to('.buttonContainer', 0.5, {
+//   clipPath: 'inset(1% 0)',
+// })
+// .to('.textContainer', 0.5, {
+//   clipPath: 'inset(1% 0)',
+// }, '<')
+// .to('.projectImage', 0.5, {
+//   scale: 1.2
+// },'<')
+
+// document.querySelector('.projectTest').addEventListener('mouseenter', () => {
+//   buttonTimeline.play();
+// })
+
+// document.querySelector('.projectTest').addEventListener('mouseleave', () => {
+//   buttonTimeline.reverse();
+// })
+
+// let otherButton = gsap.timeline({paused:true})
+// .to('.project', 0.3, {
+//   background:'linear-gradient(45deg, #030C11 0%, #030C11 10%,#0F3E57 10%, #0F3E57 15%,#1B6F9D 15%, #1B6F9D 19%,#2E9FDC 19%, #2E9FDC 25%,#73BFE7 25%, #73BFE7 37%,#B9DFF3 37%, #B9DFF3 100%)'
+// })
+
+
+const prjt = document.querySelectorAll('.project')
+
+prjt.forEach(project => {
+  let txt = project.childNodes[3]
+  let btn = project.childNodes[5]
+
+  const projectTL = gsap.timeline({paused:true})
+  projectTL.to(txt, {
+    clipPath: 'inset(0px 0px 0px 0px)',
+    duration: 0.5,
+    ease: Expo.easeInOut
+  })
+  projectTL.to(btn, {
+    clipPath: 'inset(0px 0px 0px 0px)',
+    duration: 0.5,
+    ease: Expo.easeInOut
+  }, '<')
+  project.addEventListener('mouseenter', () => {
+    projectTL.play()
+  })
+  project.addEventListener('mouseleave', () => {
+    projectTL.reverse()
+  })
+})
+
+
+const buttons = document.querySelectorAll('.projectButton')
+
+buttons.forEach(btn => {
+  const tl = gsap.timeline({paused: true})
+  tl.to(btn, {
+    background:'linear-gradient(135deg, #030C11 0%, #030C11 10%,#0F3E57 10%, #0F3E57 15%,#1B6F9D 15%, #1B6F9D 19%,#2E9FDC 19%, #2E9FDC 25%,#73BFE7 25%, #73BFE7 37%,#B9DFF3 37%, #B9DFF3 100%)',
+    color: '#000',
+    duration: 0.3,
+    ease: Expo.easeInOut
+  })
+  btn.addEventListener('mouseenter', () => {
+    tl.play()
+  })
+  btn.addEventListener('mouseleave', () => {
+    tl.reverse()
+  })
+})
+
+const contactTL = gsap.timeline({paused:true})
+contactTL.to('.contact_button', {
+  // background:'linear-gradient(135deg, #030C11 0%, #030C11 10%,#0F3E57 10%, #0F3E57 15%,#1B6F9D 15%, #1B6F9D 19%,#2E9FDC 19%, #2E9FDC 25%,#73BFE7 25%, #73BFE7 37%,#B9DFF3 37%, #B9DFF3 100%)',
+    // color: '#000',
+    // clipPath: 'inset(0px 0px 0px 0px)',
+    scale: 1.1,
+    backgroundColor: '#fff',
+    color: '#000',
+    duration: 0.3,
+    ease: Expo.easeInOut 
+})
+
+document.querySelector('.contact_button').addEventListener('mouseenter', () => {
+    contactTL.play()
+  })
+  document.querySelector('.contact_button').addEventListener('mouseleave', () => {
+    contactTL.reverse()
+  })
