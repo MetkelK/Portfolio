@@ -234,19 +234,17 @@ tlProjects.from(projectLetters, {
 const prjt = document.querySelectorAll('.project')
 
 prjt.forEach(project => {
-  let txt = project.childNodes[3]
-  let btn = project.childNodes[5]
-
+  let background = project.childNodes[3]
+  let img = project.childNodes[1]
+  console.log(project.childNodes)
   const projectTL = gsap.timeline({paused:true})
-  projectTL.to(txt, {
-    clipPath: 'inset(0px 0px 0px 0px)',
-    duration: 0.5,
-    ease: Expo.easeOut
+  projectTL.to(background, 0.5, {
+    clipPath: 'inset(0px 0px)',
+    ease: Expo.easeInOut
   })
-  projectTL.to(btn, {
-    clipPath: 'inset(0px 0px 0px 0px)',
-    duration: 0.5,
-    ease: Expo.easeOut
+  projectTL.to(img, 0.5, {
+    scale: 1.1,
+    ease: Expo.easeInOut
   }, '<')
   project.addEventListener('mouseenter', () => {
     projectTL.play()
@@ -275,20 +273,20 @@ buttons.forEach(btn => {
   })
 })
 
-const contactTL = gsap.timeline({paused:true})
-contactTL.to('.contact_button', {
-  // background:'linear-gradient(135deg, #030C11 0%, #030C11 10%,#0F3E57 10%, #0F3E57 15%,#1B6F9D 15%, #1B6F9D 19%,#2E9FDC 19%, #2E9FDC 25%,#73BFE7 25%, #73BFE7 37%,#B9DFF3 37%, #B9DFF3 100%)',
-    // color: '#000',
-    // clipPath: 'inset(0px 0px 0px 0px)',
-    backgroundColor: '#000',
-    color: '#B9DFF3',
-    duration: 0.3,
-    ease: Expo.easeOut 
-})
+// const contactTL = gsap.timeline({paused:true})
+// contactTL.to('.contact_button', {
+//   // background:'linear-gradient(135deg, #030C11 0%, #030C11 10%,#0F3E57 10%, #0F3E57 15%,#1B6F9D 15%, #1B6F9D 19%,#2E9FDC 19%, #2E9FDC 25%,#73BFE7 25%, #73BFE7 37%,#B9DFF3 37%, #B9DFF3 100%)',
+//     // color: '#000',
+//     // clipPath: 'inset(0px 0px 0px 0px)',
+//     backgroundColor: '#000',
+//     color: '#B9DFF3',
+//     duration: 0.3,
+//     ease: Expo.easeOut 
+// })
 
-document.querySelector('.contact_button').addEventListener('mouseenter', () => {
-    contactTL.play()
-  })
-  document.querySelector('.contact_button').addEventListener('mouseleave', () => {
-    contactTL.reverse()
-  })
+// document.querySelector('.contact_button').addEventListener('mouseenter', () => {
+//     contactTL.play()
+//   })
+//   document.querySelector('.contact_button').addEventListener('mouseleave', () => {
+//     contactTL.reverse()
+//   })

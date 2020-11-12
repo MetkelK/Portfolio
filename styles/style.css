@@ -85,11 +85,11 @@ ul li a:hover {
 }
 
 .overlay__inner--color-1 {
-  background-color: #D4AFCD;
+  background-color: #8FC93A;
 }
 
 .overlay__inner--color-2 {
-  background-color: #B79FAD;
+  background-color: #1E91D6;
 }
 
 /*.overlay__inner--color-3 {
@@ -166,7 +166,7 @@ ul li a:hover {
 }
 
 .social-media a i:hover {
-  	color: #B9DFF3;
+  	color: #828282;
 }
 
 .enter {
@@ -208,7 +208,7 @@ ul li a:hover {
 }
 
 .bio h2 {
-	color: #B9DFF3;
+	color: #828282;
   text-transform: uppercase;
   letter-spacing: 1rem;
   font-style: italic;
@@ -252,7 +252,7 @@ ul li a:hover {
 }
 
 .skills h2 {
-  	color: #B9DFF3;
+  	color: #828282;
   	text-transform: uppercase;
   	letter-spacing: 1rem;
   	font-style: italic;
@@ -310,13 +310,13 @@ ul li a:hover {
 }
 
 .projects h2 {
-    color: #B9DFF3;
+    color: #828282;
     text-transform: uppercase;
     letter-spacing: 1rem;
     font-style: italic;
     text-align: left;
     margin: 0 auto;
-    padding-top: 3rem;
+    padding: 3rem 3rem 0;
     max-width: 800px;
 }
 
@@ -342,7 +342,6 @@ ul li a:hover {
 }
 
 .project {
-  background-color: #fff;
   max-width: 80vmin;
   margin: 1rem 2rem;
   position: relative;
@@ -360,40 +359,45 @@ ul li a:hover {
   object-fit: cover;
 }
 
+.projectBackground {
+  position: absolute;
+  top: 0;
+  background-color: #030C11;
+  clip-path: inset(50% 0 50% 0);
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
 .textContainer {
   position: absolute;
-  top: 1px;
+  top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  background-color: #fff;
-  opacity: 0.8;
   padding: 0.5rem;
-  clip-path: inset(0 0 100% 0);
 }
 
 .textContainer h3, .textContainer p {
   margin: 0 0 0.5rem;
+  color: #fff;
 }
 
 .buttonContainer {
   position: absolute;
-  bottom: 1px;
+  bottom: 0px;
   left: 0;
   display: flex;
   justify-content: space-around;
   width: 100%;
-  background-color: #fff;
-  opacity: 0.8;
   padding: 0.5rem;
-  clip-path: inset(100% 0 0 0);
   overflow: hidden;
 }
 
 .aWrap {
-  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+  filter: drop-shadow(-1px 6px 3px rgba(255, 255, 255, 0.5));
 
 }
 
@@ -411,6 +415,7 @@ ul li a:hover {
     #73BFE7 90%,
     #B9DFF3 90%, 
     #B9DFF3 100%);
+  border: 1px solid #828282;
   color: #fff;
   text-align: center;
     text-decoration: none;
@@ -438,7 +443,7 @@ ul li a:hover {
 }
 
 .contact h2 {
-  color: #B9DFF3;
+  color: #828282;
   text-align: center;
 }
 
@@ -476,7 +481,19 @@ form {
   will-change: transform;
   overflow: hidden;
   clip-path: inset(0);
-  background-color:transparent;
+  background:linear-gradient(45deg, 
+    #030C11 0%, 
+    #030C11 63%,
+    #0F3E57 63%, 
+    #0F3E57 75%,
+    #1B6F9D 75%, 
+    #1B6F9D 81%,
+    #2E9FDC 81%, 
+    #2E9FDC 85%,
+    #73BFE7 85%, 
+    #73BFE7 90%,
+    #B9DFF3 90%, 
+    #B9DFF3 100%);
 }
 
 footer p {
