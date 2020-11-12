@@ -214,6 +214,9 @@ ul li a:hover {
   font-style: italic;
 	text-align: left;
   margin: 1rem 0;
+}
+
+.bio span {
   will-change: transform;
   display: inline-block;
   white-space: pre;
@@ -462,7 +465,6 @@ form {
   overflow: hidden;
   clip-path: inset(0);
   background-color:transparent;
-  border-radius: 0px;
 }
 
 footer p {

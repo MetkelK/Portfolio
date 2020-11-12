@@ -141,6 +141,15 @@ tlHeader.to('.revealer--first', 0.1,{
     zIndex: 0
 }, ">")
 
+
+const bioContent = {
+  title: document.querySelector('.bioTitle')
+};
+
+charming(bioContent.title);
+let bioLetters = [...bioContent.title.querySelectorAll('span')];
+console.log(bioLetters)
+
 const tlBio = gsap.timeline({
   scrollTrigger: {
     trigger: '.about',
@@ -149,17 +158,17 @@ const tlBio = gsap.timeline({
     toggleActions: "play pause reverse reset",
     // once: true,
     // markers: true,
-    scrub: 5,
+    scrub: 1,
   }
 });
-// tlBio.from('.bio h2', {
-//   opacity: 0,
-//   duration: 1
-// })
-// tlBio.from('.bio h2', {
-//   y: '-500%',
-//   duration: 0.5
-// },"<-0.25")
+
+tlBio.from(bioLetters, {
+    ease: Expo.easeInOut,
+    y: '-500%',
+    opacity: 0,
+    stagger: 0.2
+
+})
 // tlBio.from('.column p', {
 //   opacity: 0,
 //   duration: 1
