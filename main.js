@@ -216,8 +216,8 @@ const tlProjects = gsap.timeline({
     start: 'top bottom',
     end: '+=20%',
     scrub: 2,
-    // toggleActions: "play pause reverse reset",
-    once: true,
+    toggleActions: "play pause reverse reset",
+    // once: true,
     // markers: true
   } 
 })
@@ -228,59 +228,7 @@ tlProjects.from(projectLetters, {
     stagger: 0.5
 })
 
-// tlProjects.from('.projects h2', {
-//   y: '-500%',
-//   duration: 1
-// })
-// tlProjects.from('.projects h2', {
-//   opacity: 0,
-//   duration: 0.5
-// }, "<0.5")
-// tlProjects.from('#project1', 1, {
-//   duration: 1,
-//   opacity: 0,
-//   x: '-500%'
-// })
-// tlProjects.from('#project2', 1, {
-//   duration: 1,
-//   opacity: 0,
-//   x: '500%'
-// })
-// tlProjects.from('#project3', 1, {
-//   duration: 1,
-//   opacity: 0,
-//   x: '-500%'
-// })
-// tlProjects.from('#project4', 1, {
-//   duration: 1,
-//   opacity: 0,
-//   x: '500%'
-// })
 
-
-// let buttonTimeline = gsap.timeline({ paused: true })
-// .to('.buttonContainer', 0.5, {
-//   clipPath: 'inset(1% 0)',
-// })
-// .to('.textContainer', 0.5, {
-//   clipPath: 'inset(1% 0)',
-// }, '<')
-// .to('.projectImage', 0.5, {
-//   scale: 1.2
-// },'<')
-
-// document.querySelector('.projectTest').addEventListener('mouseenter', () => {
-//   buttonTimeline.play();
-// })
-
-// document.querySelector('.projectTest').addEventListener('mouseleave', () => {
-//   buttonTimeline.reverse();
-// })
-
-// let otherButton = gsap.timeline({paused:true})
-// .to('.project', 0.3, {
-//   background:'linear-gradient(45deg, #030C11 0%, #030C11 10%,#0F3E57 10%, #0F3E57 15%,#1B6F9D 15%, #1B6F9D 19%,#2E9FDC 19%, #2E9FDC 25%,#73BFE7 25%, #73BFE7 37%,#B9DFF3 37%, #B9DFF3 100%)'
-// })
 
 
 const prjt = document.querySelectorAll('.project')
