@@ -262,6 +262,12 @@ ul li a:hover {
     padding: 3rem 3rem 0;
 }
 
+.skills span {
+  will-change: transform;
+  display: inline-block;
+  white-space: pre;
+}
+
 .skillList {
   	/*background: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);*/
   	width: 100%;
@@ -312,6 +318,12 @@ ul li a:hover {
     margin: 0 auto;
     padding-top: 3rem;
     max-width: 800px;
+}
+
+.projects span {
+  will-change: transform;
+  display: inline-block;
+  white-space: pre;
 }
 
 .projectsContainer {

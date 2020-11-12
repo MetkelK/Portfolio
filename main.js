@@ -148,13 +148,12 @@ const bioContent = {
 
 charming(bioContent.title);
 let bioLetters = [...bioContent.title.querySelectorAll('span')];
-console.log(bioLetters)
 
 const tlBio = gsap.timeline({
   scrollTrigger: {
     trigger: '.about',
-    start: 'top center',
-    end: '+=10%',
+    start: 'top bottom',
+    end: '+=20%',
     toggleActions: "play pause reverse reset",
     // once: true,
     // markers: true,
@@ -163,22 +162,18 @@ const tlBio = gsap.timeline({
 });
 
 tlBio.from(bioLetters, {
-    ease: Expo.easeInOut,
+    ease: Expo.easeOut,
     y: '-500%',
     opacity: 0,
-    stagger: 0.2
-
+    stagger: 0.5
 })
-// tlBio.from('.column p', {
-//   opacity: 0,
-//   duration: 1
-// })
-// tlBio.from('.column p', {
-//   y: '500%',
-//   duration: 0.5
-// }, "<-0.25")
 
+const skillContent = {
+  title: document.querySelector('.skillsTitle')
+};
 
+charming(skillContent.title);
+let skillLetters = [...skillContent.title.querySelectorAll('span')];
 
 const tlSkills = gsap.timeline({
   scrollTrigger: {
@@ -191,15 +186,13 @@ const tlSkills = gsap.timeline({
     // markers: true,
   }
 });
-tlSkills.from('.skills h2', {
-  y: '-500%',
-  duration: 1
-})
-tlSkills.from('.skills h2', {
-  opacity: 0,
-  duration: 0.5
-}, "<0.5")
 
+tlSkills.from(skillLetters, {
+    ease: Expo.easeOut,
+    y: '-500%',
+    opacity: 0,
+    stagger: 0.5
+})
 
 // tlSkills.from('.skill--list', {
 //   y: '500%',
@@ -210,17 +203,29 @@ tlSkills.from('.skills h2', {
 //   duration: 0.5
 // }, "<-0.25")
 
+const projectContent = {
+  title: document.querySelector('.projectTitle')
+};
+
+charming(projectContent.title);
+let projectLetters = [...projectContent.title.querySelectorAll('span')];
 
 const tlProjects = gsap.timeline({
    scrollTrigger: {
     trigger: ".projects",
-    start: 'top +=80%',
-    end: '+=80%',
+    start: 'top bottom',
+    end: '+=20%',
     scrub: 2,
     // toggleActions: "play pause reverse reset",
     once: true,
     // markers: true
   } 
+})
+tlProjects.from(projectLetters, {
+    ease: Expo.easeOut,
+    y: '-500%',
+    opacity: 0,
+    stagger: 0.5
 })
 
 // tlProjects.from('.projects h2', {
@@ -288,12 +293,12 @@ prjt.forEach(project => {
   projectTL.to(txt, {
     clipPath: 'inset(0px 0px 0px 0px)',
     duration: 0.5,
-    ease: Expo.easeInOut
+    ease: Expo.easeOut
   })
   projectTL.to(btn, {
     clipPath: 'inset(0px 0px 0px 0px)',
     duration: 0.5,
-    ease: Expo.easeInOut
+    ease: Expo.easeOut
   }, '<')
   project.addEventListener('mouseenter', () => {
     projectTL.play()
@@ -312,7 +317,7 @@ buttons.forEach(btn => {
     background:'linear-gradient(135deg, #030C11 0%, #030C11 10%,#0F3E57 10%, #0F3E57 15%,#1B6F9D 15%, #1B6F9D 19%,#2E9FDC 19%, #2E9FDC 25%,#73BFE7 25%, #73BFE7 37%,#B9DFF3 37%, #B9DFF3 100%)',
     color: '#000',
     duration: 0.3,
-    ease: Expo.easeInOut
+    ease: Expo.easeOut
   })
   btn.addEventListener('mouseenter', () => {
     tl.play()
@@ -330,7 +335,7 @@ contactTL.to('.contact_button', {
     backgroundColor: '#000',
     color: '#B9DFF3',
     duration: 0.3,
-    ease: Expo.easeInOut 
+    ease: Expo.easeOut 
 })
 
 document.querySelector('.contact_button').addEventListener('mouseenter', () => {
