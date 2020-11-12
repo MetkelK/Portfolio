@@ -94,7 +94,7 @@ const tlHeader = gsap.timeline({
     end: '+=65%',
     toggleActions: "play pause reverse reset",
     // markers: true,
-    scrub: 4,
+    scrub: 5,
   }
 });
 
@@ -132,7 +132,7 @@ tlHeader.to(revealer.DOM.reverse, 1.2, {
 let t = 0;
 for (let i = 0; i <= overlaysTotal-1; ++i) {
 t = 0.2*i+0.2
-tlHeader.to(overlays[overlaysTotal-1-i].DOM.inner, 0.6, {
+tlHeader.to(overlays[overlaysTotal-1-i].DOM.inner, 1.2, {
     ease: Expo.easeInOut,
     y: '100%'
 }, t);

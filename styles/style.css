@@ -40,7 +40,7 @@ nav {
 }
 
 ul {
-  background-color: #F5F5F5;
+  background-color: #F7F0F0;
   display: flex;
   justify-content: flex-end;
   padding: 1rem 0.5rem;
@@ -85,12 +85,11 @@ ul li a:hover {
 }
 
 .overlay__inner--color-1 {
-  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+  background-color: #D4AFCD;
 }
 
 .overlay__inner--color-2 {
-  background-color: #d8dede;
-background-image: linear-gradient(315deg, #d8dede 0%, #e5bdf6 74%);
+  background-color: #B79FAD;
 }
 
 /*.overlay__inner--color-3 {
@@ -221,7 +220,7 @@ background-image: linear-gradient(315deg, #d8dede 0%, #e5bdf6 74%);
 }
 
 .bio p {
-  color: #fff;
+  color: #F7F0F0;
 }
 
 @media all and (min-width: 1200px) {
@@ -274,7 +273,7 @@ background-image: linear-gradient(315deg, #d8dede 0%, #e5bdf6 74%);
 .skillIcon {
 	font-size: 6vw;
   padding: 1rem 2rem;
-  color: #fff;
+  color: #F7F0F0;
 }
 
 @media all and (min-width: 738px)  {
