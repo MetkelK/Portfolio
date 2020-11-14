@@ -394,18 +394,53 @@ ul li a:hover {
   	position: relative;
   	background: linear-gradient(315deg, #FAEBD7 5%, #F5F5F5 20%);
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
+
 
 .projectsContainer {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0;
 }
 
 .projectSection {
   height: 25vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+#projectSection1 {
+  background-image: url(../assets/espressofull.png);
+}
+
+#projectSection2 {
+  background-image: url(../assets/makeupfull.png);
+}
+
+#projectSection3 {
+  background-image: url(../assets/newsfull.png);
+}
+
+#projectSection4 {
+  background-image: url(../assets/yeezyfull.png);
+}
+
+@media screen and (min-width:600px) {
+  .projectsContainer {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projectSection {
+    height: 50vh;
+  }
 }
 
 .projects h2 {
@@ -525,6 +560,8 @@ ul li a:hover {
 .project_button a {
   color: #FFF;
 }
+
+
 
 .contact {
   	padding: 2rem;

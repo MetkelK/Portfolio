@@ -1,3 +1,19 @@
+let project1 = document.querySelector('#projectSection1')
+
+const tl = gsap.timeline({paused:true})
+tl.to(project1, 0.8, {
+  clipPath: 'inset(20%)',
+  scale: 1.05,
+  ease: 'power2.inOut'
+})
+
+project1.addEventListener('mouseenter', () => {
+  tl.play()
+})
+project1.addEventListener('mouseleave', () => {
+  tl.reverse()
+})
+
 new fullpage('#fullpage', {
   //options here
   autoScrolling:true,
