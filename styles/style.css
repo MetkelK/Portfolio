@@ -392,8 +392,20 @@ ul li a:hover {
 .projects {
   overflow: hidden;
   	position: relative;
-  	padding: 3rem 0;
   	background: linear-gradient(315deg, #FAEBD7 5%, #F5F5F5 20%);
+    height: 100vh;
+}
+
+.projectsContainer {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.projectSection {
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .projects h2 {
