@@ -1,17 +1,20 @@
-let project1 = document.querySelector('#projectSection1')
+let projects = document.querySelectorAll('.projectSection')
 
-const tl = gsap.timeline({paused:true})
-tl.to(project1, 0.8, {
-  clipPath: 'inset(20%)',
-  scale: 1.05,
+projects.forEach(project => {
+  const projectTL = gsap.timeline({paused:true})
+  projectTL.to(project, 0.8, {
+  clipPath: 'inset(15%)',
+  scale: 0.95,
   ease: 'power2.inOut'
 })
 
-project1.addEventListener('mouseenter', () => {
-  tl.play()
-})
-project1.addEventListener('mouseleave', () => {
-  tl.reverse()
+  project.addEventListener('mouseenter', () => {
+    projectTL.play()
+  })
+  project.addEventListener('mouseleave', () => {
+    projectTL.reverse()
+  })
+
 })
 
 new fullpage('#fullpage', {
