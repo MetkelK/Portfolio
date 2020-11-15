@@ -1,8 +1,9 @@
 let projects = document.querySelectorAll('.projectSection')
 
 projects.forEach(project => {
+  let image = project.childNodes[1]
   const projectTL = gsap.timeline({paused:true})
-  projectTL.to(project, 0.8, {
+  projectTL.to(image, 0.5, {
   clipPath: 'inset(15%)',
   scale: 0.95,
   ease: 'power2.inOut'

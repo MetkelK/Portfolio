@@ -414,13 +414,21 @@ ul li a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  position: relative;
 }
 
-#projectSection1 {
+.projectSection img {
+  object-fit: cover;
+  height: 100%;
+  width: calc(100% + 1px);
+  vertical-align: middle;
+}
+
+/*#projectSection1 {
   background-image: url(../assets/espressofull.png);
-}
+}*/
 
-#projectSection2 {
+/*#projectSection2 {
   background-image: url(../assets/makeupfull.png);
 }
 
@@ -430,7 +438,7 @@ ul li a:hover {
 
 #projectSection4 {
   background-image: url(../assets/yeezyfull.png);
-}
+}*/
 
 @media screen and (min-width:600px) {
   .projectsContainer {
@@ -441,6 +449,10 @@ ul li a:hover {
   .projectSection {
     height: 50vh;
   }
+}
+
+.projectSection p {
+  position: absolute;
 }
 
 .projects h2 {
