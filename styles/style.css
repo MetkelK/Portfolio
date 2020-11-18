@@ -252,6 +252,14 @@ ul li a:hover {
   pointer-events: none;
 }
 
+.bannerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
 .banner {
   	text-align: right;
   	background-color: #FFFFF3;
@@ -405,6 +413,8 @@ ul li a:hover {
   grid-template-columns: 1fr;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .projectSection {
@@ -424,21 +434,6 @@ ul li a:hover {
   vertical-align: middle;
 }
 
-/*#projectSection1 {
-  background-image: url(../assets/espressofull.png);
-}*/
-
-/*#projectSection2 {
-  background-image: url(../assets/makeupfull.png);
-}
-
-#projectSection3 {
-  background-image: url(../assets/newsfull.png);
-}
-
-#projectSection4 {
-  background-image: url(../assets/yeezyfull.png);
-}*/
 
 @media screen and (min-width:600px) {
   .projectsContainer {
@@ -451,8 +446,12 @@ ul li a:hover {
   }
 }
 
-.projectSection p {
+.buttonContainer {
   position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .projects h2 {

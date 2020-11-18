@@ -12,12 +12,16 @@
 	<link rel="stylesheet" href="fullpage.css">
 	<script rel="preconnect" src="https://kit.fontawesome.com/3ce30db80b.js" crossorigin="anonymous"></script>
 </head>
-<body>
-	<main>
+<body data-barba="wrapper">
+	<main data-barba="container" data-barba-namespace="home">
 		<div class="projects">
 			<div class="projectsContainer">
 				<div class="projectSection" id='projectSection1'>
 					<img src="assets/espressofull.png" alt="">
+					<div class="buttonContainer">
+						<a href="#">Live</a>
+						<a href="#">Code</a>
+					</div>
 				</div>
 				<div class="projectSection" id='projectSection2'>
 					<img src="assets/makeupfull.png" alt="">
@@ -30,72 +34,10 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="projects" id="projects">
-			<h2>Projects</h2>
-
-			<div class="project" id="project1">
-				<div class="project-column">
-					<h3>News Tracker</h3>
-					<p class='skills-used'>React / API</p>
-					<p>Follow the latest news with data provided by the New York Times</p>
-					<div class="button-container" id="button-container1">
-						<button class="project_button"><a href="https://modest-blackwell-d7e99c.netlify.app" target="_blank" rel="noreferrer">View Live</a></button>
-						<button class="project_button"><a href="https://www.github.com/MetkelK/newsapp" target="_blank" rel="noreferrer">View Code</a></button>
-					</div>
-				</div>
-				<div class="column-image">
-					<img src="Assets/newsmockup.png" alt="" class="project-image">
-				</div>
-			</div>
 		
-			<div class="project" id="project2">
-				<div class="column-image">
-					<img src="Assets/yeezymockup.png" alt="" class="project-image">
-				</div>
-				<div class="project-column">
-					<h3>Yeezy's Thoughts</h3>
-					<p class='skills-used'>React / API</p>
-					<p>Ever wondered what Kanye West is thinking? Click the button to find out. </p>
-					<div class="button-container" id="button-container2">
-						<button class="project_button"><a href="https://www.yeezysthoughts.com" target="_blank" rel="noreferrer">View Live</a></button>
-						<button class="project_button"><a href="https://www.github.com/MetkelK/yeezysthoughts" target="_blank" rel="noreferrer">View Code</a></button>
-					</div>
-				</div>
-			</div>
-
-			<div class="project" id="project3">
-				<div class="project-column">
-					<h3>Courtney Does Makeup</h3>
-					<p class='skills-used'>JavaScript / jQuery / Sass / CSS3 / HTML5 / Responsive </p>
-					<p>A simple single page website that displays the makeup skills of Courtney</p>
-					<div class="button-container" id="button-container3">
-						<button class="project_button"><a href="https://www.courtneydoesmakeup.com" target="_blank" rel="noreferrer">View Live</a></button>
-						<button class="project_button"><a href="https://www.github.com/MetkelK/courtneydoesmakeup" target="_blank" rel="noreferrer">View Code</a></button>
-					</div>
-				</div>
-				<div class="column-image">
-					<img src="Assets/makeupmockup.png" alt="" class="project-image">
-				</div>
-			</div>
-
-			<div class="project" id="project4">
-				<div class="column-image">
-					<img src="Assets/espressomockup.png" alt="" class="project-image">
-				</div>
-				<div class="project-column">
-					<h3>Oakwood Espresso</h3>
-					<p class='skills-used'>HTML5 / CSS3</p>
-					<p>A landing page for a local coffee shop</p>
-					<div class="button-container" id="button-container2">
-						<button class="project_button"><a href="https://oakwoodespresso.com" target="_blank" rel="noreferrer">View Live</a></button>
-						<button class="project_button"><a href="https://www.github.com/MetkelK/yeezysthoughts" target="_blank" rel="noreferrer">View Code</a></button>
-					</div>
-				</div>
-			</div> -->
-
-			
 	</main>
 	<script src="charming.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 	<script src="gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
 	<script src="ScrollTrigger.min.js"></script>
