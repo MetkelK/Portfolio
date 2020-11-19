@@ -7,7 +7,8 @@ body {
 section {
 	height: 100vh;
 	width: 100%;
-	
+	margin: 0;
+    padding: 0;
 }
 
 .section1 {
@@ -37,6 +38,8 @@ nav {
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 10;
+	
 }
 
 nav ul {
@@ -86,7 +89,7 @@ nav ul li {
 
 .bio {
 	width: 60%;
-	padding: 2rem;
+	padding: 2rem 1rem;
 	margin: 0 auto;
 	background-color: #fff;
 	border-radius: 5px;
@@ -123,15 +126,16 @@ nav ul li {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
+  height: 100%;
+  /*overflow: hidden;*/
+  
+
 }
 
 .projectSection {
-  height: 25vh;
+  height: 20vh;
   margin: 0;
-  padding: 0;
+  padding: 1rem 2rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -152,7 +156,7 @@ nav ul li {
   }
 
   .projectSection {
-    height: 50vh;
+    height: 40vh;
   }
 }
 

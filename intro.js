@@ -1,3 +1,5 @@
+
+
 gsap.to(".name", {
   xPercent: -100,
   // rotate: '90deg',
@@ -6,18 +8,18 @@ gsap.to(".name", {
   scrollTrigger: {
     trigger: "body",
     start: 'top top',
-
+    end: '+=80%',
     scrub: true,
   }
 });
 
-gsap.to('.last', {
+gsap.from('.last', {
     xPercent: 90,
     // scale: 0.2,
     scrollTrigger: {
         trigger:'body',
         start: 'top top',
- 
+        end: '+=100%',
         scrub: true,
     }
 })
