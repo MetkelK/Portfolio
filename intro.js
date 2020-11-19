@@ -23,7 +23,7 @@ gsap.to('.last', {
 })
 
 
-const tl = gsap.timeline({pause: true})
+const tl = gsap.timeline({paused: true})
 tl.to('#wave', 0.3, {
     attr: {
         fill: '#000',
