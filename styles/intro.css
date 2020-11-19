@@ -76,7 +76,7 @@ nav ul li {
 	padding: 0;
 	position: fixed;
 	bottom: 0%;
-	left: 100%;
+	right: 0%;
 	font-size: 25em;
 	font-family: 'Montserrat';
   	color: transparent;
@@ -88,15 +88,17 @@ nav ul li {
 	width: 60%;
 	padding: 2rem;
 	margin: 0 auto;
+	background-color: #fff;
+	border-radius: 5px;
 }
 
 .bio h1 {
-	color: #fff;
+	color: #000;
 	margin: 0;
 }
 
 .bio p {
-	color: #fff;
+	color: #000;
 }
 
 .skillsList {

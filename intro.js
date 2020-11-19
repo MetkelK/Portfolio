@@ -1,22 +1,23 @@
-gsap.from(".name", {
+gsap.to(".name", {
   xPercent: -100,
-  rotate: '90deg',
-  scale: 2,
+  // rotate: '90deg',
+  // scale: 2,
   // backgroundPosition: '1300px 0',
   scrollTrigger: {
     trigger: "body",
     start: 'top top',
-    end: 'bottom bottom',
+
     scrub: true,
   }
 });
 
 gsap.to('.last', {
-    x: -1300,
-    scale: 0.2,
+    xPercent: 90,
+    // scale: 0.2,
     scrollTrigger: {
-        trigger:'.section2',
+        trigger:'body',
         start: 'top top',
+ 
         scrub: true,
     }
 })
