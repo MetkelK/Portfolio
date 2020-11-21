@@ -28,7 +28,7 @@ section {
 }
 
 .logo {
-	padding: 1rem;
+	padding: 0.25rem 1rem;
 }
 
 nav {
@@ -38,8 +38,8 @@ nav {
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 10;
-	
+	z-index: 15;
+	background: linear-gradient(0deg,#000000,#152331)
 }
 
 nav ul {
@@ -61,17 +61,13 @@ nav ul li {
 	margin: 0;
 	padding: 0;
 	position: fixed;
-  	top: 20%;
-  	left: 50%;
-  	font-size: 25em;
+  	top: 10%;
+  	left: 3%;
+  	font-size: 5em;
   	font-family: 'Montserrat';
   	color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
-  	/*text-shadow: -1px 1px 0 #fff,
-				  1px 1px 0 #fff,
-				 1px -1px 0 #fff;
-				-1px -1px 0 #fff;*/
 }
 
 .last {
@@ -79,8 +75,8 @@ nav ul li {
 	padding: 0;
 	position: fixed;
 	bottom: 0%;
-	right: 0%;
-	font-size: 25em;
+	right: 3%;
+	font-size: 5em;
 	font-family: 'Montserrat';
   	color: transparent;
     -webkit-text-stroke-width: 1px;
@@ -88,20 +84,34 @@ nav ul li {
 }
 
 .bio {
-	width: 60%;
+	width: 80%;
 	padding: 2rem 1rem;
 	margin: 0 auto;
-	background-color: #fff;
+	/*background-color: #fff;*/
 	border-radius: 5px;
+	/*box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);*/
 }
 
 .bio h1 {
-	color: #000;
+	color: #FAF0E6;
 	margin: 0;
 }
 
 .bio p {
-	color: #000;
+	color: #FAF0E6;
+}
+
+.skillsName {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: 0%;
+	left: 3%;
+	font-size: 5em;
+	font-family: 'Montserrat';
+  	color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
 }
 
 .skillsList {
@@ -128,8 +138,8 @@ nav ul li {
   width: 100%;
   height: 100%;
   /*overflow: hidden;*/
-  
-
+  position: relative;
+  z-index: 10;
 }
 
 .projectSection {
