@@ -13,23 +13,6 @@ gsap.to(".name", {
   }
 });
 
-const projectTL = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".section3",
-        start: 'top center',
-        end: '+=50%',
-        scrub: true,
-        // markers: true,
-    }
-})
-projectTL.to('.name', {
-    xPercent: -10,
-    rotate: '-90deg',
-    scale: 2,
-    zIndex: 1,
-    ease: Circ.easeInOut,
-})
-
 gsap.to('.last', {
     xPercent: -500,
     scale: 4,
@@ -42,6 +25,32 @@ gsap.to('.last', {
     }
 })
 
+const projectTL = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".section3",
+        start: 'top center',
+        end: '+=50%',
+        scrub: true,
+        // markers: true,
+    }
+})
+projectTL.to('.name', {
+    xPercent: -10,
+    yPercent: -50,
+    rotate: '-90deg',
+    scale: 2,
+    ease: Circ.easeInOut,
+})
+projectTL.to('.last', {
+    xPercent: 10,
+    yPercent: 50,
+    rotate: '90deg',
+    scale: 2,
+    ease: Circ.easeInOut,
+},'<')
+
+
+
 gsap.from('.skillsName', {
     xPercent: -500,
     scale: 4,
@@ -50,6 +59,30 @@ gsap.from('.skillsName', {
         trigger:'.section1',
         start: 'bottom bottom',
         end: '+=20%',
+        scrub: true,
+    }
+})
+
+gsap.from('.projectsName', {
+    xPercent: -500,
+    scale: 4,
+    ease: Circ.easeInOut,
+    scrollTrigger: {
+        trigger:'.section2',
+        start: 'bottom bottom',
+        end: '+=20%',
+        scrub: true,
+    }
+})
+
+gsap.from('.contactName', {
+    xPercent: -500,
+    scale: 4,
+    ease: Circ.easeInOut,
+    scrollTrigger: {
+        trigger:'.section3',
+        start: 'bottom bottom',
+        end: '+=50%',
         scrub: true,
     }
 })
@@ -83,3 +116,29 @@ document.querySelector('.logo').addEventListener('mouseleave', () => {
     tl.reverse()
 })
 
+
+const contacttTL = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".section4",
+        start: 'top center',
+        end: '+=50%',
+        scrub: true,
+        // markers: true,
+    }
+})
+contacttTL.to('.name', {
+    bottom: '10%',
+    top: 'auto',
+    xPercent: 0,
+    yPercent: 0,
+    rotate: '0deg',
+    scale: 1,
+    ease: Circ.easeInOut,
+})
+contacttTL.to('.last', {
+    xPercent: 0,
+    yPercent: 0,
+    rotate: '-0deg',
+    scale: 1,
+    ease: Circ.easeInOut,
+},'<')

@@ -9,14 +9,16 @@ section {
 	width: 100%;
 	margin: 0;
     padding: 0;
+    position: relative;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .section1 {
 	background: linear-gradient(180deg,#000000,#152331);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	
 }
 
 .section2 {
@@ -25,6 +27,10 @@ section {
 
 .section3 {
 	background: linear-gradient(180deg,#000000,#152331);
+}
+
+.section4 {
+	background: linear-gradient(0deg,#000000,#152331);
 }
 
 .logo {
@@ -68,6 +74,7 @@ nav ul li {
   	color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
+    z-index: 9;
 }
 
 .last {
@@ -81,6 +88,7 @@ nav ul li {
   	color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
+    z-index: 9;
 }
 
 .bio {
@@ -105,7 +113,7 @@ nav ul li {
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	bottom: 0%;
+	top: 10%;
 	left: 3%;
 	font-size: 5em;
 	font-family: 'Montserrat';
@@ -127,6 +135,19 @@ nav ul li {
 	padding: 1rem;
 	text-align: center;
 	color: #fff;
+}
+
+.projectsName {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: -10%;
+	left: 3%;
+	font-size: 5em;
+	font-family: 'Montserrat';
+  	color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
 }
 
 .projectsContainer {
@@ -170,3 +191,31 @@ nav ul li {
   }
 }
 
+.contactName {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 20%;
+	left: 3%;
+	font-size: 5em;
+	font-family: 'Montserrat';
+  	color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+}
+
+.formContainer {
+	/*display: flex;
+	flex-direction: column;
+	align-items: center;*/
+}
+
+.columnContainer, .messageContainer {
+	/*width: 50%;*/
+}
+
+input, textarea {
+	background-color: transparent;
+	border:1px solid #ccc;
+	width: 300px; 
+}
