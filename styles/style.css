@@ -26,6 +26,25 @@ a:active, a:visited {
   	color: black;
 }
 
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media all and (min-width: 738px) {
+  .wrapper {
+    width: 70%;
+    margin: 1rem auto;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .wrapper {
+    width: 50%;
+    margin: 1rem auto;
+  }
+}
+
 .header {
   	height: 100vh;
   	position: relative;
@@ -33,13 +52,10 @@ a:active, a:visited {
   	flex-direction: column;
   	justify-content: center;
   	align-items: flex-end;
-  	background:linear-gradient(45deg, 
-    	rgb(17, 29, 65) 0%, rgb(17, 29, 65) 63%,
-    	rgb(33, 58, 130) 63%, rgb(33, 58, 130) 75%,
-    	rgb(49, 86, 196) 75%, rgb(49, 86, 196) 81%,
-    	rgb(108, 136, 218) 81%, rgb(108, 136, 218) 85%,
-    	rgb(173, 189, 235) 85%, rgb(173, 189, 235) 90%,
-    	rgb(239, 242, 251) 90%, rgb(239, 242, 251) 100%);       
+  	background-image: url('../altumcode-oZ61KFUQsus-unsplash.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;     
 }
 
 .banner {
@@ -95,94 +111,66 @@ a:active, a:visited {
 }
 
 .about {
-	height: 100vh;
-  	display: flex;
-  	flex-direction: column;
-  	justify-content: center;
-  	align-items: center;
-  	position: relative;
-  	background:linear-gradient(225deg, 
-	    rgb(17, 29, 65) 0%, rgb(17, 29, 65) 63%,
-	    rgb(33, 58, 130) 63%, rgb(33, 58, 130) 75%,
-	    rgb(49, 86, 196) 75%, rgb(49, 86, 196) 81%,
-	    rgb(108, 136, 218) 81%, rgb(108, 136, 218) 85%,
-	    rgb(173, 189, 235) 85%, rgb(173, 189, 235) 90%,
-	    rgb(239, 242, 251) 90%, rgb(239, 242, 251) 100%);
-}
-
-.bio-background {
-	width: 50%;
+  padding: 2rem 1rem;
 	height: auto;
-	position: absolute;
-	top: 25%;
-	left: 25%;
-	z-index: 98;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg,#121315,#000000,#152331);
 }
 
-.bio-background img {
-	width: 100%;
-}
+/*.bio {
+  width: 100%;
+}*/
 
-.bio {
-	z-index: 98;
-}
-
-.bio h2 {
+.about h2 {
 	color: #FFFFF3;
-  	text-transform: uppercase;
-  	letter-spacing: 1rem;
-  	font-style: italic;
-	text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-style: italic;
+	text-align: left;
+  margin: 1rem;
+  padding: 0 1rem;
 }
 
 .column {
 	padding: 1rem;
-  	background-color: #FFFFF3;
-  	margin: 1rem;
-  	border-radius: 5px;
-  	box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
-}
-
-@media all and (min-width: 1200px) {
-	.column {
-		width: 70%;
-    margin: 1rem auto;
-	}
+  background-color: #FFFFF3;
+  margin: 1rem;
+  border-radius: 5px;
+  box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
 }
 
 .skills {
-  height: 100vh;
-  	padding: 1rem 0;
-  	display: flex;
-    flex-direction: column;
-    justify-content: center;
-  	background:linear-gradient(315deg, 
-	    rgb(17, 29, 65) 0%, rgb(17, 29, 65) 63%,
-	    rgb(33, 58, 130) 63%, rgb(33, 58, 130) 75%,
-	    rgb(49, 86, 196) 75%, rgb(49, 86, 196) 81%,
-	    rgb(108, 136, 218) 81%, rgb(108, 136, 218) 85%,
-	    rgb(173, 189, 235) 85%, rgb(173, 189, 235) 90%,
-	    rgb(239, 242, 251) 90%, rgb(239, 242, 251) 100%);
+  padding: 2rem 1rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:#152331;
 }
 
 .skills h2 {
-  	color: #FFF;
-  	text-transform: uppercase;
-  	letter-spacing: 1rem;
-  	font-style: italic;
-  	text-align: center;
-    margin: 0;
+  color: #FFFFF3;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-style: italic;
+  text-align: left;
+  margin: 1rem;
+  padding: 0 1rem;
 }
 
 .skill-list {
-  	background-color: #FFFFF3;
-  	padding: 1rem;
-  	margin: 2rem;
-  	display: grid;
-  	grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr ;
-  	border-radius: 5px;
-  	box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
-  	text-align: center;
+  background-color: #FFFFF3;
+  padding: 1rem;
+  margin: 1rem;
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr ;
+  border-radius: 5px;
+  box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+  text-align: center;
 }
 
 .skill-icon {
@@ -191,40 +179,43 @@ a:active, a:visited {
 
 @media all and (min-width: 738px)  {
 	.skill-list {
+    width: 70%;
+    margin: 1rem auto;
 		grid-template: 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr ;
-  	}
+  }
 }
 
 @media all and (min-width: 1200px)  {
-  	.skill-list {
-    	grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
-  	}
+  .skill-list {
+    width: 50%;
+    margin: 1rem auto;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  }
 }
 
 
 .skill-title {
-  	font-size: initial;
+  font-size: initial;
 }
 
 .projects {
-  	position: relative;
-  	padding: 3rem 0;
-  	background:linear-gradient(135deg, 
-	    rgb(17, 29, 65) 0%, rgb(17, 29, 65) 63%,
-	    rgb(33, 58, 130) 63%, rgb(33, 58, 130) 75%,
-	    rgb(49, 86, 196) 75%, rgb(49, 86, 196) 81%,
-	    rgb(108, 136, 218) 81%, rgb(108, 136, 218) 85%,
-	    rgb(173, 189, 235) 85%, rgb(173, 189, 235) 90%,
-	    rgb(239, 242, 251) 90%, rgb(239, 242, 251) 100%);
+  padding: 2rem 1rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:linear-gradient(0deg,#000000,#152331);
 }
 
 .projects h2 {
-  	color: #FFFFF3;
-  	text-transform: uppercase;
-  	letter-spacing: 1rem;
-  	font-style: italic;
-  	text-align: center;
-    margin: 0;
+  color: #FFFFF3;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-style: italic;
+  text-align: left;
+  margin: 1rem;
+  padding: 0 1rem;
 }
 
 .project {
@@ -333,42 +324,53 @@ a:active, a:visited {
 }
 
 .contact {
-  	padding: 2rem;
-  /*background:linear-gradient(225deg, */
-	    rgb(17, 29, 65) 0%, rgb(17, 29, 65) 63%,
-	    rgb(33, 58, 130) 63%, rgb(33, 58, 130) 75%,
-	    rgb(49, 86, 196) 75%, rgb(49, 86, 196) 81%,
-	    rgb(108, 136, 218) 81%, rgb(108, 136, 218) 85%,
-	    rgb(173, 189, 235) 85%, rgb(173, 189, 235) 90%,
-	    rgb(239, 242, 251) 90%, rgb(239, 242, 251) 100%);
+  padding: 2rem;
+  background:#000;
 }
 
-.contact h2, .contact i, .contact p, .contact a {
-  	text-align: center;
-  	color: #FFF;
-    margin-bottom: 1rem;
+.contact h2 {
+  color: #FFFFF3;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-style: italic;
+  text-align: left;
+  margin: 1rem;
+  padding: 0 1rem;
+}
+
+.contact i, .contact p, .contact a {
+  text-align: center;
+  color: #FFF;
+  margin-bottom: 1rem;
 }
 
 address {
-  	display: flex;
-  	justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer {
+  width: 100%;
 }
 
 input[type=text], input[type=email], select, textarea {
   	width: 100%;
-  	padding: 12px;
+  	padding: 0.5rem;
   	border: 1px solid #ccc;
-  	border-radius: 4px;
-  	margin-top: 6px;
-  	margin-bottom: 16px;
+  	border-radius: 5px;
+  	margin: 0.125rem 0;
   	resize: vertical;
+    background-color: transparent;
 }
 
-form {
-  	display: flex;
-  	flex-direction: column;
-    align-items: center;
-}
+
 
 @media all and (min-width: 738px) {
 	.formContainer, .contact_button {
