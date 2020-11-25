@@ -45,6 +45,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #121315;
   position: fixed;
   top: 0;
@@ -53,17 +54,18 @@ nav {
 }
 
 svg {
-  padding-left: 1rem;
+  padding: 0 0 0 1rem;
 }
 
 nav ul {
   list-style-type: none;
   display: flex;
+  /*flex-direction: row;*/
   padding: 0 1rem;
 }
 
 nav ul li {
-  padding: 0 0.5rem;
+  padding: 0.5rem;
 }
 
 nav ul li a {
@@ -73,6 +75,36 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ccc;
+}
+
+#openMenu, #closeMenu {
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer; 
+}
+
+#closeMenu {
+  display: none;
+}
+
+#openMenu:hover, #closeMenu:hover {
+  color: #ccc;
+  transition: 0.3s;
+}
+
+#menuList {
+  display: none;
+}
+
+@media all and (min-width: 575px) {
+  #openMenu, #closeMenu {
+    display: none;
+  }
+
+  #menuList {
+    display: flex;
+  }
 }
 
 .header {
@@ -155,6 +187,7 @@ nav ul li a:hover {
 }
 
 .column {
+  width: 90%;
 	padding: 1rem;
   background-color: #FFFFF3;
   margin: 1rem;
@@ -183,6 +216,7 @@ nav ul li a:hover {
 }
 
 .skill-list {
+  width: 90%;
   background-color: #FFFFF3;
   padding: 1rem;
   margin: 1rem;
@@ -194,25 +228,30 @@ nav ul li a:hover {
 }
 
 .skill-icon {
-	font-size: 6vw;
+	font-size: 5vw;
 }
 
 @media all and (min-width: 738px)  {
-	.skill-list {
-    width: 70%;
+  .column, .skill-list, .project  {
+    width: 80%;
     margin: 1rem auto;
+  }
+
+	.skill-list {
 		grid-template: 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr ;
   }
 }
 
 @media all and (min-width: 1200px)  {
-  .skill-list {
-    width: 50%;
+  .column, .skill-list, .project {
+    width: 70%;
     margin: 1rem auto;
-    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  }
+
+  .skill-list {
+    grid-template: 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr ;
   }
 }
-
 
 .skill-title {
   font-size: initial;
@@ -239,9 +278,10 @@ nav ul li a:hover {
 }
 
 .project {
+  width: 90%;
   	background-color: #FFFFF3;
   	padding: 1rem;
-  	margin: 2rem;
+  	margin: 1rem;
   	display: flex;
   	flex-direction: row;
   	border-radius: 5px;
@@ -312,9 +352,16 @@ nav ul li a:hover {
 	}
 }
 
+@media all and (min-width: 738px)  {
+  .project  {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
+
 @media all and (min-width: 1200px) {
 	.project {
-    	margin: 2rem auto;
+    	margin: 1rem auto;
     	width: 70%;
   	}
 }
@@ -370,11 +417,12 @@ address {
 }
 
 form {
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
+  margin: 1rem auto;
   padding: 1rem;
 }
 
@@ -393,10 +441,17 @@ input[type=text], input[type=email], select, textarea {
 }
 
 @media all and (min-width: 738px) {
-	.formContainer, .contact_button {
-    width: 50%;
+	.formContainer, {
+    width: 80%;
     margin: 0 auto;
   }
+}
+
+@media all and (min-width: 1200px) {
+  .formContainer {
+      margin: 1rem auto;
+      width: 70%;
+    }
 }
 
 .contact_button {
