@@ -208,7 +208,7 @@ nav ul li a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-blend-mode: multiply ;   
+  background-blend-mode: darken  ;   
 }
 
 .skills h2 {
