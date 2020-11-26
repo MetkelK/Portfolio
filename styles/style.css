@@ -8,18 +8,17 @@ html{scroll-behavior:smooth;line-height:1.15;-ms-text-size-adjust:100%;-webkit-t
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-
 html h1, html h2, html h3, html h4, html h5, html h6, html a {
 	font-family: 'Raleway',  sans-serif;
 }
 
 html p {
-  	font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 a {
-  	text-decoration: none;
-  	color: black;      
+  text-decoration: none;
+  color: black;      
 }
 
 .wrapper {
@@ -108,62 +107,64 @@ nav ul li a:hover {
 }
 
 .header {
-  	height: 100vh;
-  	position: relative;
-  	display: flex;
-  	flex-direction: column;
-  	justify-content: center;
-  	align-items: flex-end;
-  	background-image: url('../altumcode-oZ61KFUQsus-unsplash.jpg'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;     
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background:#152331;
+  background-image: url('../altumcode-oZ61KFUQsus-unsplash.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-blend-mode: normal;     
 }
 
 .banner {
-  	text-align: right;
-  	background-color: #FFFFF3;
-  	padding: 1rem;
-  	margin: 1rem;
-  	border-radius: 5px;
-  	box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+  text-align: right;
+  background-color: #FFFFF3;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+  box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
 }
 
 .banner h2, .social-media {
-  	color: #000;
-  	transition-duration: 0.3s;
+  color: #000;
+  transition-duration: 0.3s;
 }
 
 .social-media a {
-  	cursor: pointer;
+  cursor: pointer;
 }
 
 .social-media a i:hover {
-  	color: #262E45;
+  color: #262E45;
 }
 
 .scrollArrow {
-  	position: absolute;
-  	bottom: 3rem;
-  	width: 100%;
-  	display: flex;
-  	flex-direction: column;
-  	justify-content: center;
-  	color: #FFFFF3;
-    z-index: 102;
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #FFFFF3;
+  z-index: 102;
 }
 
 .scrollArrow p {
-  	color: #FFFFF3;
-  	margin: 0;
-  	text-align: center;
+  color: #FFFFF3;
+  margin: 0;
+  text-align: center;
 }
 
 .scrollArrow i {
-  	color:#FFFFF3;
-  	width: 100%;
-  	text-align: center;
-  	font-size: 1.2rem;
+  color:#FFFFF3;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .about {
@@ -173,7 +174,7 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg,#121315,#000000,#152331);
+  background: linear-gradient(180deg,#121315, #000);
 }
 
 .about h2 {
@@ -203,6 +204,11 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   background:#152331;
+  background-image: url('../pankaj-patel-u2Ru4QBXA5Q-unsplash.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-blend-mode: multiply ;   
 }
 
 .skills h2 {
@@ -228,7 +234,7 @@ nav ul li a:hover {
 }
 
 .skill-icon {
-	font-size: 5vw;
+	font-size: 4rem;
 }
 
 @media all and (min-width: 738px)  {
@@ -264,7 +270,7 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background:linear-gradient(0deg,#000000,#152331);
+  background:linear-gradient(0deg,#000000,#152331, #121315, #000);
 }
 
 .projects h2 {
@@ -279,20 +285,20 @@ nav ul li a:hover {
 
 .project {
   width: 90%;
-  	background-color: #FFFFF3;
-  	padding: 1rem;
-  	margin: 1rem;
-  	display: flex;
-  	flex-direction: row;
-  	border-radius: 5px;
-  	box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+  background-color: #FFFFF3;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
 }
 
 .project-column {
-  	width: 50%;
-  	display: flex;
-  	flex-direction: column;
-  	justify-content: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .project-column h3 {
@@ -304,17 +310,17 @@ nav ul li a:hover {
 }
 
 .button-container {
-  	width: auto;
-  	display: flex;
-  	align-items: center;
+  width: auto;
+  display: flex;
+  align-items: center;
 }
 
 #button-container1, #button-container3 {
-  	justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 #button-container2 {
-  	justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 #project2, #project4 {
@@ -322,33 +328,33 @@ nav ul li a:hover {
 }
 
 .column-image {
-  	width: 50%;
-  	display: flex;
-  	justify-content: center;
-  	align-items: center;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-image {
-  	object-fit: contain;
-  	width: 100%;
+  object-fit: contain;
+  width: 100%;
 }
 
 @media all and (max-width: 575px) {
 	.project {
-    	flex-direction: column;
-  	}
+    flex-direction: column;
+  }
 
-  	.project-column {
-	    text-align: center;
-	    width: 100%;
-  	}
+  .project-column {
+    text-align: center;
+    width: 100%;
+  }
 
 	.column-image {
-	    width: 100%;
+    width: 100%;
 	}
 
 	#button-container1, #button-container2, #button-container3 {
-	  	justify-content: center;
+	  justify-content: center;
 	}
 }
 
@@ -361,29 +367,29 @@ nav ul li a:hover {
 
 @media all and (min-width: 1200px) {
 	.project {
-    	margin: 1rem auto;
-    	width: 70%;
-  	}
+    margin: 1rem auto;
+    width: 70%;
+  }
 }
 
 .project_button {
-  	background-color: #262E45;
-  	border: 1px solid #262E45;
-    color: #FFF;
-  	border-radius: 4px;
-  	text-align: center;
-  	text-decoration: none;
-  	display: inline-block;
-  	font-size: 16px;
-  	margin: 4px 2px;
-  	padding: 0.5rem 1rem;
-  	transition-duration: 0.3s;
+  background-color: #262E45;
+  border: 1px solid #262E45;
+  color: #FFF;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 0.5rem 1rem;
+  transition-duration: 0.3s;
 }
 
 .project_button:hover {
-  	background-color: #244091;
-  	border: 1px solid #244091;
-    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+  background-color: #244091;
+  border: 1px solid #244091;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
 }
 
 .project_button a {
@@ -417,13 +423,13 @@ address {
 }
 
 form {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1rem auto;
-  padding: 1rem;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .formContainer {
@@ -449,9 +455,9 @@ input[type=text], input[type=email], select, textarea {
 
 @media all and (min-width: 1200px) {
   .formContainer {
-      margin: 1rem auto;
-      width: 70%;
-    }
+    margin: 1rem auto;
+    width: 70%;
+  }
 }
 
 .contact_button {
