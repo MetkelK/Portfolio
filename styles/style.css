@@ -42,6 +42,7 @@ a {
 
 nav {
   width: 100%;
+  height: 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,23 +57,54 @@ svg {
   padding: 0 0 0 1rem;
 }
 
-nav ul {
+#desktopMenu {
   list-style-type: none;
   display: flex;
-  /*flex-direction: row;*/
+  flex-direction: row;
   padding: 0 1rem;
+  margin: 0;
 }
 
-nav ul li {
+#desktopMenu li {
   padding: 0.5rem;
 }
 
-nav ul li a {
+#desktopMenu li a {
   color: #fff;
   transition: 0.3s;
 }
 
-nav ul li a:hover {
+#desktopMenu li a:hover {
+  color: #ccc;
+}
+
+#mobileMenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #121315;
+  opacity: 0.9;
+  list-style-type: none;
+}
+
+#mobileMenu li {
+  padding: 1rem;
+}
+
+#mobileMenu li a {
+  color: #fff;
+  transition: 0.3s;
+}
+
+#mobileMenu li a:hover {
   color: #ccc;
 }
 
@@ -83,8 +115,13 @@ nav ul li a:hover {
   cursor: pointer; 
 }
 
+#openMenu {
+  display: block;
+}
+
 #closeMenu {
   display: none;
+  z-index: 104;
 }
 
 #openMenu:hover, #closeMenu:hover {
@@ -92,7 +129,7 @@ nav ul li a:hover {
   transition: 0.3s;
 }
 
-#menuList {
+#desktopMenu {
   display: none;
 }
 
@@ -101,8 +138,12 @@ nav ul li a:hover {
     display: none;
   }
 
-  #menuList {
+  #desktopMenu {
     display: flex;
+  }
+
+  #mobileMenu {
+    display: none;
   }
 }
 
