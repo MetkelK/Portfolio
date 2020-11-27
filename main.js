@@ -15,6 +15,16 @@ function close() {
 	mobileMenu.style.display = 'none';
 }
 
+gsap.utils.toArray('nav a').forEach(function(link) {
+	link.addEventListener('click', function(e) {
+		e.preventDefault();
+		gsap.to(window, {
+			duration: 0.5,
+			scrollTo: e.target.getAttribute('href')
+		});
+	});
+});
+
 openMenu.addEventListener('click', open);
 
 closeMenu.addEventListener('click', close);
