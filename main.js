@@ -25,6 +25,14 @@ gsap.utils.toArray('nav a').forEach(function(link) {
 	});
 });
 
+document.getElementById('scroll').addEventListener('click', function(e) {
+	e.preventDefault();
+	gsap.to(window, {
+		duration: 0.5,
+		scrollTo: e.target.getAttribute('href')
+	});
+});
+
 openMenu.addEventListener('click', open);
 
 closeMenu.addEventListener('click', close);
@@ -32,3 +40,7 @@ closeMenu.addEventListener('click', close);
 document.querySelectorAll('#mobileMenu a').forEach(link => {
 	link.addEventListener('click', close)
 })
+
+// document.getElementById('home').addEventListener('click', function(e) {
+// 	console.log(e.target);
+// })

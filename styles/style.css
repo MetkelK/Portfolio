@@ -18,7 +18,7 @@ html p {
 
 a {
   text-decoration: none;
-  color: black;      
+  color: inherit;      
 }
 
 .wrapper {
@@ -55,6 +55,10 @@ nav {
 
 svg {
   padding: 0 0 0 1rem;
+}
+
+svg:hover {
+  cursor: pointer; 
 }
 
 #desktopMenu {
@@ -195,7 +199,7 @@ svg {
   z-index: 102;
 }
 
-.scrollArrow p {
+.scrollArrow {
   color: #FFFFF3;
   margin: 0;
   text-align: center;
