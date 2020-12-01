@@ -87,7 +87,13 @@ pro.forEach(project => {
 	  project.addEventListener('mouseenter', () => {
 	    projectTL.play()
 	  })
+	  project.addEventListener('touchstart', () => {
+	    projectTL.play()
+	  })
 	  project.addEventListener('mouseleave', () => {
+	    projectTL.reverse()
+	  })
+	  project.addEventListener('touchend', () => {
 	    projectTL.reverse()
 	  })
 })
