@@ -528,33 +528,3 @@ footer p {
   padding: 1rem 0;
 }
 
-.pro {
-  height: 25vh;
-  margin: 0;
-  padding: 1rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  position: relative;
-}
-
-.pro img {
-   object-fit: cover;
-  height: 100%;
-  width: calc(100% + 1px);
-  vertical-align: middle;
-}
-
-.btns {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
-@media screen and (min-width: 575px) {
-  .pro {
-    height: 50vh;
-  }
-}

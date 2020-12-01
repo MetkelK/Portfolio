@@ -63,3 +63,4 @@ document.getElementById('logo').addEventListener('mouseenter', () => {
 document.getElementById('logo').addEventListener('mouseleave', () => {
 	logoTL.reverse()
 })
+
