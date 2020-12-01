@@ -1,7 +1,7 @@
 const openMenu = document.getElementById('openMenu');
 const closeMenu = document.getElementById('closeMenu');
 
-let mobileMenu = document.getElementById('mobileMenu');
+const mobileMenu = document.getElementById('mobileMenu');
 
 function open() {
 	openMenu.style.display = 'none';
@@ -41,6 +41,25 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
 	link.addEventListener('click', close)
 })
 
-// document.getElementById('home').addEventListener('click', function(e) {
-// 	console.log(e.target);
-// })
+gsap.from('.scrollArrow i', {
+	y: 40,
+	duration: 0.7,
+	yoyo: true,
+	repeat: -1,
+	ease: Bounce.Out
+})
+
+let logoTL = gsap.timeline({ paused: true })
+logoTL.to('#logo', 0.3, {
+	fill: '#000',
+	stroke: '#fff',
+	scale: 0.99
+})
+
+document.getElementById('logo').addEventListener('mouseenter', () => {
+	logoTL.play()
+})
+
+document.getElementById('logo').addEventListener('mouseleave', () => {
+	logoTL.reverse()
+})
