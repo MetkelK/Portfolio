@@ -97,12 +97,12 @@ pro.forEach(project => {
 	},'<')
 	projectTL.reverse()
 
-	// project.addEventListener('mouseenter', () => {
-	//     projectTL.play()
-	// })
-	// project.addEventListener('mouseleave', () => {
-	//     projectTL.reverse()
-	// })
+	project.addEventListener('mouseenter', () => {
+	    projectTL.play()
+	})
+	project.addEventListener('mouseleave', () => {
+	    projectTL.reverse()
+	})
 	project.addEventListener('click', () => {
 	  	projectTL.reversed(!projectTL.reversed());
 	})
