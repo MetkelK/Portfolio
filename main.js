@@ -66,34 +66,33 @@ document.getElementById('logo').addEventListener('mouseleave', () => {
 
 let pro = document.querySelectorAll('.pro')
 
+	let displayImage = false;
 pro.forEach(project => {
-	console.log(project.childNodes)
+	console.log(displayImage)
 	let image = project.childNodes[1]
   	let projectContainer = project.childNodes[3]
   	const projectTL = gsap.timeline({paused:true})
   	projectTL.to(image, 0.5, {
   		rotationY: 180,
 	    opacity: 0,
+	    scale: 0.99,
   		ease: 'power2.inOut'
   	})
 	projectTL.from(projectContainer, 0.5, {
-	    // scaleX: 0,
 	    rotationY: 180,
 	    opacity: 0,
 	    ease: 'expo.inOut',
-	    // clipPath: 'inset(15%)',
+
 	},'<')
+	projectTL.reverse()
 
 	  project.addEventListener('mouseenter', () => {
-	    projectTL.play()
-	  })
-	  project.addEventListener('touchstart', () => {
 	    projectTL.play()
 	  })
 	  project.addEventListener('mouseleave', () => {
 	    projectTL.reverse()
 	  })
-	  project.addEventListener('touchend', () => {
-	    projectTL.reverse()
+	  project.addEventListener('click', () => {
+	  	projectTL.reversed(!projectTL.reversed());
 	  })
 })
