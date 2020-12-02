@@ -6,13 +6,23 @@ const mobileMenu = document.getElementById('mobileMenu');
 function open() {
 	openMenu.style.display = 'none';
 	closeMenu.style.display = 'block';
-	mobileMenu.style.display = 'flex';
+	// mobileMenu.style.display = 'flex';
+	gsap.to(mobileMenu, 0.3, {
+		display: 'flex',
+		opacity: 0.9,
+		ease: 'expo.inOut',
+	})
 }
 
 function close() {
 	openMenu.style.display = 'block';
 	closeMenu.style.display = 'none';
-	mobileMenu.style.display = 'none';
+	// mobileMenu.style.display = 'none';
+	gsap.to(mobileMenu, 0.3, {
+		display: 'none',
+		opacity: 0,
+		ease: 'expo.inOut',
+	})
 }
 
 gsap.utils.toArray('nav a').forEach(function(link) {
@@ -66,9 +76,7 @@ document.getElementById('logo').addEventListener('mouseleave', () => {
 
 let pro = document.querySelectorAll('.pro')
 
-	let displayImage = false;
 pro.forEach(project => {
-	console.log(displayImage)
 	let image = project.childNodes[1]
   	let projectContainer = project.childNodes[3]
   	const projectTL = gsap.timeline({paused:true})
@@ -76,7 +84,7 @@ pro.forEach(project => {
   		rotationY: 180,
 	    opacity: 0,
 	    scale: 0.99,
-  		ease: 'power2.inOut'
+  		ease: 'expo.inOut',
   	})
 	projectTL.from(projectContainer, 0.5, {
 	    rotationY: 180,
@@ -86,13 +94,13 @@ pro.forEach(project => {
 	},'<')
 	projectTL.reverse()
 
-	  project.addEventListener('mouseenter', () => {
+	project.addEventListener('mouseenter', () => {
 	    projectTL.play()
-	  })
-	  project.addEventListener('mouseleave', () => {
+	})
+	project.addEventListener('mouseleave', () => {
 	    projectTL.reverse()
-	  })
-	  project.addEventListener('click', () => {
+	})
+	project.addEventListener('click', () => {
 	  	projectTL.reversed(!projectTL.reversed());
-	  })
+	})
 })
