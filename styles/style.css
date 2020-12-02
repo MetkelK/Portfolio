@@ -50,7 +50,7 @@ nav {
   position: fixed;
   top: 0;
   z-index: 103;
-  opacity: 0.9;
+  padding: 1rem 0;
 }
 
 svg {
@@ -137,7 +137,7 @@ svg:hover {
   display: none;
 }
 
-@media all and (min-width: 575px) {
+@media all and (min-width: 576px) {
   #openMenu, #closeMenu {
     display: none !important;
   }
@@ -535,9 +535,10 @@ footer p {
 }
 
 .pro {
-  height: 25vh;
+  height: 60vmin;
   position: relative;
   margin: 1rem;
+  cursor: pointer;
 }
 
 .pro img {
@@ -561,9 +562,23 @@ footer p {
   border-radius: 5px;
 }
 
+.proContainer h3, .proContainer p {
+  margin-bottom: 0.25rem;
+}
+
+.btnContainer {
+  pointer-events: none;
+}
+
+@media (min-width: 576px) {
+  .pro {
+    height: 50vmin;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .pro {
-    height: 35vh;
+    height: 40vmin;
   }
 }
 
@@ -574,6 +589,6 @@ footer p {
   }
 
   .pro {
-    height: 30vh;
+    height: 30vmin;
   }
 }

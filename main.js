@@ -92,14 +92,17 @@ pro.forEach(project => {
 	    ease: 'expo.inOut',
 
 	},'<')
+	projectTL.to('.btnContainer', {
+		pointerEvents: 'auto',
+	},'<')
 	projectTL.reverse()
 
-	project.addEventListener('mouseenter', () => {
-	    projectTL.play()
-	})
-	project.addEventListener('mouseleave', () => {
-	    projectTL.reverse()
-	})
+	// project.addEventListener('mouseenter', () => {
+	//     projectTL.play()
+	// })
+	// project.addEventListener('mouseleave', () => {
+	//     projectTL.reverse()
+	// })
 	project.addEventListener('click', () => {
 	  	projectTL.reversed(!projectTL.reversed());
 	})
