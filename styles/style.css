@@ -436,7 +436,7 @@ svg:hover {
 }
 
 .contact {
-  padding: 2rem;
+  padding: 2rem 1rem;
   background:#000;
 }
 
@@ -446,7 +446,7 @@ svg:hover {
   letter-spacing: 1rem;
   font-style: italic;
   text-align: left;
-  margin: 1rem;
+  margin-bottom: 1rem;
   padding: 0 1rem;
 }
 
@@ -485,17 +485,10 @@ input[type=text], input[type=email], select, textarea {
   background-color: transparent;
 }
 
-@media all and (min-width: 738px) {
-	.formContainer, {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
-
-@media all and (min-width: 1200px) {
-  .formContainer {
-    margin: 1rem auto;
+@media all and (min-width: 768px) {
+	.formContainer {
     width: 70%;
+    margin: 1rem auto;
   }
 }
 
@@ -572,19 +565,19 @@ footer p {
   pointer-events: none;
 }
 
-@media (min-width: 576px) {
+@media all and (min-width: 576px) {
   .pro {
     height: 50vmin;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
   .pro {
     height: 40vmin;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media all and (min-width: 1200px) {
   .gridContainer {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
