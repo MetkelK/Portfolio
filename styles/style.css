@@ -273,11 +273,16 @@ svg:hover {
 	font-size: 4rem;
 }
 
+.skill-title {
+  font-size: initial;
+}
+
 @media all and (min-width: 738px)  {
   .column, .skill-list, .project  {
     width: 80%;
     margin: 1rem auto;
   }
+}
 
 @media all and (min-width: 1200px)  {
   .column, .skill-list, .project {
@@ -290,12 +295,8 @@ svg:hover {
   }
 
   .skill-icon {
-    font-size: 2rem;
+    font-size: 3rem;
   }
-}
-
-.skill-title {
-  font-size: initial;
 }
 
 .projects {
