@@ -88,7 +88,7 @@ svg:hover {
   padding: 0;
   display: none;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background-color: #121315;
   opacity: 0;
@@ -97,13 +97,14 @@ svg:hover {
 
 #mobileMenu li {
   padding: 1rem;
+  margin: 1rem 0;
 }
 
 #mobileMenu li a {
   color: #fff;
   transition: 0.3s;
   text-transform: uppercase;
-  letter-spacing: 1rem;
+  letter-spacing: 0.75rem;
 }
 
 #mobileMenu li a:hover {
@@ -262,7 +263,7 @@ svg:hover {
   padding: 1rem;
   margin: 1rem;
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr ;
+  grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr;
   border-radius: 5px;
   box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
   text-align: center;
@@ -278,11 +279,6 @@ svg:hover {
     margin: 1rem auto;
   }
 
-	.skill-list {
-		grid-template: 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr ;
-  }
-}
-
 @media all and (min-width: 1200px)  {
   .column, .skill-list, .project {
     width: 70%;
@@ -290,7 +286,11 @@ svg:hover {
   }
 
   .skill-list {
-    grid-template: 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr ;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .skill-icon {
+    font-size: 2rem;
   }
 }
 
