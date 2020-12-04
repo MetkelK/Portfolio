@@ -485,6 +485,10 @@ input[type=text], input[type=email], select, textarea {
   background-color: transparent;
 }
 
+label {
+  color: #ccc;
+}
+
 @media all and (min-width: 768px) {
 	.formContainer {
     width: 70%;
