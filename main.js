@@ -1,6 +1,5 @@
 const openMenu = document.getElementById('openMenu');
 const closeMenu = document.getElementById('closeMenu');
-
 const mobileMenu = document.getElementById('mobileMenu');
 
 function open() {
