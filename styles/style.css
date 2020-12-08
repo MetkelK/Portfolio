@@ -310,7 +310,7 @@ svg:hover {
   background:linear-gradient(0deg,#000000,#152331, #121315, #000);
 }
 
-.projects > h2 {
+.projects h2 {
   color: #FFFFF3;
   text-transform: uppercase;
   letter-spacing: 1rem;
@@ -432,7 +432,7 @@ svg:hover {
   }
 
   .project {
-    width: 30vmin;
+    width: 70%;
   }
 }
 
