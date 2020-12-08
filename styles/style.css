@@ -162,7 +162,7 @@ svg:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-blend-mode: overlay;     
+  background-blend-mode: normal;     
 }
 
 .banner {
