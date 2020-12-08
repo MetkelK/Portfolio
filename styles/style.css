@@ -162,7 +162,7 @@ svg:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-blend-mode: normal;     
+  background-blend-mode: overlay;     
 }
 
 .banner {
@@ -228,13 +228,27 @@ svg:hover {
   padding: 0 1rem;
 }
 
-.column {
+.bio {
   width: 90%;
 	padding: 1rem;
   background-color: #FFFFF3;
   margin: 1rem;
   border-radius: 5px;
   box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+}
+
+@media all and (min-width: 768px)  {
+  .bio {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
+
+@media all and (min-width: 1200px)  {
+  .bio {
+    width: 70%;
+    margin: 1rem auto;
+  }
 }
 
 .skills {
@@ -274,7 +288,7 @@ svg:hover {
   text-align: center;
 }
 
-.skill-icon {
+.skill-list i {
 	font-size: 2rem;
 }
 
@@ -282,15 +296,15 @@ svg:hover {
   font-size: initial;
 }
 
-@media all and (min-width: 738px)  {
-  .column, .skill-list, .project  {
+@media all and (min-width: 768px)  {
+  .skill-list  {
     width: 80%;
     margin: 1rem auto;
   }
 }
 
 @media all and (min-width: 1200px)  {
-  .column, .skill-list, .project {
+  .skill-list {
     width: 70%;
     margin: 1rem auto;
   }
@@ -326,65 +340,6 @@ svg:hover {
   grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
-}
-
-.pro {
-  height: 60vmin;
-  position: relative;
-  margin: 1rem;
-  cursor: pointer;
-}
-
-.pro img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  vertical-align: middle;
-}
-
-.proContainer {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 5px;
-}
-
-.proContainer h3, .proContainer p {
-  margin-bottom: 0.25rem;
-}
-
-.btnContainer {
-  pointer-events: none;
-}
-
-@media all and (min-width: 576px) {
-  .pro {
-    height: 50vmin;
-  }
-}
-
-@media all and (min-width: 768px) {
-  .pro {
-    height: 40vmin;
-  }
-}
-
-@media all and (min-width: 1200px) {
-  .gridContainer {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .pro {
-    height: 30vmin;
-  }
 }
 
 .project {
@@ -432,7 +387,7 @@ svg:hover {
   }
 
   .project {
-    width: 70%;
+    width: 90%;
   }
 }
 
