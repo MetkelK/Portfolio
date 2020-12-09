@@ -158,7 +158,7 @@ svg:hover {
   justify-content: center;
   align-items: flex-end;
   background:#152331;
-  background-image: url('../assets/altumcode-oZ61KFUQsus-unsplash.jpg'); 
+  background-image: url('../assets/altumcode-oZ61KFUQsus-unsplash.webp'), url('../assets/altumcode-oZ61KFUQsus-unsplash.jpg'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -259,7 +259,7 @@ svg:hover {
   justify-content: center;
   align-items: center;
   background:#152331;
-  background-image: url('../assets/pankaj-patel-u2Ru4QBXA5Q-unsplash.jpg'); 
+  background-image: url('../assets/pankaj-patel-u2Ru4QBXA5Q-unsplash.webp'), url('../assets/pankaj-patel-u2Ru4QBXA5Q-unsplash.jpg'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
