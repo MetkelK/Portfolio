@@ -42,11 +42,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #121315;
+  background-color: rgba(18,19,21, 0.8);
   position: fixed;
   top: 0;
   z-index: 103;
   padding: 1rem 0;
+  backdrop-filter: saturate(180%) blur(20px);
 }
 
 svg {
