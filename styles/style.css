@@ -10,6 +10,7 @@ html h1, html h2, html h3, html h4, html h5, html h6, html a {
 
 html p {
   font-family: 'Bitter', serif;
+  line-height: 1.6;
 }
 
 a {
