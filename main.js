@@ -1,85 +1,77 @@
-//LOGO ANIMATION
-let logoTL = gsap.timeline({ paused: true })
+gsap.registerPlugin(ScrollTrigger);
 
-logoTL.to('#logo', 0.3, {
-	fill: '#000',
-	stroke: '#fff',
-	scale: 0.99
-})
-
-document.getElementById('logo').addEventListener('mouseenter', () => {
-	logoTL.play()
-})
-
-document.getElementById('logo').addEventListener('mouseleave', () => {
-	logoTL.reverse()
-})
-
-
-//MOBILE MENU FUNCTIONS
-const openMenu = document.getElementById('openMenu');
-const closeMenu = document.getElementById('closeMenu');
-const mobileMenu = document.getElementById('mobileMenu');
-
-function open() {
-	openMenu.style.display = 'none';
-	closeMenu.style.display = 'block';
-	gsap.to(mobileMenu, 0.3, {
-		display: 'flex',
-		opacity: 0.9,
-		ease: 'expo.inOut',
-	})
-}
-
-openMenu.addEventListener('click', open);
-
-function close() {
-	openMenu.style.display = 'block';
-	closeMenu.style.display = 'none';
-	gsap.to(mobileMenu, 0.3, {
-		display: 'none',
-		opacity: 0,
-		ease: 'expo.inOut',
-	})
-}
-
-closeMenu.addEventListener('click', close);
-
-document.querySelectorAll('#mobileMenu a').forEach(link => {
-	link.addEventListener('click', close)
-})
-
-//NAV SCROLL TO
-gsap.utils.toArray('nav a').forEach(function(link) {
-	link.addEventListener('click', function(e) {
-		e.preventDefault();
-		gsap.to(window, {
-			duration: 0.5,
-			scrollTo: e.target.getAttribute('href')
-		});
-	});
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".container",
+    start: "top top",
+    end: "+=50%",
+    pin: true,
+    scrub: 3,
+    // markers: true,
+  },
 });
 
-
-//ARROW SCROLL 
-document.getElementById('scroll').addEventListener('click', function(e) {
-	e.preventDefault();
-	gsap.to(window, {
-		duration: 0.5,
-		scrollTo: e.target.getAttribute('href')
-	});
+tl.to(".first", {
+  delay: 0.5,
+  // rotate: "45deg",
+  // scaleX: 2,
+  // yPercent: 200,
+  // xPercent: 50,
+  ease: "expo.Out",
+  letterSpacing: "1px",
+  textShadow: "5px 5px #000",
+  // scaleX: 2,
 });
+tl.to(
+  ".last",
+  {
+    delay: 0.6,
+    ease: "expo.Out",
+    letterSpacing: "1px",
+    textShadow: "-5px 5px #000",
+  },
+  "<"
+);
+tl.to(
+  ".title",
+  {
+    delay: 0.8,
+    color: "rgb(255,255,255, 1)",
+    ease: "expo.Out",
+    letterSpacing: "1px",
+    textShadow: "-5px 5px #000",
+  },
+  "<"
+);
 
-//ARROW BOUNCE 
-gsap.from('.scrollArrow i', {
-	y: 40,
-	duration: 0.7,
-	yoyo: true,
-	repeat: -1,
-	ease: Bounce.Out
-})
+function random_rgba() {
+  var o = Math.round,
+    r = Math.random,
+    s = 255;
+  return (
+    "rgba(" +
+    o(r() * s) +
+    "," +
+    o(r() * s) +
+    "," +
+    o(r() * s) +
+    "," +
+    r().toFixed(1) +
+    ")"
+  );
+}
 
+var color = random_rgba();
 
-
-
-
+document.querySelectorAll("path").forEach((path, i) => {
+  tl.to(path, {
+    // stagger: {
+    //   amount: 24,
+    //   each: 8,
+    //   //repeat: -1,
+    // },
+    attr: {
+      fill: random_rgba(),
+    },
+  });
+});
