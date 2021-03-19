@@ -266,7 +266,7 @@ body {
   padding: 0;
   position: fixed;
   top: 5%;
-  right: 3%;
+  left: 7%;
   font-size: 5rem;
   font-family: "Montserrat";
   color: white;
@@ -283,9 +283,9 @@ body {
   position: fixed;
   top: 20%;
   right: 3%;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-family: "Montserrat";
-  color: black;
+  color: white;
   z-index: 9;
   text-transform: uppercase;
   letter-spacing: -11px;
