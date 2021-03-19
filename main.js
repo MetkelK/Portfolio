@@ -13,6 +13,7 @@ const tl = gsap.timeline({
 
 tl.to(".first", {
   delay: 0.5,
+  color: "rgb(255,255,255, 1)",
   // rotate: "45deg",
   // scaleX: 2,
   // yPercent: 200,
@@ -25,6 +26,7 @@ tl.to(".first", {
 tl.to(
   ".last",
   {
+    color: "rgb(255,255,255, 1)",
     delay: 0.6,
     ease: "expo.Out",
     letterSpacing: "1px",
@@ -64,7 +66,7 @@ function random_rgba() {
 var color = random_rgba();
 
 document.querySelectorAll("path").forEach((path, i) => {
-  tl.to(path, {
+  tl.staggerTo(path, 0.2, {
     // stagger: {
     //   amount: 24,
     //   each: 8,
