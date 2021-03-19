@@ -4,9 +4,9 @@ const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".container",
     start: "top top",
-    end: "+=80%",
+    end: "+=50%",
     pin: true,
-    scrub: 3,
+    scrub: 1,
     // markers: true,
   },
 });
@@ -65,7 +65,7 @@ function random_rgba() {
 
 var color = random_rgba();
 
-document.querySelectorAll("path").forEach((path, i) => {
+document.querySelectorAll("path").forEach((path) => {
   tl.staggerTo(path, 0.2, {
     // stagger: {
     //   amount: 24,
