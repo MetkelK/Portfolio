@@ -65,8 +65,34 @@ function random_rgba() {
 
 var color = random_rgba();
 
+const palette = [
+  "rgb(21, 35, 49, 0.5)",
+  "rgb(18, 19, 21, 0.5)",
+  "rgb(184, 12, 9, 0.5)",
+  "rgb(229, 231, 230, 0.5)",
+  "rgb(183, 181, 179, 0.5)",
+];
+
+function randomColors(color) {
+  return color[Math.floor(Math.random() * color.length)];
+  console.log(color);
+}
+
+console.log(randomColors(palette));
+
+const tl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".container",
+    start: "top top",
+    end: "+=40%",
+    pin: true,
+    scrub: 1,
+    // markers: true,
+  },
+});
+
 document.querySelectorAll("path").forEach((path) => {
-  tl.staggerTo(path, 0.2, {
+  tl2.staggerTo(path, 0.2, {
     // stagger: {
     //   amount: 24,
     //   each: 8,
