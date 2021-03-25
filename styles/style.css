@@ -251,6 +251,7 @@ body {
   margin: 1rem;
   padding: 1rem;
   width: 100%;
+  overflow-x: hidden;
 }
 
 p,
