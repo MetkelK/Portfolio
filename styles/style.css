@@ -247,28 +247,46 @@ body {
 
 .svgContainer {
   position: absolute;
+  top: 0;
   margin: 1rem;
   padding: 1rem;
 }
 
-p, h1, h2, h3 {
+p,
+h1,
+h2,
+h3 {
   color: white;
 }
 
-.projects {
-  display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: center;
+.header {
+  position: relative;
+  top: 0;
+  padding: 1rem 0;
+  height: 50vh;
 }
 
-/* .first {
+.about {
+  padding: 1rem 0;
+  height: 50vh;
+}
+
+.projects {
+  padding: 1rem 0;
+  height: 50vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.first {
   margin: 0;
   padding: 0;
-  position: fixed;
+  /* position: relative;
   top: 0;
-  left: 3%;
+  left: 3%; */
   font-size: 5rem;
   font-family: "Montserrat";
   color: black;
@@ -299,13 +317,14 @@ p, h1, h2, h3 {
 .title {
   margin: 0;
   padding: 0;
-  position: fixed;
+  /* position: relative;
   top: 20%;
-  right: 3%;
+  right: 3%; */
   font-size: 1.5rem;
   font-family: "Montserrat";
   color: black;
   z-index: 9;
   text-transform: uppercase;
   letter-spacing: -11px;
-} */
+  text-align: right;
+}

@@ -7,7 +7,7 @@ const tl = gsap.timeline({
     end: "+=10%",
     // pin: true,
     scrub: 1,
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -53,7 +53,7 @@ const headertl = gsap.timeline({
     end: "bottom bottom",
     // pin: true,
     scrub: 1,
-    markers: true,
+    // markers: true,
   },
 });
 const abouttl = gsap.timeline({
@@ -63,7 +63,7 @@ const abouttl = gsap.timeline({
     end: "bottom bottom",
     // pin: true,
     scrub: 1,
-    markers: true,
+    // markers: true,
   },
 });
 const projecttl = gsap.timeline({
@@ -73,7 +73,7 @@ const projecttl = gsap.timeline({
     end: "bottom bottom",
     // pin: true,
     scrub: 1,
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -95,7 +95,7 @@ function random_rgba() {
 }
 
 document.querySelectorAll("path").forEach((path) => {
-  tl.staggerTo(path, 0.1, {
+  tl.staggerTo(path, 3, {
     ease: "expo.inOut",
     attr: {
       fill: random_rgba(),
@@ -104,7 +104,7 @@ document.querySelectorAll("path").forEach((path) => {
 });
 
 document.querySelectorAll("path").forEach((path) => {
-  headertl.staggerTo(path, 0.1, {
+  headertl.staggerTo(path, 3, {
     ease: "expo.inOut",
     attr: {
       fill: random_rgba(),
@@ -112,7 +112,7 @@ document.querySelectorAll("path").forEach((path) => {
   });
 });
 document.querySelectorAll("path").forEach((path) => {
-  abouttl.staggerTo(path, 0.1, {
+  abouttl.staggerTo(path, 3, {
     ease: "expo.inOut",
     attr: {
       fill: random_rgba(),
@@ -120,7 +120,7 @@ document.querySelectorAll("path").forEach((path) => {
   });
 });
 document.querySelectorAll("path").forEach((path) => {
-  projecttl.staggerTo(path, 0.1, {
+  projecttl.staggerTo(path, 3, {
     ease: "expo.inOut",
     attr: {
       fill: random_rgba(),
