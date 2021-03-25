@@ -4,7 +4,7 @@ const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".svgContainer",
     start: "top top",
-    end: "+=50%",
+    end: "+=10%",
     pin: true,
     scrub: 1,
     // markers: true,
