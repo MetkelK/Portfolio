@@ -241,6 +241,7 @@ body {
   padding: 1rem;
   width: 90%;
   overflow-x: hidden;
+  height: auto;
 }
 
 p,
@@ -289,6 +290,7 @@ h3 {
   z-index: 9;
   text-transform: uppercase;
   letter-spacing: -11px;
+  text-align: left;
 }
 
 .last {
