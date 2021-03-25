@@ -227,6 +227,7 @@ body {
   height: 2400px;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
@@ -244,7 +245,25 @@ body {
   align-items: center;
 }
 
-.first {
+.svgContainer {
+  position: absolute;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+p, h1, h2, h3 {
+  color: white;
+}
+
+.projects {
+  display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+/* .first {
   margin: 0;
   padding: 0;
   position: fixed;
@@ -289,4 +308,4 @@ body {
   z-index: 9;
   text-transform: uppercase;
   letter-spacing: -11px;
-}
+} */

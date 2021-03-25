@@ -4,10 +4,10 @@ const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".container",
     start: "top top",
-    end: "+=50%",
-    pin: true,
+    end: "+=10%",
+    // pin: true,
     scrub: 1,
-    // markers: true,
+    markers: true,
   },
 });
 
@@ -46,6 +46,37 @@ tl.to(
   "<"
 );
 
+const headertl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".header",
+    start: "top top",
+    end: "bottom bottom",
+    // pin: true,
+    scrub: 1,
+    markers: true,
+  },
+});
+const abouttl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".about",
+    start: "top top",
+    end: "bottom bottom",
+    // pin: true,
+    scrub: 1,
+    markers: true,
+  },
+});
+const projecttl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".project",
+    start: "top top",
+    end: "bottom bottom",
+    // pin: true,
+    scrub: 1,
+    markers: true,
+  },
+});
+
 function random_rgba() {
   var o = Math.round,
     r = Math.random,
@@ -63,41 +94,34 @@ function random_rgba() {
   );
 }
 
-var color = random_rgba();
-
-const palette = [
-  "rgb(21, 35, 49, 0.5)",
-  "rgb(18, 19, 21, 0.5)",
-  "rgb(184, 12, 9, 0.5)",
-  "rgb(229, 231, 230, 0.5)",
-  "rgb(183, 181, 179, 0.5)",
-];
-
-function randomColors(color) {
-  return color[Math.floor(Math.random() * color.length)];
-  console.log(color);
-}
-
-console.log(randomColors(palette));
-
-const tl2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".container",
-    start: "top top",
-    end: "+=40%",
-    pin: true,
-    scrub: 1,
-    // markers: true,
-  },
+document.querySelectorAll("path").forEach((path) => {
+  tl.staggerTo(path, 0.1, {
+    ease: "expo.inOut",
+    attr: {
+      fill: random_rgba(),
+    },
+  });
 });
 
 document.querySelectorAll("path").forEach((path) => {
-  tl2.staggerTo(path, 0.2, {
-    // stagger: {
-    //   amount: 24,
-    //   each: 8,
-    //   //repeat: -1,
-    // },
+  headertl.staggerTo(path, 0.1, {
+    ease: "expo.inOut",
+    attr: {
+      fill: random_rgba(),
+    },
+  });
+});
+document.querySelectorAll("path").forEach((path) => {
+  abouttl.staggerTo(path, 0.1, {
+    ease: "expo.inOut",
+    attr: {
+      fill: random_rgba(),
+    },
+  });
+});
+document.querySelectorAll("path").forEach((path) => {
+  projecttl.staggerTo(path, 0.1, {
+    ease: "expo.inOut",
     attr: {
       fill: random_rgba(),
     },
