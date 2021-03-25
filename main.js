@@ -2,10 +2,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".container",
+    trigger: ".svgContainer",
     start: "top top",
-    end: "+=10%",
-    // pin: true,
+    end: "+=50%",
+    pin: true,
     scrub: 1,
     // markers: true,
   },
