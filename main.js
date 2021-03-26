@@ -26,12 +26,13 @@ const randomColor6 = random_rgba();
 
 const tl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".svgContainer",
+    trigger: ".header",
     start: "top top",
     end: "bottom center",
     pin: true,
+    pinSpacing: true,
     scrub: 1,
-    // markers: true,
+    markers: true,
   },
 });
 
