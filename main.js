@@ -6,7 +6,7 @@ const tl = gsap.timeline({
     start: "top top",
     end: "+=10%",
     pin: true,
-    scrub: 1,
+    scrub: 5,
     // markers: true,
   },
 });
@@ -52,7 +52,7 @@ const headertl = gsap.timeline({
     start: "top top",
     end: "bottom bottom",
     // pin: true,
-    scrub: 1,
+    scrub: 5,
     // markers: true,
   },
 });
@@ -62,7 +62,7 @@ const midheadtl = gsap.timeline({
     start: "center top",
     end: "bottom bottom",
     // pin: true,
-    scrub: 1,
+    scrub: 5,
     // markers: true,
   },
 });
@@ -72,7 +72,7 @@ const abouttl = gsap.timeline({
     start: "top top",
     end: "bottom bottom",
     // pin: true,
-    scrub: 1,
+    scrub: 5,
     // markers: true,
   },
 });
@@ -82,7 +82,7 @@ const projecttl = gsap.timeline({
     start: "top top",
     end: "bottom bottom",
     // pin: true,
-    scrub: 1,
+    scrub: 5,
     // markers: true,
   },
 });
