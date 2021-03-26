@@ -4,9 +4,9 @@ const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".svgContainer",
     start: "top top",
-    end: "+=50%",
+    end: "+=10%",
     pin: true,
-    scrub: 3,
+    scrub: 1,
     // markers: true,
   },
 });
@@ -127,3 +127,43 @@ document.querySelectorAll("path").forEach((path) => {
     },
   });
 });
+
+const about = {
+  title: document.querySelector(".aboutTitle"),
+  first: document.querySelector(".aboutP1"),
+  second: document.querySelector(".aboutP2"),
+  third: document.querySelector(".aboutP3"),
+};
+
+charming(about.title);
+about.titleLetters = [...about.title.querySelectorAll("span")];
+about.titleLetters.sort(() => Math.round(Math.random()) - 0.5);
+let letters = about.titleLetters.filter((_) => Math.random() < 0.5);
+let otherletters = about.titleLetters.filter((el) => letters.indexOf(el) < 0);
+
+headertl.staggerFrom(
+  letters,
+  0.2,
+  {
+    ease: Expo.easeInOut,
+    y: "-100%",
+    scaleX: 0.8,
+    scaleY: 1.5,
+    opacity: 0,
+  },
+  0.04,
+  0
+);
+headertl.staggerFrom(
+  otherletters,
+  0.2,
+  {
+    ease: Expo.easeInOut,
+    y: "500%",
+    scaleX: 0.8,
+    scaleY: 1.5,
+    opacity: 0,
+  },
+  0.04,
+  0
+);
