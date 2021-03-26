@@ -53,7 +53,17 @@ const headertl = gsap.timeline({
     end: "bottom bottom",
     // pin: true,
     scrub: 1,
-    markers: true,
+    // markers: true,
+  },
+});
+const midheadtl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".header",
+    start: "center top",
+    end: "bottom bottom",
+    // pin: true,
+    scrub: 1,
+    // markers: true,
   },
 });
 const abouttl = gsap.timeline({
@@ -141,19 +151,19 @@ about.titleLetters.sort(() => Math.round(Math.random()) - 0.5);
 let letters = about.titleLetters.filter((_) => Math.random() < 0.5);
 let otherletters = about.titleLetters.filter((el) => letters.indexOf(el) < 0);
 
-headertl.from(letters, {
+midheadtl.from(letters, {
   ease: Expo.easeOut,
   y: "-500%",
   opacity: 0,
   stagger: 0.5,
 });
-headertl.from(otherletters, {
+midheadtl.from(otherletters, {
   ease: Expo.easeOut,
   y: "-500%",
   opacity: 0,
   stagger: 0.6,
 });
-headertl.from(".aboutBio", 5, {
+midheadtl.from(".aboutBio", 5, {
   ease: Expo.easeOut,
   clipPath: "inset(50% 0 50% 0)",
   opacity: 0,
