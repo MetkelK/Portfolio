@@ -12,7 +12,7 @@ const tl = gsap.timeline({
 });
 
 tl.to(".first", {
-  delay: 0.5,
+  // delay: 0.5,
   color: "rgb(255,255,255, 1)",
   // rotate: "45deg",
   // scaleX: 2,
@@ -37,7 +37,7 @@ tl.to(
 tl.to(
   ".title",
   {
-    delay: 0.8,
+    // delay: 0.8,
     color: "rgb(255,255,255, 1)",
     ease: "expo.Out",
     letterSpacing: "1px",
