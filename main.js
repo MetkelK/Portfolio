@@ -4,36 +4,20 @@ const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".svgContainer",
     start: "top top",
-    end: "+=10%",
+    end: "bottom center",
     pin: true,
-    scrub: 5,
-    // markers: true,
+    scrub: 1,
+    markers: true,
   },
 });
 
 tl.to(".first", {
   // delay: 0.5,
   color: "rgb(255,255,255, 1)",
-  // rotate: "45deg",
-  // scaleX: 2,
-  // yPercent: 200,
-  // xPercent: 50,
   ease: "expo.Out",
   letterSpacing: "1px",
   textShadow: "5px 5px #000",
-  // scaleX: 2,
 });
-tl.to(
-  ".last",
-  {
-    color: "rgb(255,255,255, 1)",
-    delay: 0.6,
-    ease: "expo.Out",
-    letterSpacing: "1px",
-    textShadow: "-5px 5px #000",
-  },
-  "<"
-);
 tl.to(
   ".title",
   {
