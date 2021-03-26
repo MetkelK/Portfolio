@@ -153,3 +153,8 @@ headertl.from(otherletters, {
   opacity: 0,
   stagger: 0.6,
 });
+headertl.from(".aboutBio", 5, {
+  ease: Expo.easeOut,
+  clipPath: "inset(50% 0 50% 0)",
+  opacity: 0,
+});

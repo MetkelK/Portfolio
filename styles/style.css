@@ -265,6 +265,10 @@ h3 {
   text-transform: uppercase;
 }
 
+.aboutBio {
+  clip-path: inset(0 0 0 0);
+}
+
 .projects {
   padding: 1rem 0;
 
