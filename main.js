@@ -53,7 +53,7 @@ const headertl = gsap.timeline({
     end: "bottom bottom",
     // pin: true,
     scrub: 1,
-    // markers: true,
+    markers: true,
   },
 });
 const abouttl = gsap.timeline({
@@ -141,29 +141,15 @@ about.titleLetters.sort(() => Math.round(Math.random()) - 0.5);
 let letters = about.titleLetters.filter((_) => Math.random() < 0.5);
 let otherletters = about.titleLetters.filter((el) => letters.indexOf(el) < 0);
 
-headertl.staggerFrom(
-  letters,
-  0.2,
-  {
-    ease: Expo.easeInOut,
-    y: "-100%",
-    scaleX: 0.8,
-    scaleY: 1.5,
-    opacity: 0,
-  },
-  0.04,
-  0
-);
-headertl.staggerFrom(
-  otherletters,
-  0.2,
-  {
-    ease: Expo.easeInOut,
-    y: "500%",
-    scaleX: 0.8,
-    scaleY: 1.5,
-    opacity: 0,
-  },
-  0.04,
-  0
-);
+headertl.from(letters, {
+  ease: Expo.easeOut,
+  y: "-500%",
+  opacity: 0,
+  stagger: 0.5,
+});
+headertl.from(otherletters, {
+  ease: Expo.easeOut,
+  y: "-500%",
+  opacity: 0,
+  stagger: 0.6,
+});
