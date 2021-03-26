@@ -1,5 +1,29 @@
 gsap.registerPlugin(ScrollTrigger);
 
+function random_rgba() {
+  var o = Math.round,
+    r = Math.random,
+    s = 255;
+  return (
+    "rgba(" +
+    o(r() * s) +
+    "," +
+    o(r() * s) +
+    "," +
+    o(r() * s) +
+    "," +
+    r().toFixed(1) +
+    ")"
+  );
+}
+
+const randomColor1 = random_rgba();
+const randomColor2 = random_rgba();
+const randomColor3 = random_rgba();
+const randomColor4 = random_rgba();
+const randomColor5 = random_rgba();
+const randomColor6 = random_rgba();
+
 const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".svgContainer",
@@ -7,7 +31,7 @@ const tl = gsap.timeline({
     end: "bottom center",
     pin: true,
     scrub: 1,
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -28,6 +52,42 @@ tl.to(
     textShadow: "-5px 5px #000",
   },
   "<"
+);
+tl.fromTo(
+  "body",
+  2,
+  {
+    ease: "expo.Out",
+    background: `linear-gradient(45deg,
+    ${randomColor6} 0%,
+    ${randomColor6} 45%,
+    ${randomColor5} 45%,
+    ${randomColor5} 65%,
+    ${randomColor4} 65%,
+    ${randomColor4} 80%,
+    ${randomColor3} 80%,
+    ${randomColor3} 90%,
+    ${randomColor2} 90%,
+    ${randomColor2} 95%,
+    ${randomColor1} 95%,
+    ${randomColor1} 100%)`,
+  },
+  {
+    ease: "expo.Out",
+    background: `linear-gradient(50deg,
+    ${randomColor1} 0%,
+    ${randomColor1} 2%,
+    ${randomColor2} 2%,
+    ${randomColor2} 5%,
+    ${randomColor3} 5%,
+    ${randomColor3} 11%,
+    ${randomColor4} 11%,
+    ${randomColor4} 23%,
+    ${randomColor5} 23%,
+    ${randomColor5} 47%,
+    ${randomColor6} 47%,
+    ${randomColor6} 100%)`,
+  }
 );
 
 const headertl = gsap.timeline({
@@ -70,23 +130,6 @@ const projecttl = gsap.timeline({
     // markers: true,
   },
 });
-
-function random_rgba() {
-  var o = Math.round,
-    r = Math.random,
-    s = 255;
-  return (
-    "rgba(" +
-    o(r() * s) +
-    "," +
-    o(r() * s) +
-    "," +
-    o(r() * s) +
-    "," +
-    r().toFixed(1) +
-    ")"
-  );
-}
 
 document.querySelectorAll("path").forEach((path) => {
   tl.staggerTo(path, 3, {
