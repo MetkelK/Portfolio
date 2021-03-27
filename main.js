@@ -30,9 +30,9 @@ const tl = gsap.timeline({
     start: "top top",
     end: "bottom center",
     pin: true,
-    pinSpacing: true,
+    pinSpacing: false,
     scrub: 1,
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -107,8 +107,8 @@ const midheadtl = gsap.timeline({
     start: "center top",
     end: "bottom bottom",
     // pin: true,
-    scrub: 5,
-    // markers: true,
+    scrub: 3,
+    markers: true,
   },
 });
 const abouttl = gsap.timeline({
@@ -191,8 +191,13 @@ midheadtl.from(otherletters, {
   opacity: 0,
   stagger: 0.6,
 });
-midheadtl.from(".aboutBio", 5, {
-  ease: Expo.easeOut,
-  clipPath: "inset(50% 0 50% 0)",
-  opacity: 0,
-});
+midheadtl.from(
+  ".aboutBio",
+  1,
+  {
+    ease: Expo.easeOut,
+    clipPath: "inset(50% 0 50% 0)",
+    opacity: 0,
+  },
+  "<"
+);
