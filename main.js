@@ -54,42 +54,22 @@ tl.to(
   },
   "<"
 );
-tl.fromTo(
-  "body",
-  2,
-  {
-    ease: "expo.Out",
-    background: `linear-gradient(45deg,
-    ${randomColor6} 0%,
-    ${randomColor6} 45%,
-    ${randomColor5} 45%,
-    ${randomColor5} 65%,
-    ${randomColor4} 65%,
-    ${randomColor4} 80%,
-    ${randomColor3} 80%,
-    ${randomColor3} 90%,
-    ${randomColor2} 90%,
-    ${randomColor2} 95%,
-    ${randomColor1} 95%,
-    ${randomColor1} 100%)`,
-  },
-  {
-    ease: "expo.Out",
-    background: `linear-gradient(50deg,
+tl.to("body", 2, {
+  ease: "expo.Out",
+  background: `linear-gradient(45deg,
     ${randomColor1} 0%,
-    ${randomColor1} 2%,
-    ${randomColor2} 2%,
-    ${randomColor2} 5%,
-    ${randomColor3} 5%,
-    ${randomColor3} 11%,
-    ${randomColor4} 11%,
-    ${randomColor4} 23%,
-    ${randomColor5} 23%,
-    ${randomColor5} 47%,
-    ${randomColor6} 47%,
+    ${randomColor1} 53%,
+    ${randomColor2} 53%,
+    ${randomColor2} 65%,
+    ${randomColor3} 65%,
+    ${randomColor3} 71%,
+    ${randomColor4} 71%,
+    ${randomColor4} 75%,
+    ${randomColor5} 75%,
+    ${randomColor5} 80%,
+    ${randomColor6} 80%,
     ${randomColor6} 100%)`,
-  }
-);
+});
 
 const headertl = gsap.timeline({
   scrollTrigger: {
@@ -104,16 +84,42 @@ const headertl = gsap.timeline({
 const midheadtl = gsap.timeline({
   scrollTrigger: {
     trigger: ".header",
-    start: "center top",
+    start: "top top",
     end: "bottom bottom",
     // pin: true,
     scrub: 3,
-    markers: true,
+    // markers: true,
   },
 });
 const abouttl = gsap.timeline({
   scrollTrigger: {
     trigger: ".about",
+    start: "top top",
+    end: "bottom bottom",
+    // pin: true,
+    scrub: 5,
+    markers: true,
+  },
+});
+abouttl.to("body", 2, {
+  ease: "expo.Out",
+  background: `,linear-gradient(45deg,
+    ${randomColor1} 0%,
+    ${randomColor1} 2%,
+    ${randomColor2} 2%,
+    ${randomColor2} 5%,
+    ${randomColor3} 5%,
+    ${randomColor3} 11%,
+    ${randomColor4} 11%,
+    ${randomColor4} 23%,
+    ${randomColor5} 23%,
+    ${randomColor5} 47%,
+    ${randomColor6} 47%,
+    ${randomColor6} 100%)`,
+});
+const skillstl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".skills",
     start: "top top",
     end: "bottom bottom",
     // pin: true,
@@ -179,19 +185,13 @@ about.titleLetters.sort(() => Math.round(Math.random()) - 0.5);
 let letters = about.titleLetters.filter((_) => Math.random() < 0.5);
 let otherletters = about.titleLetters.filter((el) => letters.indexOf(el) < 0);
 
-midheadtl.from(letters, {
+midheadtl.to(letters, {
   ease: Expo.easeOut,
   y: "-500%",
   opacity: 0,
   stagger: 0.5,
 });
-midheadtl.from(otherletters, {
-  ease: Expo.easeOut,
-  y: "-500%",
-  opacity: 0,
-  stagger: 0.6,
-});
-midheadtl.from(
+midheadtl.to(
   ".aboutBio",
   1,
   {
