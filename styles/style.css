@@ -610,30 +610,6 @@ svg:hover {
   }
 }
 
-.project_button {
-  background-color: #262e45;
-  border: 1px solid #262e45;
-  color: #fff;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  padding: 0.5rem 1rem;
-  transition-duration: 0.3s;
-}
-
-.project_button:hover {
-  background-color: #244091;
-  border: 1px solid #244091;
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
-}
-
-.project_button a {
-  color: #fff;
-}
-
 .button {
   pointer-events: auto;
   cursor: pointer;
