@@ -576,7 +576,7 @@ svg:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(0deg, #000, #121315);
+  background: linear-gradient(0deg, #0a1826, #121315);
 }
 
 .projects h2 {
@@ -738,7 +738,7 @@ svg:hover {
 
 .contact {
   padding: 2rem 1rem;
-  background: linear-gradient(180deg, #000, #121315);
+  background: linear-gradient(180deg, #0a1826, #121315);
 }
 
 .contact h2 {
