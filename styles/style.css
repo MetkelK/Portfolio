@@ -237,7 +237,7 @@ a {
 
 @media all and (min-width: 1200px) {
   .wrapper {
-    width: 50%;
+    width: 60%;
     margin: 1rem auto;
   }
 }
@@ -389,7 +389,6 @@ svg:hover {
 .banner h2,
 .social-media {
   color: #000;
-  transition-duration: 0.3s;
 }
 
 .social-media a {
@@ -399,10 +398,25 @@ svg:hover {
 .social-media a i {
   font-size: 1.5rem;
   padding: 0 0.5rem;
+  transition-duration: 0.3s;
 }
 
 .social-media a i:hover {
-  color: #262e45;
+  /* color: #262e45; */
+  color: #152331;
+}
+
+@media all and (min-width: 1200px) {
+  .banner {
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .banner h1,
+  .banner h2,
+  .social-media {
+    color: #fff;
+  }
 }
 
 .scrollArrow {
@@ -428,7 +442,7 @@ svg:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #0a1826, #121315, #000);
+  background: linear-gradient(180deg, #0a1826, #121315);
 }
 
 .about h2 {
@@ -459,8 +473,14 @@ svg:hover {
 
 @media all and (min-width: 1200px) {
   .bio {
-    width: 70%;
+    width: 100%;
     margin: 1rem auto;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .bio p {
+    color: #fff;
   }
 }
 
@@ -518,13 +538,34 @@ svg:hover {
 }
 
 @media all and (min-width: 1200px) {
-  .skill-list {
-    width: 70%;
-    margin: 1rem auto;
+  .skills {
+    background: linear-gradient(180deg, #0a1826, #121315);
   }
 
   .skill-list {
-    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    margin: 1rem auto;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr;
+  }
+
+  .skill-list i,
+  .skill-title {
+    color: #fff;
+    padding: 0 1rem;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .biowrapper {
+    width: 100%;
+    display: flex;
+  }
+
+  .about,
+  .skills {
+    width: 50%;
   }
 }
 
@@ -535,7 +576,7 @@ svg:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(0deg, #000000, #152331, #121315, #000);
+  background: linear-gradient(0deg, #000, #121315);
 }
 
 .projects h2 {
@@ -697,7 +738,7 @@ svg:hover {
 
 .contact {
   padding: 2rem 1rem;
-  background: #000;
+  background: linear-gradient(180deg, #000, #121315);
 }
 
 .contact h2 {
