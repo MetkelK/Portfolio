@@ -548,6 +548,8 @@ svg:hover {
 
 .skill-title {
   font-size: initial;
+  display: block;
+  padding: 1rem 0;
 }
 
 @media all and (min-width: 768px) {
@@ -824,7 +826,7 @@ textarea {
   color: var(--gray);
 }
 
-label {
+form label {
   color: var(--gray);
 }
 

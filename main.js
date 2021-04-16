@@ -52,7 +52,6 @@ document.querySelectorAll("#mobileMenu a").forEach((link) => {
 gsap.utils.toArray("nav a").forEach(function (link) {
   link.addEventListener("click", function (e) {
     e.preventDefault();
-    console.log(link);
     gsap.to(window, {
       duration: 0.5,
       scrollTo: e.target.getAttribute("href"),
