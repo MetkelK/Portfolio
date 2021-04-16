@@ -1,3 +1,11 @@
+:root {
+  --nav-background: rgba(18, 19, 21, 0.9);
+  --primary-color: #121315;
+  --secondary-color: #152331;
+  --tertiary-color: #0a1826;
+  --card-color: #fffff3;
+}
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -248,7 +256,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(18, 19, 21, 0.9);
+  background-color: var(--nav-background);
   position: fixed;
   top: 0;
   z-index: 103;
@@ -298,7 +306,7 @@ svg:hover {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background-color: #121315;
+  background-color: var(--primary-color);
   opacity: 0;
   list-style-type: none;
 }
@@ -368,7 +376,7 @@ svg:hover {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  background-image: linear-gradient(to bottom, #000, #152331),
+  background-image: linear-gradient(to bottom, #000, var(--secondary-color)),
     url("../assets/altumcode-U0tBTn8UR8I-unsplash.webp"),
     url("../assets/altumcode-U0tBTn8UR8I-unsplash.jpg");
   background-size: cover;
@@ -379,7 +387,7 @@ svg:hover {
 
 .banner {
   text-align: right;
-  background-color: #fffff3;
+  background-color: var(--card-color);
   padding: 1rem;
   margin: 1rem;
   border-radius: 5px;
@@ -402,8 +410,8 @@ svg:hover {
 }
 
 .social-media a i:hover {
-  /* color: #262e45; */
-  color: #152331;
+  /* color: #152331; */
+  color: #ccc;
 }
 
 @media all and (min-width: 1200px) {
@@ -426,7 +434,7 @@ svg:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fffff3;
+  color: #fff;
   z-index: 102;
   text-align: center;
 }
@@ -442,11 +450,15 @@ svg:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #0a1826, #121315);
+  background: linear-gradient(
+    180deg,
+    var(--tertiary-color),
+    var(--primary-color)
+  );
 }
 
 .about h2 {
-  color: #fffff3;
+  color: var(--card-color);
   text-transform: uppercase;
   letter-spacing: 1rem;
   font-style: italic;
@@ -458,7 +470,7 @@ svg:hover {
 .bio {
   width: 90%;
   padding: 1rem;
-  background-color: #fffff3;
+  background-color: var(--card-color);
   margin: 1rem;
   border-radius: 5px;
   box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.75);
@@ -501,7 +513,7 @@ svg:hover {
 }
 
 .skills h2 {
-  color: #fffff3;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 1rem;
   font-style: italic;
@@ -512,7 +524,7 @@ svg:hover {
 
 .skill-list {
   width: 90%;
-  background-color: #fffff3;
+  background-color: var(--card-color);
   padding: 1rem;
   margin: 1rem;
   display: grid;
@@ -539,7 +551,11 @@ svg:hover {
 
 @media all and (min-width: 1200px) {
   .skills {
-    background: linear-gradient(180deg, #0a1826, #121315);
+    background: linear-gradient(
+      180deg,
+      var(--tertiary-color),
+      var(--primary-color)
+    );
   }
 
   .skill-list {
@@ -576,7 +592,11 @@ svg:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(0deg, #0a1826, #121315);
+  background: linear-gradient(
+    0deg,
+    var(--tertiary-color),
+    var(--primary-color)
+  );
 }
 
 .projects h2 {
@@ -601,7 +621,7 @@ svg:hover {
   width: 90%;
   position: relative;
   margin: 1rem;
-  background-color: #fff;
+  background-color: var(--card-color);
   border-radius: 5px;
   padding: 1rem;
   box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.75);
@@ -738,11 +758,15 @@ svg:hover {
 
 .contact {
   padding: 2rem 1rem;
-  background: linear-gradient(180deg, #0a1826, #121315);
+  background: linear-gradient(
+    180deg,
+    var(--tertiary-color),
+    var(--primary-color)
+  );
 }
 
 .contact h2 {
-  color: #fffff3;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 1rem;
   font-style: italic;
@@ -803,30 +827,10 @@ label {
   }
 }
 
-.contact_button {
-  background-color: #262e45;
-  border: 1px solid #262e45;
-  color: #fff;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  padding: 0.5rem 1rem;
-  transition-duration: 0.3s;
-}
-
-.contact_button:hover {
-  background-color: #244091;
-  border: 1px solid #244091;
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
-}
-
 footer {
   height: auto;
   text-align: center;
-  background-color: #121315;
+  background-color: var(--primary-color);
 }
 
 footer p {
