@@ -1,182 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Metkel Kebede - Front-End Web Developer based in Toronto"/>
-	<title>Metkel Kebede | Web Developer</title>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles/style.css">
-	<link rel="stylesheet" rel="preconnect" rel="preload" href="styles/devicon.min.css">
-	
-	<meta name="theme-color" content="#ffffff">
-	<link rel="icon" href="favicon.svg">
-	<link rel="alternate icon" href="favicon.ico">
-	<link rel="mask-icon" href="mask-icon.svg" color="#000000">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="manifest" href="manifest.json">
-</head>
-<body>
-	<nav>
-		<svg height='50px' width='50px' viewBox="0 0 28 16">
-			<a><path href="#header" id="logo" fill="#fff" stroke-width="1px" fill-opacity="1" d="M 0 0 L 5 0 L 9 6 L 13 0 L 18 0 L 18 16 L 13 16 L 13 7 L 9 12 L 5 7 L 5 16 L 0 16 L 0 0 M 18 7 L 23 0 L 28 0 L 22 8 L 28 16 L 23 16 L 18 9"></path></a>
-		</svg>
-		<i class="fas fa-bars" id='openMenu'></i>
-		<i class="fas fa-times" id='closeMenu'></i>
-		<ul id='desktopMenu'>
-			<li><a href="#about">About</a></li>
-			<li><a href="#skills">Skills</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
-		<ul id='mobileMenu'>
-			<li><a href="#about">About</a></li>
-			<li><a href="#skills">Skills</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
-	</nav>
-	<div class="header" id="header">
-		<div class="banner">
-			<h1>Hi! My name's Metkel...</h1>
-			<h2>but you can call me Mike</h2>
-			<div class="social-media">
-				<a class="icon" aria-label="Twitter" href="http://www.twitter.com/k_metkel" target="_blank" rel="noreferrer"><i class="fab fa-twitter icon"></i></a>
-				<a class="icon" aria-label="Github" href="http://www.github.com/MetkelK" target="_blank" rel="noreferrer"><i class="fab fa-github icon"></i></a>
-				<a class="icon" aria-label="LinkedIn" href="https://www.linkedin.com/in/metkel-kebede-50a79664/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in icon"></i></a>
-			</div>
-		</div>
-		<div class="scrollArrow" >
-			<a href="#about" id="scroll">Learn More</a>
-			<i class="fas fa-arrow-down"></i>
-		</div>
-	</div>
-	
-	<main>
-		<div class="biowrapper">
-			<div class="about" id="about">
-				<div class="wrapper">   
-					<h2>Who am I?</h2>
-					<div class="bio">
-						<p>I'm a Front-End Developer with a passion for continuous learning. I'm really excited about web development because it allows me to combine logic and creativity to building engaging applications.</p>
-						
-						<p>My path to web development started with an intro course at Juno College and continued with self-instruction. I previously completed a Mechanical Engineering Technology program at George Brown College.</p>
-						
-						<p>When I'm not coding you can find me working out, relaxing with a good book, or geeking out over video games.</p>
-					</div>
-				</div>
-			</div>
-			
-			<div class="skills" id="skills">
-				<div class="wrapper">
-					<h2>Skills</h2>
-					<div class="skill-list">
-						<i class="devicon-html5-plain"><p class="skill-title">HTML5</p></i>
-						<i class="devicon-css3-plain"><p class="skill-title">CSS3</p></i>
-						<i class="devicon-sass-original"><p class="skill-title">Sass</p></i>
-						<i class="devicon-javascript-plain"><p class="skill-title">JavaScript</p></i>
-						<i class="devicon-jquery-plain"><p class="skill-title">jQuery</p></i>
-						<i class="devicon-react-original"><p class="skill-title">React</p></i>
-						<i class="devicon-nodejs-plain"><p class="skill-title">NodeJS</p></i>
-						<i class="devicon-express-original"><p class="skill-title">Express</p></i>
-						<i class="devicon-mongodb-plain"><p class="skill-title">MongoDB</p></i>
-						<i class="devicon-git-plain"><p class="skill-title">Git</p></i>
-					</div>
-				</div>
-			</div>
-		</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Metkel Kebede - Front-End Web Developer based in Toronto"
+    />
+    <title>Metkel Kebede | Web Developer</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" rel="preload" href="styles/devicon.min.css" />
 
-		<div class="projects" id="projects">
-			<div class="wrapper">			
-				<h2>Projects</h2>
-				<div class="gridContainer">
-					<div class="project">
-						<picture>
-							<source srcset="assets/newsfull.webp 827w" type="image/webp">
-							<img src="assets/newsfull.png" alt="Office towers with an overlay of a news article">
-						</picture>
-						<h3>News Tracker</h3>
-						<h4>HTML / CSS / REACT / API / MATERIAL UI</h4>
-						<p>This site uses the New York Times API to display their top articles, their most viewed stories of the week and the ability to search their database.</p>
-						<div class="linkContainer">
-							<a href="https://modest-blackwell-d7e99c.netlify.app" target="_blank" rel="noreferrer" class="button button--motion"><span><span>View Live</span></span></a>
-							<a href="https://www.github.com/MetkelK/newsapp" target="_blank" rel="noreferrer" class="button button--motion"><span><span>View Code</span></span></a>
-						</div>
-					</div>
-					<div class="project">
-						<picture>
-							<source srcset="assets/Fumblr.webp 830w" type="image/webp">
-							<img src="assets/Fumblr.png" alt="A gallery of images over a white background">
-						</picture>
-						<h3>Fumblr</h3>
-						<h4>HTML / CSS / NEXT.JS / FIREBASE </h4>
-						<p>An imitation Tumblr I call Fumblr. Go ahead and upload a photo or gif - The site will automatically refresh to include your addition.</p>
-						<div class="linkContainer">
-							<a href="https://fumblr.vercel.app/" target="_blank" rel="noreferrer" class="button button--motion"><span><span>View Live</span></span></a>
-							<a href="https://www.github.com/MetkelK/Fumblr" target="_blank" rel="noreferrer" class="button button--motion"><span><span>View Code</span></span></a>
-						</div>
-					</div>
-					<div class="project">
-						<picture>
-							<source srcset="assets/makeupfull.webp 831w" type="image/webp">
-							<img src="assets/makeupfull.png" alt="A pink background with a womans nose and mouth bursting through">
-						</picture>
-						<h3>Courtney Does Makeup</h3>
-						<h4>HTML / SASS / JQUERY</h4>
-						<p>A single page site developed for a self-taught makeup artist that includes a short bio, a gallery of featured work and a contact form.</p>
-						<div class="linkContainer">
-							<a href="https://www.courtneydoesmakeup.com" target="_blank" rel="noreferrer" class="button button--motion"><span><span>View Live</span></span></a>
-							<a href="https://www.github.com/MetkelK/courtneydoesmakeup" target="_blank" rel="noreferrer"  class="button button--motion"><span><span>View Code</span></span></a>
-						</div>
-					</div>
-					<div class="project">
-						<picture>
-							<source srcset="assets/espressofull.webp 836w" type="image/webp">
-							<img src="assets/espressofull.png" alt="A coffee shop with a banner indicating the name, location and hours">
-						</picture>
-						<h3>Oakwood Espresso</h3>
-						<h4>HTML / CSS</h4>
-						<p>A landing page developed for a local espresso shop to display their location and hours along with links to social media.</p>
-						<div class="linkContainer">
-							<a href="https://oakwoodespresso.com" target="_blank" rel="noreferrer" class="button button--motion"><span><span>View Live</span></span></a>
-							<a href="https://www.github.com/MetkelK/Espresso" target="_blank" rel="noreferrer" class="button button--motion"><span><span>View Code</span></span></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="favicon.svg" />
+    <link rel="alternate icon" href="favicon.ico" />
+    <link rel="mask-icon" href="mask-icon.svg" color="#000000" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <body>
+    <nav>
+      <svg height="50px" width="50px" viewBox="0 0 28 16">
+        <a>
+          <path
+            href="#header"
+            id="logo"
+            fill="#fff"
+            stroke-width="1px"
+            fill-opacity="1"
+            d="M 0 0 L 5 0 L 9 6 L 13 0 L 18 0 L 18 16 L 13 16 L 13 7 L 9 12 L 5 7 L 5 16 L 0 16 L 0 0 M 18 7 L 23 0 L 28 0 L 22 8 L 28 16 L 23 16 L 18 9"
+          ></path>
+        </a>
+      </svg>
+      <i class="fas fa-bars" id="openMenu"></i>
+      <i class="fas fa-times" id="closeMenu"></i>
+      <ul id="desktopMenu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <ul id="mobileMenu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header" id="header">
+      <div class="banner">
+        <h1>Hi! My name's Metkel...</h1>
+        <h2>but you can call me Mike</h2>
+        <div class="social-media">
+          <a
+            class="icon"
+            aria-label="Twitter"
+            href="http://www.twitter.com/k_metkel"
+            target="_blank"
+            rel="noreferrer"
+            ><i class="fab fa-twitter icon"></i
+          ></a>
+          <a
+            class="icon"
+            aria-label="Github"
+            href="http://www.github.com/MetkelK"
+            target="_blank"
+            rel="noreferrer"
+            ><i class="fab fa-github icon"></i
+          ></a>
+          <a
+            class="icon"
+            aria-label="LinkedIn"
+            href="https://www.linkedin.com/in/metkel-kebede-50a79664/"
+            target="_blank"
+            rel="noreferrer"
+            ><i class="fab fa-linkedin-in icon"></i
+          ></a>
+        </div>
+      </div>
+      <div class="scrollArrow">
+        <a href="#about" id="scroll">Learn More</a>
+        <i class="fas fa-arrow-down"></i>
+      </div>
+    </div>
 
-		<div class="contact" id="contact">
-			<div class="wrapper">
-				<h2>Contact</h2>
-				<address>
-					<a aria-label="Email to Metkel" href="mailto:metkelk@gmail.com"><i class="fas fa-envelope icon"></i></a>
-				</address>
-				<p>-OR-</p>
-				<form name="contact" data-netlify="true" method="POST">
-					<div class="formContainer">
-						<div class="column-container">
-							<input aria-label="name" type="text" name="name" id="name" placeholder="Name" required> </br>
-							<input aria-label="email" type="email" name="email" id="email" placeholder="Email" required> </br>
-						</div>
-						<div class="message-container">
-							<textarea aria-label="message" name="message" id="message" placeholder="Message"></textarea>
-						</div>
-					</div>
-					<button type="submit" value="Send Message" class="button button--motion"><span><span>Send Message</span></span>
-				</form>
-			</div>
-		</div>
-	</main>
+    <main>
+      <div class="biowrapper">
+        <div class="about" id="about">
+          <div class="wrapper">
+            <h2>Who am I?</h2>
+            <div class="bio">
+              <p>
+                I'm a Front-End Developer with a passion for continuous
+                learning. I'm really excited about web development because it
+                allows me to combine logic and creativity to building engaging
+                applications.
+              </p>
 
-	<footer>
-		<p>&copy; Metkel Kebede 2020 Images provided by <a href="https://unsplash.com/@altumcode" target="_blank" rel="noreferrer">AltumCode</a> and <a href="https://unsplash.com/@pankajpatel" target="_blank" rel="noreferrer">Pankaj Patel</a></p>
-	</footer>
+              <p>
+                My path to web development started with an intro course at Juno
+                College and continued with self-instruction. I previously
+                completed a Mechanical Engineering Technology program at George
+                Brown College.
+              </p>
 
-	<script async rel="preconnect" src="https://kit.fontawesome.com/3ce30db80b.js" crossorigin="anonymous"></script>
-	<script defer src="gsap.min.js"></script>
-	<script defer src="ScrollToPlugin.min.js"></script>
-	<script defer src="main.js"></script>
-</body>
+              <p>
+                When I'm not coding you can find me working out, relaxing with a
+                good book, or geeking out over video games.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills" id="skills">
+          <div class="wrapper">
+            <h2>Skills</h2>
+            <div class="skill-list">
+              <i class="devicon-html5-plain"
+                ><p class="skill-title">HTML5</p></i
+              >
+              <i class="devicon-css3-plain"><p class="skill-title">CSS3</p></i>
+              <i class="devicon-sass-original"
+                ><p class="skill-title">Sass</p></i
+              >
+              <i class="devicon-javascript-plain"
+                ><p class="skill-title">JavaScript</p></i
+              >
+              <i class="devicon-jquery-plain"
+                ><p class="skill-title">jQuery</p></i
+              >
+              <i class="devicon-react-original"
+                ><p class="skill-title">React</p></i
+              >
+              <i class="devicon-nodejs-plain"
+                ><p class="skill-title">NodeJS</p></i
+              >
+              <i class="devicon-express-original"
+                ><p class="skill-title">Express</p></i
+              >
+              <i class="devicon-mongodb-plain"
+                ><p class="skill-title">MongoDB</p></i
+              >
+              <i class="devicon-git-plain"><p class="skill-title">Git</p></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects" id="projects">
+        <div class="wrapper">
+          <h2>Projects</h2>
+          <div class="gridContainer">
+            <div class="project">
+              <picture>
+                <source srcset="assets/newsfull.webp 827w" type="image/webp" />
+                <img
+                  src="assets/newsfull.png"
+                  alt="Office towers with an overlay of a news article"
+                />
+              </picture>
+              <h3>News Tracker</h3>
+              <h4>HTML / CSS / REACT / API / MATERIAL UI</h4>
+              <p>
+                This site uses the New York Times API to display their top
+                articles, their most viewed stories of the week and the ability
+                to search their database.
+              </p>
+              <div class="linkContainer">
+                <a
+                  href="https://modest-blackwell-d7e99c.netlify.app"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="button button--motion"
+                  ><span><span>View Live</span></span></a
+                >
+                <a
+                  href="https://www.github.com/MetkelK/newsapp"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="button button--motion"
+                  ><span><span>View Code</span></span></a
+                >
+              </div>
+            </div>
+            <div class="project">
+              <picture>
+                <source srcset="assets/Fumblr.webp 830w" type="image/webp" />
+                <img
+                  src="assets/Fumblr.png"
+                  alt="A gallery of images over a white background"
+                />
+              </picture>
+              <h3>Fumblr</h3>
+              <h4>HTML / CSS / NEXT.JS / FIREBASE</h4>
+              <p>
+                An imitation Tumblr I call Fumblr. Go ahead and upload a photo
+                or gif - The site will automatically refresh to include your
+                addition.
+              </p>
+              <div class="linkContainer">
+                <a
+                  href="https://fumblr.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="button button--motion"
+                  ><span><span>View Live</span></span></a
+                >
+                <a
+                  href="https://www.github.com/MetkelK/Fumblr"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="button button--motion"
+                  ><span><span>View Code</span></span></a
+                >
+              </div>
+            </div>
+            <div class="project">
+              <picture>
+                <source
+                  srcset="assets/makeupfull.webp 831w"
+                  type="image/webp"
+                />
+                <img
+                  src="assets/makeupfull.png"
+                  alt="A pink background with a womans nose and mouth bursting through"
+                />
+              </picture>
+              <h3>Courtney Does Makeup</h3>
+              <h4>HTML / SASS / JQUERY</h4>
+              <p>
+                A single page site developed for a self-taught makeup artist
+                that includes a short bio, a gallery of featured work and a
+                contact form.
+              </p>
+              <div class="linkContainer">
+                <a
+                  href="https://www.courtneydoesmakeup.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="button button--motion"
+                  ><span><span>View Live</span></span></a
+                >
+                <a
+                  href="https://www.github.com/MetkelK/courtneydoesmakeup"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="button button--motion"
+                  ><span><span>View Code</span></span></a
+                >
+              </div>
+            </div>
+            <div class="project">
+              <picture>
+                <source
+                  srcset="assets/espressofull.webp 836w"
+                  type="image/webp"
+                />
+                <img
+                  src="assets/espressofull.png"
+                  alt="A coffee shop with a banner indicating the name, location and hours"
+                />
+              </picture>
+              <h3>Oakwood Espresso</h3>
+              <h4>HTML / CSS</h4>
+              <p>
+                A landing page developed for a local espresso shop to display
+                their location and hours along with links to social media.
+              </p>
+              <div class="linkContainer">
+                <a
+                  href="https://oakwoodespresso.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="button button--motion"
+                  ><span><span>View Live</span></span></a
+                >
+                <a
+                  href="https://www.github.com/MetkelK/Espresso"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="button button--motion"
+                  ><span><span>View Code</span></span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact" id="contact">
+        <div class="wrapper">
+          <h2>Contact</h2>
+          <address>
+            <a aria-label="Email to Metkel" href="mailto:metkelk@gmail.com"
+              ><i class="fas fa-envelope icon"></i
+            ></a>
+          </address>
+          <p>-OR-</p>
+          <form name="contact" data-netlify="true" method="POST">
+            <div class="formContainer">
+              <div class="column-container">
+                <input
+                  aria-label="name"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Name"
+                  required
+                />
+                <br />
+                <input
+                  aria-label="email"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  required
+                />
+                <br />
+              </div>
+              <div class="message-container">
+                <textarea
+                  aria-label="message"
+                  name="message"
+                  id="message"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+            </div>
+            <button
+              type="submit"
+              value="Send Message"
+              class="button button--motion"
+            >
+              <span><span>Send Message</span></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; Metkel Kebede 2020 Images provided by
+        <a
+          href="https://unsplash.com/@altumcode"
+          target="_blank"
+          rel="noreferrer"
+          >AltumCode</a
+        >
+        and
+        <a
+          href="https://unsplash.com/@pankajpatel"
+          target="_blank"
+          rel="noreferrer"
+          >Pankaj Patel</a
+        >
+      </p>
+    </footer>
+
+    <script
+      async
+      rel="preconnect"
+      src="https://kit.fontawesome.com/3ce30db80b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="gsap.min.js"></script>
+    <script defer src="ScrollToPlugin.min.js"></script>
+    <script defer src="main.js"></script>
+  </body>
 </html>
