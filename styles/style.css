@@ -4,6 +4,9 @@
   --secondary-color: #152331;
   --tertiary-color: #0a1826;
   --card-color: #fffff3;
+  --black: #000;
+  --white: #fff;
+  --gray: #ccc;
 }
 
 html {
@@ -286,12 +289,12 @@ svg:hover {
 }
 
 #desktopMenu li a {
-  color: #fff;
+  color: var(--white);
   transition: 0.3s;
 }
 
 #desktopMenu li a:hover {
-  color: #ccc;
+  color: var(--gray);
 }
 
 #mobileMenu {
@@ -317,21 +320,21 @@ svg:hover {
 }
 
 #mobileMenu li a {
-  color: #fff;
+  color: var(--white);
   transition: 0.3s;
   text-transform: uppercase;
   letter-spacing: 0.75rem;
 }
 
 #mobileMenu li a:hover {
-  color: #ccc;
+  color: var(--gray);
 }
 
 #openMenu,
 #closeMenu {
   padding-right: 1rem;
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
 }
 
@@ -346,7 +349,7 @@ svg:hover {
 
 #openMenu:hover,
 #closeMenu:hover {
-  color: #ccc;
+  color: var(--gray);
   transition: 0.3s;
 }
 
@@ -376,7 +379,11 @@ svg:hover {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  background-image: linear-gradient(to bottom, #000, var(--secondary-color)),
+  background-image: linear-gradient(
+      to bottom,
+      var(--black),
+      var(--secondary-color)
+    ),
     url("../assets/altumcode-U0tBTn8UR8I-unsplash.webp"),
     url("../assets/altumcode-U0tBTn8UR8I-unsplash.jpg");
   background-size: cover;
@@ -396,7 +403,7 @@ svg:hover {
 
 .banner h2,
 .social-media {
-  color: #000;
+  color: var(--black);
 }
 
 .social-media a {
@@ -410,8 +417,7 @@ svg:hover {
 }
 
 .social-media a i:hover {
-  /* color: #152331; */
-  color: #ccc;
+  color: var(--gray);
 }
 
 @media all and (min-width: 1200px) {
@@ -423,7 +429,7 @@ svg:hover {
   .banner h1,
   .banner h2,
   .social-media {
-    color: #fff;
+    color: var(--white);
   }
 }
 
@@ -434,7 +440,7 @@ svg:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fff;
+  color: var(--white);
   z-index: 102;
   text-align: center;
 }
@@ -492,7 +498,7 @@ svg:hover {
   }
 
   .bio p {
-    color: #fff;
+    color: var(--white);
   }
 }
 
@@ -503,7 +509,7 @@ svg:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #152331;
+  background: var(--secondary-color);
   background-image: url("../assets/pankaj-patel-u2Ru4QBXA5Q-unsplash.webp"),
     url("../assets/pankaj-patel-u2Ru4QBXA5Q-unsplash.jpg");
   background-size: cover;
@@ -513,7 +519,7 @@ svg:hover {
 }
 
 .skills h2 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   letter-spacing: 1rem;
   font-style: italic;
@@ -568,7 +574,7 @@ svg:hover {
 
   .skill-list i,
   .skill-title {
-    color: #fff;
+    color: var(--white);
     padding: 0.5rem;
   }
 }
@@ -600,7 +606,7 @@ svg:hover {
 }
 
 .projects h2 {
-  color: #fffff3;
+  color: var(--white);
   text-transform: uppercase;
   letter-spacing: 1rem;
   font-style: italic;
@@ -717,7 +723,7 @@ svg:hover {
 
 .button--motion {
   overflow: hidden;
-  color: #fff;
+  color: var(--white);
   font-family: "Montserrat", sans-serif;
   padding: 0.5rem 1rem;
   margin: 0.25rem 0.125rem;
@@ -766,7 +772,7 @@ svg:hover {
 }
 
 .contact h2 {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   letter-spacing: 1rem;
   font-style: italic;
@@ -779,7 +785,7 @@ svg:hover {
 .contact p,
 .contact a {
   text-align: center;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 1rem;
 }
 
@@ -808,16 +814,16 @@ select,
 textarea {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--gray);
   border-radius: 5px;
   margin: 0.125rem 0;
   resize: vertical;
   background-color: transparent;
-  color: #ccc;
+  color: var(--gray);
 }
 
 label {
-  color: #ccc;
+  color: var(--gray);
 }
 
 @media all and (min-width: 768px) {
@@ -834,7 +840,8 @@ footer {
 }
 
 footer p {
-  color: #fff;
+  color: var(--white);
   margin: 0;
   padding: 1rem 0;
+  font-size: 0.8rem;
 }
