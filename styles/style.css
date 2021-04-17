@@ -751,8 +751,8 @@ svg:hover {
 .button--motion::before {
   content: "";
   background: var(--button-before);
-  width: 100%;
-  height: 100%;
+  width: 105%;
+  height: 105%;
   transform-origin: 50% 100%;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
