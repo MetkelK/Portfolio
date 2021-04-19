@@ -374,7 +374,7 @@ svg:hover {
   }
 }
 
-.header {
+header {
   height: 100vh;
   position: relative;
   display: flex;
