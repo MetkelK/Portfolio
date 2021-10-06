@@ -621,7 +621,7 @@ header {
 
 .gridContainer {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
@@ -672,7 +672,7 @@ header {
 
 @media all and (min-width: 1200px) {
   .gridContainer {
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
 
